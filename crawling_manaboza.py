@@ -1,6 +1,5 @@
+# -*- coding: utf-8 -*-
 import os
-import re
-import json
 import shutil
 import urllib3
 import requests
@@ -21,10 +20,10 @@ def main():
     # # episode-wise operation
     for i, key in enumerate(hotKeys, start=1):
 
-        #     # extract episode title
+        # extract episode title
         title = key.select_one(".episode_stitle").get_text().strip()
-        if title not in ["06권"]:
-            continue
+        # if title not in ["06권"]:
+        #     continue
 
         print(f"{i}/{len(hotKeys)}: {title}")
 
@@ -55,7 +54,6 @@ def main():
             print(f"{j} /{len(img_list)}")
             ext = url.split(".")[-1]
             dst = f"{save_base_path}/{j:03d}.{ext}"
-            # urlretrieve(url, dst)
             with http.request("GET", url, preload_content=False) as r, open(
                 dst, "wb"
             ) as out_file:

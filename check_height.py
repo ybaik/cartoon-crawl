@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-exts = [".jpg", ".png", ".gif"]  # , ".JPG"]
+exts = [".jpg", ".png", ".gif"]
 
 
 def main():
@@ -45,11 +45,13 @@ def main():
             if not check_ext_only:
                 file_path = f"{target_path}/{file}"
                 img_array = np.fromfile(file_path, np.uint8)
-                img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                # img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                img = cv2.imdecode(img_array, cv2.IMREAD_GRAYSCALE)
+
                 if img is None:
                     print(f"None: {target_path}/{file}")
                     continue
-                h, w, c = img.shape
+                h, wc = img.shape
                 heights.append(h)
 
         if not check_ext_only:
