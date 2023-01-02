@@ -32,6 +32,7 @@ def main():
             continue
 
         # check ext [zip and csv]
+    print("done")
 
 
 if __name__ == "__main__":

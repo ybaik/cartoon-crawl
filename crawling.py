@@ -12,14 +12,15 @@ from tqdm import tqdm
 
 def main():
 
-    name = "진격의 거인"
-    base_path = f"D:/comix/{name}"
+    name = "귀멸의 칼날"
+    # base_path = f"D:/comix/기타작업/{name}"
+    base_path = f"D:/comix/download0"
     # tag = "(ONE OUTS)"
     # tag1 = "(ONE O…UTS)"
 
     # extract episodes
     site_address = "http://156.239.152.53:9200/bbs"
-    list_address = f"{site_address}/board.php?bo_table=toons&stx=%EC%A7%84%EA%B2%A9%EC%9D%98+%EA%B1%B0%EC%9D%B8&is=3892&sord=&type=&page=1"
+    list_address = f"{site_address}/board.php?bo_table=toons&stx=%EA%B7%80%EB%A9%B8%EC%9D%98%20%EC%B9%BC%EB%82%A0&is=3737"
     source = requests.get(list_address).text
 
     soup = BeautifulSoup(source, "html.parser")
@@ -27,6 +28,8 @@ def main():
 
     # episode-wise operation
     for i, key in enumerate(hotKeys, start=1):
+        # if i not in [71, 68]:
+        #     continue
         # extract episode title
         title = key.select_one(".episode-title").get_text()
         title = title.replace(name, "").strip()
@@ -34,12 +37,10 @@ def main():
         # title = title.replace(tag1, "").strip()
 
         print(f"{i}/{len(hotKeys)}: {title}")
-        # cc = int(title[:-1])
-        # if cc > 23:
-        #     continue
+        # continue
         save_base_path = f"{base_path}/{title}"
-        if os.path.isdir(save_base_path):
-            continue
+        # if os.path.isdir(save_base_path):
+        #     continue
         os.makedirs(save_base_path, exist_ok=True)
 
         # extract episode target page

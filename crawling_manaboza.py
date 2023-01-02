@@ -9,8 +9,9 @@ from bs4 import BeautifulSoup
 def main():
 
     base_path = "D:/comix/download1"
+    tag = "귀멸의\xa0칼날 "
     # extract episodes
-    site_address = "http://www.manaboza16.com/comic/ep_list/3606"
+    site_address = "http://www.manaboza16.com/comic/ep_list/3737"
     list_address = f"{site_address}"
 
     source = requests.get(list_address).text
@@ -22,7 +23,11 @@ def main():
 
         # extract episode title
         title = key.select_one(".episode_stitle").get_text().strip()
-        # if title not in ["06권"]:
+        # title = title.replace(tag, "")
+        # print(title)
+        # if title not in [
+        #     "147화",
+        # ]:
         #     continue
 
         print(f"{i}/{len(hotKeys)}: {title}")
@@ -35,6 +40,7 @@ def main():
         # extract episode target page
         target = key.get("data-episode-id")
         target_address = site_address.replace("ep_list", "ep_view")
+        # target_address = target_address[:-2]
         target_address = f"{target_address}/{target}"
 
         print(target_address)
