@@ -4,14 +4,15 @@ import shutil
 import urllib3
 import requests
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 
 def main():
 
-    base_path = "D:/comix/download1"
-    tag = "귀멸의\xa0칼날 "
+    base_path = "D:\comix\기타작업\창천항로"
+    # tag = "귀멸의\xa0칼날 "
     # extract episodes
-    site_address = "http://www.manaboza16.com/comic/ep_list/3737"
+    site_address = "https://www.manaboza16.com/comic/ep_list/3748"
     list_address = f"{site_address}"
 
     source = requests.get(list_address).text
@@ -26,9 +27,9 @@ def main():
         # title = title.replace(tag, "")
         # print(title)
         # if title not in [
-        #     "147화",
+        #     "33권",
         # ]:
-        #     continue
+        # continue
 
         print(f"{i}/{len(hotKeys)}: {title}")
 
@@ -56,14 +57,18 @@ def main():
 
         # download frame list
         http = urllib3.PoolManager()
-        for j, url in enumerate(img_list, start=1):
-            print(f"{j} /{len(img_list)}")
+        idx = 1
+        for url in tqdm(img_list):
+            # print(f"{j} /{len(img_list)}")
             ext = url.split(".")[-1]
-            dst = f"{save_base_path}/{j:03d}.{ext}"
-            with http.request("GET", url, preload_content=False) as r, open(
-                dst, "wb"
-            ) as out_file:
-                shutil.copyfileobj(r, out_file)
+            dst = f"{save_base_path}/{idx:03d}.{ext}"
+
+            if not os.path.exists(dst):
+                with http.request("GET", url, preload_content=False) as r, open(
+                    dst, "wb"
+                ) as out_file:
+                    shutil.copyfileobj(r, out_file)
+            idx += 1
 
 
 if __name__ == "__main__":

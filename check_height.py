@@ -9,8 +9,9 @@ exts = [".jpg", ".png", ".gif"]
 
 
 def main():
-    base_path = "D:\comix\해귀선 (완)"
-    check_ext_only = False
+    base_path = "D:\comix\기타작업\호문쿨루스"
+    check_ext_only = True
+    # check_ext_only = False
 
     exts_ = dict()
     dirs = os.listdir(base_path)
@@ -30,7 +31,7 @@ def main():
         target_path = f"{base_path}/{folder}"
         if not os.path.isdir(target_path):
             continue
-
+        # print(folder)
         files = os.listdir(target_path)
         heights = []
         for file in files:
