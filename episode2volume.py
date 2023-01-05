@@ -4,48 +4,48 @@ import os
 import shutil
 
 episode2vol = {
-    # 1: [1, 7],
-    2: [8, 16],
-    # 3: [17, 25],
-    # 4: [26, 34],
-    # 5: [35, 43],
-    # 6: [44, 52],
-    # 7: [53, 61],
-    # 8: [62, 70],
-    # 9: [71, 79],
-    # 10: [80, 88],
-    # 11: [89, 97],
-    # 12: [98, 103],
-    # 12: [98, 106],
-    # 13: [107, 115],
-    # 14: [116, 124],
-    # 15: [125, 133],
-    # 16: [134, 142],
-    # 17: [143, 151],
-    # 18: [152, 160],
-    # 19: [161, 169],
-    # 20: [170, 178],
-    # 21: [179, 187],
-    # 22: [188, 196],
-    # 23: [197, 205],
+    1: [1, 9],
+    2: [10, 18],
+    3: [19, 27],
+    4: [28, 36],
+    5: [37, 45],
+    6: [46, 54],
+    7: [55, 63],
+    8: [64, 72],
+    9: [73, 81],
+    10: [82, 90],
+    11: [91, 99],
+    12: [100, 108],
+    13: [109, 117],
 }
 
 
 def main():
-    base_path = "D:\comix\체인소맨"
-    base_path1 = "D:\comix\체인소맨a"
+    base_path = "D:\comix\기타작업\엿보기 구멍"
+    base_path1 = "D:\comix\기타작업\엿보기 구멍a"
 
     for k in episode2vol.keys():
         [s, e] = episode2vol.get(k)
         target = f"{base_path1}/{k:02d}권"
         os.makedirs(target, exist_ok=True)
+
+        first_start_index = True
         for i in range(s, e + 1):
             src_dir = f"{base_path}/{i}화"
+
             if not os.path.exists(src_dir):
                 print(src_dir)
                 continue
+
             files = os.listdir(src_dir)
-            for f in files:
+
+            for j, f in enumerate(files):
+
+                if j == 0:
+                    if not first_start_index:
+                        continue
+                    first_start_index = False
+
                 [id, ext] = f.split(".")
                 if i < 1000:
                     shutil.copyfile(
