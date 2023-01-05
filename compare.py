@@ -15,8 +15,10 @@ def check_dir_names(dirs_src, dirs_dst):
 def main():
 
     base_path_src = "D:\comix"
-    base_path_dst = "//192.168.1.1\comix"
-    # base_path_dst = "F:/comix"
+    base_path_dst = "Z:/"
+    base_path_dst = "F:/comix"
+
+    diff = False
 
     for main_dir in main_dirs:
         main_dir_src = f"{base_path_src}/{main_dir}"
@@ -33,17 +35,19 @@ def main():
                 check_dir_names(dirs_src, dirs_dst)
             else:
                 check_dir_names(dirs_dst, dirs_src)
+            diff = True
             continue
 
         # check names
-        is_same = True
         for src, dst in zip(dirs_src, dirs_dst):
             if src != dst:
-                is_same = False
+                diff = True
                 print(f"Dir name different: {main_dir_src}/{src}")
             continue
 
         # check ext [zip and csv]
+    if not diff:
+        print("No differences.")
     print("done")
 
 
