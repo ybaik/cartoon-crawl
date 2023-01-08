@@ -5,17 +5,23 @@ import urllib3
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+from fake_useragent import UserAgent
+import ssl
 
 
 def main():
 
-    base_path = "D:\comix\기타작업\창천항로"
+    ssl._create_default_https_context = ssl._create_unverified_context
+
+    base_path = "D:\comix\기타작업\인고시마"
     # tag = "귀멸의\xa0칼날 "
     # extract episodes
-    site_address = "https://www.manaboza16.com/comic/ep_list/3748"
+    site_address = "https://www.manaboza16.com/comic/ep_list/22778"
     list_address = f"{site_address}"
 
-    source = requests.get(list_address).text
+    user_agent = UserAgent()
+    headers = {"User-Agent": user_agent.random}
+    source = requests.get(list_address, headers=headers).text
     soup = BeautifulSoup(source, "html.parser")
     hotKeys = soup.select("a.flex-container")
 
@@ -32,6 +38,7 @@ def main():
         # continue
 
         print(f"{i}/{len(hotKeys)}: {title}")
+        # continue
 
         save_base_path = f"{base_path}/{title}"
         if os.path.isdir(save_base_path):
@@ -64,9 +71,9 @@ def main():
             dst = f"{save_base_path}/{idx:03d}.{ext}"
 
             if not os.path.exists(dst):
-                with http.request("GET", url, preload_content=False) as r, open(
-                    dst, "wb"
-                ) as out_file:
+                with http.request(
+                    "GET", url, preload_content=False, headers=headers
+                ) as r, open(dst, "wb") as out_file:
                     shutil.copyfileobj(r, out_file)
             idx += 1
 

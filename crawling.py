@@ -8,11 +8,16 @@ import urllib3
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+from fake_useragent import UserAgent
+import ssl
+import time
 
 
 def main():
 
-    name = "창천항로"
+    ssl._create_default_https_context = ssl._create_unverified_context
+
+    name = "인고시마"
     base_path = f"D:/comix/기타작업/{name}"
     # base_path = f"D:/comix/download0"
     # tag = "(ONE OUTS)"
@@ -20,16 +25,20 @@ def main():
 
     # extract episodes
     site_address = "http://156.239.152.53:9200/bbs"
-    list_address = f"{site_address}/board.php?bo_table=toons&stx=%EC%B0%BD%EC%B2%9C%ED%95%AD%EB%A1%9C&is=3748"
-    source = requests.get(list_address).text
+
+    list_address = f"{site_address}/board.php?bo_table=toons&stx=%EC%9D%B8%EA%B3%A0%EC%8B%9C%EB%A7%88&is=22778&sord=&type=&page=1"
+
+    user_agent = UserAgent()
+    headers = {"User-Agent": user_agent.random}
+    source = requests.get(list_address, headers=headers).text
 
     soup = BeautifulSoup(source, "html.parser")
     hotKeys = soup.select("button.episode")
 
     # episode-wise operation
     for i, key in enumerate(hotKeys, start=1):
-        if i < 15:
-            continue
+        # if i < 50:
+        #     continue
         # extract episode title
         title = key.select_one(".episode-title").get_text()
         title = title.replace(name, "").strip()
@@ -51,6 +60,8 @@ def main():
         # extract image list
         target = requests.get(target_address).text
         matched = re.search("var img_list = (.+?);", target, re.S)
+        if matched is None:
+            print(1)
         json_string = matched.group(1)
         img_list = json.loads(json_string)
         # print(frame_list)
@@ -63,11 +74,12 @@ def main():
             dst = f"{save_base_path}/{idx:03d}.{ext}"
 
             if not os.path.exists(dst):
-                with http.request("GET", url, preload_content=False) as r, open(
-                    dst, "wb"
-                ) as out_file:
+                with http.request(
+                    "GET", url, preload_content=False, headers=headers
+                ) as r, open(dst, "wb") as out_file:
                     shutil.copyfileobj(r, out_file)
-                idx += 1
+            idx += 1
+        time.sleep(1)
 
 
 if __name__ == "__main__":

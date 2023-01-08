@@ -43,9 +43,24 @@ def main():
             if src != dst:
                 diff = True
                 print(f"Dir name different: {main_dir_src}/{src}")
-            continue
+                continue
 
-        # check ext [zip and csv]
+            # check ext [zip and csv]
+            files_src = os.listdir(f"{main_dir_src}/{src}")
+            files_dst = os.listdir(f"{main_dir_dst}/{dst}")
+
+            for file in files_src:
+                name, ext = os.path.splitext(file)
+                if ext not in [".zip", ".csv", ".txt"]:
+                    diff = True
+                    print(src)
+
+            for file in files_dst:
+                name, ext = os.path.splitext(file)
+                if ext not in [".zip", ".csv", ".txt"]:
+                    diff = True
+                    print(dst)
+
     if not diff:
         print("No differences.")
     print("done")
