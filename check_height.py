@@ -9,9 +9,9 @@ exts = [".jpg", ".png", ".gif"]
 
 
 def main():
-    base_path = "D:\comix\기타작업\호문쿨루스"
+    base_path = "D:\comix\기타작업\트라이건"
     check_ext_only = True
-    # check_ext_only = False
+    check_ext_only = False
 
     exts_ = dict()
     dirs = os.listdir(base_path)

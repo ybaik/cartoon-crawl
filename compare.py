@@ -3,7 +3,7 @@
 import os
 import shutil
 
-main_dirs = ["미완_스캔", "연재중", "완결", "완결_스캔"]
+main_dirs = ["미완", "미완_스캔", "연재중", "완결", "완결_스캔"]
 
 
 def check_dir_names(dirs_src, dirs_dst):

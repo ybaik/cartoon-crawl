@@ -17,7 +17,7 @@ def main():
 
     ssl._create_default_https_context = ssl._create_unverified_context
 
-    name = "인고시마"
+    name = "무한의 주인"
     base_path = f"D:/comix/기타작업/{name}"
     # base_path = f"D:/comix/download0"
     # tag = "(ONE OUTS)"
@@ -26,7 +26,7 @@ def main():
     # extract episodes
     site_address = "http://156.239.152.53:9200/bbs"
 
-    list_address = f"{site_address}/board.php?bo_table=toons&stx=%EC%9D%B8%EA%B3%A0%EC%8B%9C%EB%A7%88&is=22778&sord=&type=&page=1"
+    list_address = f"{site_address}/board.php?bo_table=toons&stx=%EB%AC%B4%ED%95%9C%EC%9D%98%20%EC%A3%BC%EC%9D%B8&is=9269"
 
     user_agent = UserAgent()
     headers = {"User-Agent": user_agent.random}

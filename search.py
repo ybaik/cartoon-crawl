@@ -2,13 +2,13 @@
 
 import os
 
-main_dirs = ["미완_스캔", "연재중", "완결", "완결_스캔"]
+main_dirs = ["미완", "미완_스캔", "연재중", "완결", "완결_스캔"]
 
 
 def main():
 
     base_path = "D:\comix"
-    keyword = "H2"
+    keyword = "나루토"
 
     for main_dir in main_dirs:
         main_dir_src = f"{base_path}/{main_dir}"
