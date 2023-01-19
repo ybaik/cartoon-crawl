@@ -13,10 +13,10 @@ def main():
 
     ssl._create_default_https_context = ssl._create_unverified_context
 
-    base_path = "D:\comix\기타작업\인고시마"
+    base_path = "D:\comix\기타작업/20세기 소년"
     # tag = "귀멸의\xa0칼날 "
     # extract episodes
-    site_address = "https://www.manaboza16.com/comic/ep_list/22778"
+    site_address = "https://www.manaboza18.com/comic/ep_list/3643"
     list_address = f"{site_address}"
 
     user_agent = UserAgent()
@@ -27,6 +27,8 @@ def main():
 
     # # episode-wise operation
     for i, key in enumerate(hotKeys, start=1):
+        # if i != 3:
+        #     continue
 
         # extract episode title
         title = key.select_one(".episode_stitle").get_text().strip()

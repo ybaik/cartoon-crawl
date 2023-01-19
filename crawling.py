@@ -17,16 +17,15 @@ def main():
 
     ssl._create_default_https_context = ssl._create_unverified_context
 
-    name = "무한의 주인"
+    name = "카페 알파"
     base_path = f"D:/comix/기타작업/{name}"
-    # base_path = f"D:/comix/download0"
-    # tag = "(ONE OUTS)"
-    # tag1 = "(ONE O…UTS)"
+    tags = [name]
+    # tags.append("…코하마 지점")
+    # tags.append("페이트 그랜드 오더…앤솔로지")
 
     # extract episodes
     site_address = "http://156.239.152.53:9200/bbs"
-
-    list_address = f"{site_address}/board.php?bo_table=toons&stx=%EB%AC%B4%ED%95%9C%EC%9D%98%20%EC%A3%BC%EC%9D%B8&is=9269"
+    list_address = f"{site_address}/board.php?bo_table=toons&stx=%EC%B9%B4%ED%8E%98%20%EC%95%8C%ED%8C%8C&is=2962"
 
     user_agent = UserAgent()
     headers = {"User-Agent": user_agent.random}
@@ -37,13 +36,13 @@ def main():
 
     # episode-wise operation
     for i, key in enumerate(hotKeys, start=1):
-        # if i < 50:
+        # if i != 3:
         #     continue
+
         # extract episode title
         title = key.select_one(".episode-title").get_text()
-        title = title.replace(name, "").strip()
-        # title = title.replace(tag, "").strip()
-        # title = title.replace(tag1, "").strip()
+        for tag in tags:
+            title = title.replace(tag, "").strip()
 
         print(f"{i}/{len(hotKeys)}: {title}")
         # continue

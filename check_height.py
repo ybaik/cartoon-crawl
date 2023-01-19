@@ -9,7 +9,7 @@ exts = [".jpg", ".png", ".gif"]
 
 
 def main():
-    base_path = "D:\comix\기타작업\트라이건"
+    base_path = "D:\comix\기타작업/20세기 소년"
     check_ext_only = True
     check_ext_only = False
 
@@ -37,6 +37,11 @@ def main():
         for file in files:
             name, ext = os.path.splitext(file)
             exts_[ext] = 1
+
+            fsize = os.path.getsize(f"{target_path}/{file}")
+            if fsize < 10000:
+                print(f"{target_path}/{file}: {fsize} byte")
+
             if ext not in exts:
                 if ext in [".JPG", ".jpeg"]:
                     os.rename(f"{target_path}/{file}", f"{target_path}/{name}.jpg")

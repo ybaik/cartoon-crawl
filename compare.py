@@ -16,10 +16,10 @@ def main():
 
     base_path_src = "D:\comix"
     base_path_dst = "Z:/"
-    base_path_dst = "F:/comix"
+    # base_path_dst = "F:/comix"
 
     diff = False
-
+    num_series = 0
     for main_dir in main_dirs:
         main_dir_src = f"{base_path_src}/{main_dir}"
         main_dir_dst = f"{base_path_dst}/{main_dir}"
@@ -60,9 +60,12 @@ def main():
                 if ext not in [".zip", ".csv", ".txt"]:
                     diff = True
                     print(dst)
+        num_series += len(dirs_src)
 
     if not diff:
         print("No differences.")
+        print(f"Sceries: {num_series}")
+
     print("done")
 
 
