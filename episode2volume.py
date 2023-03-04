@@ -4,32 +4,21 @@ import os
 import shutil
 
 episode2vol = {
-    1: [1, 9],
-    2: [10, 18],
-    3: [19, 27],
-    4: [28, 36],
-    5: [37, 45],
-    6: [46, 54],
-    7: [55, 63],
-    8: [64, 72],
-    9: [73, 81],
-    10: [82, 90],
-    11: [91, 99],
-    12: [100, 108],
-    13: [109, 117],
+    1: [4, 5],
+    # 2: [8, 17],
 }
 
 
 def main():
-    base_path = "D:\comix\기타작업\엿보기 구멍"
-    base_path1 = "D:\comix\기타작업\엿보기 구멍a"
+    base_path = "D:/comix/etc/바질리스크 오우카인법첩"
+    base_path1 = "D:/comix/etc/바질리스크a"
 
     for k in episode2vol.keys():
         [s, e] = episode2vol.get(k)
-        target = f"{base_path1}/{k:02d}권"
+        target = f"{base_path1}/{k:02d}"
         os.makedirs(target, exist_ok=True)
 
-        first_start_index = True
+        # first_start_index = True
         for i in range(s, e + 1):
             src_dir = f"{base_path}/{i}화"
 
@@ -41,10 +30,10 @@ def main():
 
             for j, f in enumerate(files):
 
-                if j == 0:
-                    if not first_start_index:
-                        continue
-                    first_start_index = False
+                # if j == 0:
+                #     if not first_start_index:
+                #         continue
+                #     first_start_index = False
 
                 [id, ext] = f.split(".")
                 if i < 1000:

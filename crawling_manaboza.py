@@ -13,10 +13,10 @@ def main():
 
     ssl._create_default_https_context = ssl._create_unverified_context
 
-    base_path = "D:\comix\기타작업/20세기 소년"
-    # tag = "귀멸의\xa0칼날 "
+    base_path = "D:/comix/etc/바질리스크 오우카인법첩"
+    # tag = "베르세르크_"
     # extract episodes
-    site_address = "https://www.manaboza18.com/comic/ep_list/3643"
+    site_address = "http://manaboza.komana.wiki/comic/ep_list/12777"
     list_address = f"{site_address}"
 
     user_agent = UserAgent()
@@ -40,12 +40,11 @@ def main():
         # continue
 
         print(f"{i}/{len(hotKeys)}: {title}")
-        # continue
 
         save_base_path = f"{base_path}/{title}"
-        if os.path.isdir(save_base_path):
-            continue
-        os.makedirs(save_base_path, exist_ok=True)
+        # if os.path.isdir(save_base_path):
+        #     continue
+        # os.makedirs(save_base_path, exist_ok=True)
 
         # extract episode target page
         target = key.get("data-episode-id")
@@ -70,6 +69,9 @@ def main():
         for url in tqdm(img_list):
             # print(f"{j} /{len(img_list)}")
             ext = url.split(".")[-1]
+            if ext not in ["jpg", "JPG", "jpeg", "JPEG"]:
+                ext = "jpg"
+
             dst = f"{save_base_path}/{idx:03d}.{ext}"
 
             if not os.path.exists(dst):

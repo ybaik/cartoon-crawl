@@ -17,16 +17,15 @@ def main():
 
     ssl._create_default_https_context = ssl._create_unverified_context
 
-    name = "카페 알파"
-    base_path = f"D:/comix/기타작업/{name}"
+    name = "허리케인 죠"
+    base_path = f"D:/comix/etc/{name}"
     tags = [name]
     # tags.append("…코하마 지점")
     # tags.append("페이트 그랜드 오더…앤솔로지")
 
     # extract episodes
     site_address = "http://156.239.152.53:9200/bbs"
-    list_address = f"{site_address}/board.php?bo_table=toons&stx=%EC%B9%B4%ED%8E%98%20%EC%95%8C%ED%8C%8C&is=2962"
-
+    list_address = f"{site_address}/board.php?bo_table=toons&stx=%ED%97%88%EB%A6%AC%EC%BC%80%EC%9D%B8%20%EC%A3%A0&is=2769"
     user_agent = UserAgent()
     headers = {"User-Agent": user_agent.random}
     source = requests.get(list_address, headers=headers).text
@@ -58,6 +57,10 @@ def main():
 
         # extract image list
         target = requests.get(target_address).text
+
+        # with open("d:/text.txt", "w", encoding="UTF-8") as f:
+        #     f.write(target)
+
         matched = re.search("var img_list = (.+?);", target, re.S)
         if matched is None:
             print(1)
@@ -70,6 +73,10 @@ def main():
         idx = 1
         for url in tqdm(img_list):
             ext = url.split(".")[-1]
+
+            if ext not in ["jpg", "JPG", "jpeg", "JPEG"]:
+                ext = "jpg"
+
             dst = f"{save_base_path}/{idx:03d}.{ext}"
 
             if not os.path.exists(dst):

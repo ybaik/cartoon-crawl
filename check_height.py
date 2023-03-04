@@ -9,7 +9,7 @@ exts = [".jpg", ".png", ".gif"]
 
 
 def main():
-    base_path = "D:\comix\기타작업/20세기 소년"
+    base_path = "D:\comix\etc/허리케인 죠"
     check_ext_only = True
     check_ext_only = False
 
@@ -23,7 +23,7 @@ def main():
             if not os.path.isdir(target_path):
                 continue
             cnt += 1
-        csv_head = ["volumn", "median height(px)"]
+        csv_head = ["volumn", "median height(px)", "min height(px)", "max height(px)"]
         df = pd.DataFrame(index=range(0, cnt), columns=csv_head)
 
     cnt = 0
@@ -62,7 +62,14 @@ def main():
 
         if not check_ext_only:
             median = int(np.median(heights))
-            df.iloc[cnt] = {"volumn": folder, "median height(px)": median}
+            min = int(np.min(heights))
+            max = int(np.max(heights))
+            df.iloc[cnt] = {
+                "volumn": folder,
+                "median height(px)": median,
+                "min height(px)": min,
+                "max height(px)": max,
+            }
         cnt += 1
 
     if not check_ext_only:
