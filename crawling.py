@@ -14,18 +14,21 @@ import time
 
 
 def main():
-
     ssl._create_default_https_context = ssl._create_unverified_context
 
-    name = "허리케인 죠"
+    name = "a"
     base_path = f"D:/comix/etc/{name}"
     tags = [name]
-    # tags.append("…코하마 지점")
-    # tags.append("페이트 그랜드 오더…앤솔로지")
+    tags.append("피안도 48일 후")
+
+    # tags.append("원피스")
+    # tags.append("(ONE PI…ECE)")
+    # tags.append("(ONE PI…CE)")
+    # tags.append("(ONE PIECE)")
 
     # extract episodes
-    site_address = "http://156.239.152.53:9200/bbs"
-    list_address = f"{site_address}/board.php?bo_table=toons&stx=%ED%97%88%EB%A6%AC%EC%BC%80%EC%9D%B8%20%EC%A3%A0&is=2769"
+    site_address = "https://www.11toon128.com/bbs"
+    list_address = f"{site_address}/board.php?bo_table=toons&stx=%ED%94%BC%EC%95%88%EB%8F%84%2048%EC%9D%BC%20%ED%9B%84&is=20182"
     user_agent = UserAgent()
     headers = {"User-Agent": user_agent.random}
     source = requests.get(list_address, headers=headers).text
@@ -35,7 +38,11 @@ def main():
 
     # episode-wise operation
     for i, key in enumerate(hotKeys, start=1):
-        # if i != 3:
+        # if i > 1:
+        #     continue
+        if i > 20:
+            continue
+        # if i not in [4]:
         #     continue
 
         # extract episode title
@@ -43,12 +50,23 @@ def main():
         for tag in tags:
             title = title.replace(tag, "").strip()
 
-        print(f"{i}/{len(hotKeys)}: {title}")
+        # print(i, title)
         # continue
+
         save_base_path = f"{base_path}/{title}"
-        if os.path.isdir(save_base_path):
-            continue
-        os.makedirs(save_base_path, exist_ok=True)
+        if not os.path.isdir(save_base_path):
+            os.makedirs(save_base_path, exist_ok=True)
+        else:
+            # check number of files
+            files = os.listdir(save_base_path)
+            cnt = 0
+            for file in files:
+                name, ext = os.path.splitext(file)
+                if ext == ".jpg":
+                    cnt += 1
+            if cnt >= 15:
+                continue
+        print(f"{i}/{len(hotKeys)}: {title}")
 
         # extract episode target page
         target = key.get("onclick").replace("location.href='.", site_address)
@@ -61,6 +79,7 @@ def main():
         # with open("d:/text.txt", "w", encoding="UTF-8") as f:
         #     f.write(target)
 
+        # matched = re.search("var img_list_2 = (.+?);", target, re.S)
         matched = re.search("var img_list = (.+?);", target, re.S)
         if matched is None:
             print(1)

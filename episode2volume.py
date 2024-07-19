@@ -4,46 +4,45 @@ import os
 import shutil
 
 episode2vol = {
-    1: [4, 5],
-    # 2: [8, 17],
+    44: [387, 394]
+    # 107: [1077, 1088],
+    # 21: [192, 201],  # 66
 }
 
 
 def main():
-    base_path = "D:/comix/etc/바질리스크 오우카인법첩"
-    base_path1 = "D:/comix/etc/바질리스크a"
+    skip_1page = False
+    base_dir = "D:/comix/etc/a"
+    base_dir1 = "D:/comix/etc/c"
+    bgfile = "D:/comix/etc/c/white.png"
+    add_bg_file = True
 
     for k in episode2vol.keys():
         [s, e] = episode2vol.get(k)
-        target = f"{base_path1}/{k:02d}"
+        target = f"{base_dir1}/{k:03d}"
         os.makedirs(target, exist_ok=True)
 
-        # first_start_index = True
-        for i in range(s, e + 1):
-            src_dir = f"{base_path}/{i}화"
-
+        for vol_idx, i in enumerate(range(s, e + 1)):
+            # src_dir = f"{base_dir}/{i:02d}화"
+            src_dir = f"{base_dir}/{i}화"
             if not os.path.exists(src_dir):
                 print(src_dir)
                 continue
 
+            idx = 3  # will be ordered later
             files = os.listdir(src_dir)
-
             for j, f in enumerate(files):
-
-                # if j == 0:
-                #     if not first_start_index:
-                #         continue
-                #     first_start_index = False
-
+                if skip_1page and j < 1:
+                    continue
                 [id, ext] = f.split(".")
-                if i < 1000:
-                    shutil.copyfile(
-                        f"{src_dir}/{f}", f"{target}/{k:02d}-{i:03d}-{id}.{ext}"
-                    )
-                else:
-                    shutil.copyfile(
-                        f"{src_dir}/{f}", f"{target}/{k:02d}-last-ball-{id}.{ext}"
-                    )
+                shutil.copyfile(
+                    f"{src_dir}/{f}", f"{target}/{k:03d}-{i:03d}-{idx:03d}.{ext}"
+                )
+                idx += 1
+
+            # if add_bg_file:
+            #     if i < e:
+            #         shutil.copyfile(bgfile, f"{target}/{k:03d}-{i:04d}-{idx:03d}.{ext}")
 
 
 if __name__ == "__main__":
