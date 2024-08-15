@@ -14,34 +14,31 @@ import time
 
 
 def main():
-    ssl._create_default_https_context = ssl._create_unverified_context
+    # ssl._create_default_https_context = ssl._create_unverified_context
 
     name = "a"
-    base_path = f"D:/comix/etc/{name}"
+    base_path = f"c:/comix/etc/{name}"
     tags = [name]
-    tags.append("피안도 48일 후")
+    tags.append("스파이")
 
-    # tags.append("원피스")
-    # tags.append("(ONE PI…ECE)")
-    # tags.append("(ONE PI…CE)")
-    # tags.append("(ONE PIECE)")
-
-    # extract episodes
-    site_address = "https://www.11toon128.com/bbs"
-    list_address = f"{site_address}/board.php?bo_table=toons&stx=%ED%94%BC%EC%95%88%EB%8F%84%2048%EC%9D%BC%20%ED%9B%84&is=20182"
+    # Extract episodes
+    site_url = "https://11toon.com/bbs"
+    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EC%8A%A4%ED%8C%8C%EC%9D%B4+%ED%8C%A8%EB%B0%80%EB%A6%AC%28SPY+X+FAMILY%29&is=12725&sord=&type=&page=2"
     user_agent = UserAgent()
     headers = {"User-Agent": user_agent.random}
-    source = requests.get(list_address, headers=headers).text
+    source = requests.get(list_url, headers=headers)
 
+    # Page parsing
     soup = BeautifulSoup(source, "html.parser")
     hotKeys = soup.select("button.episode")
 
     # episode-wise operation
-    for i, key in enumerate(hotKeys, start=1):
-        # if i > 1:
+    for i, key in enumerate(reversed(hotKeys), start=1):
+        # for i, key in enumerate(hotKeys, start=1):
+        # if i < 11:
         #     continue
-        if i > 20:
-            continue
+        # if i > 20:
+        #     continue
         # if i not in [4]:
         #     continue
 
@@ -69,12 +66,13 @@ def main():
         print(f"{i}/{len(hotKeys)}: {title}")
 
         # extract episode target page
-        target = key.get("onclick").replace("location.href='.", site_address)
+        target = key.get("onclick").replace("location.href='.", site_url)
         target_address = target[:-1]
         # print(target_address)
 
         # extract image list
-        target = requests.get(target_address).text
+        headers = {"User-Agent": user_agent.random}
+        target = requests.get(target_address, headers=headers).text
 
         # with open("d:/text.txt", "w", encoding="UTF-8") as f:
         #     f.write(target)
@@ -99,6 +97,7 @@ def main():
             dst = f"{save_base_path}/{idx:03d}.{ext}"
 
             if not os.path.exists(dst):
+                headers = {"User-Agent": user_agent.random}
                 with http.request(
                     "GET", url, preload_content=False, headers=headers
                 ) as r, open(dst, "wb") as out_file:

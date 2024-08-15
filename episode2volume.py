@@ -4,7 +4,8 @@ import os
 import shutil
 
 episode2vol = {
-    44: [387, 394]
+    13: [98, 104]
+    # 45: [395, 402]
     # 107: [1077, 1088],
     # 21: [192, 201],  # 66
 }
@@ -12,14 +13,14 @@ episode2vol = {
 
 def main():
     skip_1page = False
-    base_dir = "D:/comix/etc/a"
-    base_dir1 = "D:/comix/etc/c"
-    bgfile = "D:/comix/etc/c/white.png"
-    add_bg_file = True
+    base_dir = "c:/comix/etc/a"
+    base_dir1 = "c:/comix/etc/c"
+    bgfile = "c:/comix/etc/c/white.png"
+    add_bg_file = False
 
     for k in episode2vol.keys():
         [s, e] = episode2vol.get(k)
-        target = f"{base_dir1}/{k:03d}"
+        target = f"{base_dir1}/{k:02d}"
         os.makedirs(target, exist_ok=True)
 
         for vol_idx, i in enumerate(range(s, e + 1)):
@@ -36,7 +37,7 @@ def main():
                     continue
                 [id, ext] = f.split(".")
                 shutil.copyfile(
-                    f"{src_dir}/{f}", f"{target}/{k:03d}-{i:03d}-{idx:03d}.{ext}"
+                    f"{src_dir}/{f}", f"{target}/{k:02d}-{i:03d}-{idx:03d}.{ext}"
                 )
                 idx += 1
 

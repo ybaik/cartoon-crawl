@@ -18,15 +18,17 @@ def cutting(img, src_img_path, right_cut):
 
 
 def main():
-    vol = 2
-    base_path = f"D:/comix/etc/a/{vol:02d}"
+    vol = 13
+    base_path = f"c:/comix/etc/c/{vol:02d}"
+    # base_path = f"c:/comix/etc/c"
+    page = 3
 
-    for i in range(0, 2):
+    for i in range(page, page + 1):
         src_img_path = f"{base_path}/{vol:02d}-000-{i:03d}.png"
         if not os.path.exists(src_img_path):
             continue
         img = cv2.imread(src_img_path)
-        cutting(img, src_img_path, right_cut=False)
+        cutting(img, src_img_path, right_cut=True)
 
     # for i in range(2, 3):
     #     src_img_path = f"{base_path}/{vol:02d}-000-{i:03d}.png"
