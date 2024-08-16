@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-import shutil
 
-main_dirs = ["미완", "미완_스캔", "연재중", "완결", "완결_스캔"]
+main_dirs = ["미완", "미완_스캔", "연재중", "연재중_스캔", "완결", "완결_스캔"]
 
 
 def check_dir_names(dirs_src, dirs_dst):
@@ -13,16 +12,19 @@ def check_dir_names(dirs_src, dirs_dst):
 
 
 def main():
-    base_path_src = "Z:"
-    base_path_dst = "D:/comix"
+    base_path_src = "Z:/"
+    base_path_dst = "E:/comix"
 
     diff = False
     num_series = 0
     for main_dir in main_dirs:
         main_dir_src = f"{base_path_src}/{main_dir}"
         main_dir_dst = f"{base_path_dst}/{main_dir}"
+
         dirs_src = os.listdir(main_dir_src)
         dirs_dst = os.listdir(main_dir_dst)
+        dirs_src.sort()
+        dirs_dst.sort()
 
         # 1 check dir count
         if len(dirs_src) != len(dirs_dst):

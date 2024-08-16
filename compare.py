@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-import shutil
 
-main_dirs = ["미완", "미완_스캔", "연재중", "완결", "완결_스캔"]
-# main_dirs = ["완결_스캔"]
+main_dirs = ["미완", "미완_스캔", "연재중", "연재중_스캔", "완결", "완결_스캔"]
 
 
 def check_dir_names(dirs_src, dirs_dst):
@@ -23,10 +21,10 @@ def filter_verified(dirs):
 
 def main():
     ignore_verified = True
-    base_path_src = "D:\comix"
-    base_path_src = "Z:/"
-    # base_path_dst = "Z:/"
-    base_path_dst = "E:/comix"
+    base_path_src = "d:/comix"
+    base_path_src = "e:/comix"
+    base_path_dst = "d:/comix"
+    base_path_dst = "c:/comix"
 
     diff = False
     num_series = 0
@@ -35,6 +33,8 @@ def main():
         main_dir_dst = f"{base_path_dst}/{main_dir}"
         dirs_src = os.listdir(main_dir_src)
         dirs_dst = os.listdir(main_dir_dst)
+        dirs_src.sort()
+        dirs_dst.sort()
 
         if ignore_verified:
             dirs_src = filter_verified(dirs_src)
@@ -63,11 +63,24 @@ def main():
             files_src = os.listdir(f"{main_dir_src}/{src}")
             files_dst = os.listdir(f"{main_dir_dst}/{dst}")
 
-            diff_set1 = set(files_src).difference(set(files_dst))
-            diff_set2 = set(files_dst).difference(set(files_src))
-            if len(diff_set1) + len(diff_set2):
-                diff = True
-                print(src, diff_set1, diff_set2)
+            if ignore_verified:
+                diff_set1 = set(files_src).difference(set(files_dst))
+                diff_set2 = set(files_dst).difference(set(files_src))
+                if len(diff_set1) + len(diff_set2):
+                    diff = True
+                    print(src, diff_set1, diff_set2)
+            else:
+                for file in files_src:
+                    name, ext = os.path.splitext(file)
+                    if ext not in [".zip", ".csv", ".txt"]:
+                        diff = True
+                        print(src)
+
+                for file in files_dst:
+                    name, ext = os.path.splitext(file)
+                    if ext not in [".zip", ".csv", ".txt"]:
+                        diff = True
+                        print(dst)
         num_series += len(dirs_src)
 
     if not diff:

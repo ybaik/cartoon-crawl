@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-import shutil
 
 
 def rename(base_path, vol, files):
@@ -23,7 +22,6 @@ def rename(base_path, vol, files):
 
 def main():
     base_path = "c:/comix/etc/c/08"
-    # base_path = "c:/comix/etc/던전밥/01"
 
     files = os.listdir(base_path)
     files.sort()
