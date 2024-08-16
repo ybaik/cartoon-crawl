@@ -7,7 +7,7 @@ import shutil
 def rename(base_path, vol, files):
     target_files = []
     for file in files:
-        vol_src = int(file.split("-")[1])
+        vol_src = file.split("-")[1]
         if vol_src != vol:
             continue
         target_files.append(file)
@@ -22,20 +22,20 @@ def rename(base_path, vol, files):
 
 
 def main():
-    base_path = "D:/comix/etc/c/044"
-    # base_path = "D:/comix/etc/원피스/096"
+    base_path = "c:/comix/etc/c/08"
+    # base_path = "c:/comix/etc/던전밥/01"
 
     files = os.listdir(base_path)
     files.sort()
 
     vols = set()
     for file in files:
-        vols.add(int(file.split("-")[1]))
+        vols.add(file.split("-")[1])
 
     print(vols)
 
     for vol in vols:
-        if vol == 0:
+        if vol == "000":
             continue
         rename(base_path, vol, files)
 

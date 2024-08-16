@@ -4,7 +4,7 @@ import os
 import shutil
 
 episode2vol = {
-    13: [98, 104]
+    9: [57, 62]
     # 45: [395, 402]
     # 107: [1077, 1088],
     # 21: [192, 201],  # 66
@@ -44,6 +44,32 @@ def main():
             # if add_bg_file:
             #     if i < e:
             #         shutil.copyfile(bgfile, f"{target}/{k:03d}-{i:04d}-{idx:03d}.{ext}")
+
+    # Ext
+    return
+    episode2vol["ext"] = ["2권 번외편"]
+    if episode2vol.get("ext") is not None:
+        dsts = episode2vol.get("ext")
+        cnt = 1
+        v = list(episode2vol.keys())[0]
+        target = f"{base_dir1}/{v:02d}"
+        for dst in dsts:
+            src_dir = f"{base_dir}/{dst}"
+
+            if not os.path.exists(src_dir):
+                print(src_dir)
+                continue
+
+            files = os.listdir(src_dir)
+
+            for j, f in enumerate(files):
+                if j == 0:
+                    continue
+                [id, ext] = f.split(".")
+                shutil.copyfile(
+                    f"{src_dir}/{f}", f"{target}/{v:02d}-ext-{cnt:03d}.{ext}"
+                )
+                cnt += 1
 
 
 if __name__ == "__main__":
