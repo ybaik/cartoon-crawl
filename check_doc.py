@@ -2,12 +2,29 @@
 
 import os
 import pandas as pd
+from common.info import MAIN_DIRS
 
 
 def main():
-    base_path = "D:/comix/verified/완결_스캔"
-    base_path = "D:/comix/미완"
+    base_dir = "d:/comix"
 
+    for main_name in MAIN_DIRS:
+        main_dir = f"{base_dir}/{main_name}"
+        dirs = os.listdir(main_dir)
+        dirs.sort()
+
+        for d in dirs:
+            full_d = f"{main_dir}/{d}"
+            files = os.listdir(full_d)
+            for file in files:
+                name, ext = os.path.splitext(file)
+                if ext != ".txt":
+                    continue
+                if name != "error":
+                    continue
+                print(full_d, file)
+
+    return
     # Check Dir
     ds = os.listdir(base_path)
     dirs = []

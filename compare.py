@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-
-main_dirs = ["미완", "미완_스캔", "연재중", "연재중_스캔", "완결", "완결_스캔"]
+from common.info import MAIN_DIRS
 
 
 def check_dir_names(dirs_src, dirs_dst):
@@ -20,15 +19,13 @@ def filter_verified(dirs):
 
 
 def main():
-    ignore_verified = True
+    ignore_verified = False
     base_path_src = "d:/comix"
-    base_path_src = "e:/comix"
-    base_path_dst = "d:/comix"
-    base_path_dst = "c:/comix"
+    base_path_dst = "e:/comix"
 
     diff = False
     num_series = 0
-    for main_dir in main_dirs:
+    for main_dir in MAIN_DIRS:
         main_dir_src = f"{base_path_src}/{main_dir}"
         main_dir_dst = f"{base_path_dst}/{main_dir}"
         dirs_src = os.listdir(main_dir_src)
@@ -40,7 +37,7 @@ def main():
             dirs_src = filter_verified(dirs_src)
             dirs_dst = filter_verified(dirs_dst)
 
-        # 1 check dir count
+        # Check dir count
         if len(dirs_src) != len(dirs_dst):
             print(f"Num dir difference: {main_dir_src}, {main_dir_dst}")
 
@@ -52,7 +49,7 @@ def main():
             diff = True
             continue
 
-        # check names
+        # Check names
         for src, dst in zip(dirs_src, dirs_dst):
             if src != dst:
                 diff = True
@@ -85,7 +82,7 @@ def main():
 
     if not diff:
         print("No differences.")
-        print(f"Sceries: {num_series}")
+        print(f"Series: {num_series}")
 
     print("done")
 

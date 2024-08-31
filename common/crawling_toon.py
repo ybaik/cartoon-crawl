@@ -179,6 +179,10 @@ def download_images(json_data: Dict, save_base_dir: Path, tags: List) -> None:
     for k, v in json_data.items():
         print(k)
         name = filter_title(k, tags)
+
+        # print(name)
+        # continue
+
         save_dir = save_base_dir / name
         if not save_dir.exists():
             save_dir.mkdir()

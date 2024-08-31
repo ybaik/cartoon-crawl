@@ -21,9 +21,10 @@ def rename(base_path, vol, files):
 
 
 def main():
-    base_path = "c:/comix/etc/c/08"
+    # base_dir = "C:/comix/완결_스캔/아이 앰 어 히어로 1-22(완)/22"
+    base_dir = "C:/comix/etc/c/19"
 
-    files = os.listdir(base_path)
+    files = os.listdir(base_dir)
     files.sort()
 
     vols = set()
@@ -35,7 +36,7 @@ def main():
     for vol in vols:
         if vol == "000":
             continue
-        rename(base_path, vol, files)
+        rename(base_dir, vol, files)
 
 
 if __name__ == "__main__":

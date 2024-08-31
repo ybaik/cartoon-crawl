@@ -5,7 +5,7 @@ import shutil
 
 
 def main():
-    base_path = "D:/comix/etc/더 파이팅"
+    base_path = "c:/comix/etc/b"
     # base_path = "D:/comix/etc/b/3권"
 
     els = os.listdir(base_path)

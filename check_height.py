@@ -8,12 +8,12 @@ from tqdm import tqdm
 exts = [".jpg", ".png", ".gif"]
 
 
-def check_height(base_path, clean_scan=False, check_ext_only=False):
+def check_height(base_dir, clean_scan=False, check_ext_only=False):
     exts_ = set()
-    targets = os.listdir(base_path)
+    targets = os.listdir(base_dir)
     dirs = []
     for target in targets:
-        target_path = f"{base_path}/{target}"
+        target_path = f"{base_dir}/{target}"
         if not os.path.isdir(target_path):
             continue
         dirs.append(target)
@@ -25,7 +25,7 @@ def check_height(base_path, clean_scan=False, check_ext_only=False):
 
     cnt = 0
     for folder in tqdm(dirs):
-        target_dir = f"{base_path}/{folder}"
+        target_dir = f"{base_dir}/{folder}"
         if not os.path.isdir(target_dir):
             continue
         # print(folder)
@@ -70,13 +70,13 @@ def check_height(base_path, clean_scan=False, check_ext_only=False):
         cnt += 1
 
     if not check_ext_only:
-        df.to_csv(f"{base_path}/info.csv", index=False)
+        df.to_csv(f"{base_dir}/info.csv", index=False)
     print(exts_)
 
 
 if __name__ == "__main__":
-    base_path = "D:\comix\etc\c"
+    base_dir = "c:/comix/etc/c"
     clean_scan = True
     check_ext_only = False
 
-    check_height(base_path, clean_scan, check_ext_only)
+    check_height(base_dir, clean_scan, check_ext_only)

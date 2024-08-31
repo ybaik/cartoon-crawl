@@ -2,8 +2,7 @@
 
 import os
 from zipfile import ZipFile
-
-main_dirs = ["미완", "미완_스캔", "연재중", "연재중_스캔", "완결", "완결_스캔"]
+from common.info import MAIN_DIRS
 
 
 def check_zip(base_dir):
@@ -31,7 +30,7 @@ def check_zip(base_dir):
 def main():
     base_dir = "z:/"
 
-    for main_dir in main_dirs:
+    for main_dir in MAIN_DIRS:
         main_dir_src = f"{base_dir}/{main_dir}"
 
         if not os.path.exists(main_dir_src):
