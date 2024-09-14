@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import os
-from common.info import MAIN_DIRS
+
+
+MAIN_DIRS = ["미완", "미완_스캔", "연재중", "연재중_스캔", "완결", "완결_스캔"]
 
 
 def check_dir_names(dirs_src, dirs_dst):
@@ -19,9 +21,9 @@ def filter_verified(dirs):
 
 
 def main():
-    ignore_verified = False
-    base_path_src = "d:/comix"
-    base_path_dst = "e:/comix"
+    ignore_verified = True
+    base_path_src = "c:/comix"
+    base_path_dst = "d:/comix"
 
     diff = False
     num_series = 0
@@ -65,7 +67,7 @@ def main():
                 diff_set2 = set(files_dst).difference(set(files_src))
                 if len(diff_set1) + len(diff_set2):
                     diff = True
-                    print(src, diff_set1, diff_set2)
+                    print(src, sorted(diff_set1), sorted(diff_set2))
             else:
                 for file in files_src:
                     name, ext = os.path.splitext(file)
