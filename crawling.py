@@ -3,12 +3,10 @@ import json
 from pathlib import Path
 from common.crawling_toon import (
     crawling_vols,
-    crawling_vols_selenium,
     crawling_img_list,
-    crawling_img_list_selenium,
     download_images,
 )
-
+from common.crawler import SeleniumCrawlerToon
 
 USE_SELENIUM = False
 
@@ -20,11 +18,11 @@ def main():
     json_path = base_dir / "info.json"
 
     # Set url
-    site_url = "https://www.11toon132.com/bbs"
-    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EB%B0%94%EB%9E%8C%EA%B3%84%EA%B3%A1%EC%9D%98%20%EB%82%98%EC%9A%B0%EC%8B%9C%EC%B9%B4&is=11125"
+    site_url = "https://www.11toon134.com/bbs"
+    list_url = f"{site_url}/board.php?bo_table=toons&stx=%ED%8E%AB%EC%88%8D%20%EC%98%A4%EB%B8%8C%20%ED%98%B8%EB%9F%AC%EC%A6%88&is=21025"
 
     tags = []
-    tags.append("바람계곡의 나우시카")
+    tags.append("펫숍 오브 호러즈")
 
     # Read url list
     if json_path.exists():
@@ -33,19 +31,17 @@ def main():
     else:
         json_data = dict()
 
-    # Extract voulumn-wise url information via
     if not USE_SELENIUM:
         crawling_vols(site_url, list_url, json_data, json_path)
-    else:
-        crawling_vols_selenium(site_url, list_url, json_data, json_path)
-
-    # Extract image-wise url information via crawling
-    if not USE_SELENIUM:
         crawling_img_list(json_data, json_path)
     else:
-        crawling_img_list_selenium(json_data, json_path)
-    # return
 
+        crawler = SeleniumCrawlerToon()
+        crawler.crawling_vols(site_url, list_url, json_data, json_path)
+        crawler.crawling_img_list(json_data, json_path)
+        crawler.deinit()
+
+    # return
     download_images(json_data, base_dir, tags)
 
 

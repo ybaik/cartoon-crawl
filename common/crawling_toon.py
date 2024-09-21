@@ -10,9 +10,6 @@ from pathlib import Path
 from typing import List, Dict
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
 
 
 def filter_title(title: str, tags: List) -> str:
@@ -61,39 +58,6 @@ def crawling_vols(
         json.dump(json_data, f, ensure_ascii=False, indent=4)
 
 
-def crawling_vols_selenium(
-    site_url: str, list_url: str, json_data: Dict, json_path: Path
-) -> None:
-    if len(json_data.keys()) != 0:
-        return
-
-    print("Volumn crawling has started...")
-    print(list_url)
-
-    driver_path = "c:/work/chromedriver-win64/chromedriver.exe"
-    service = Service(executable_path=driver_path)
-    options = webdriver.ChromeOptions()
-    options.add_argument("--ignore-certificate-error")
-    options.add_argument("--ignore-ssl-errors")
-    driver = webdriver.Chrome(service=service, options=options)
-
-    # Open page
-    driver.get(url=list_url)
-
-    poses = driver.find_elements(By.XPATH, '//*[@id="comic-episode-list"]/li/button')
-    for p in poses:
-        title = p.find_element(By.CLASS_NAME, "episode-title").text
-        vol_url = p.get_attribute("onclick").replace("location.href='.", site_url)[:-1]
-        if json_data.get(title) is None:
-            json_data[title] = dict()
-        json_data[title]["vol_url"] = vol_url
-
-    with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(json_data, f, ensure_ascii=False, indent=4)
-
-    driver.quit()
-
-
 def crawling_img_list(json_data: Dict, json_path: Path) -> None:
 
     # Check if there is file-wise url exists
@@ -125,51 +89,6 @@ def crawling_img_list(json_data: Dict, json_path: Path) -> None:
 
             with open(json_path, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
-
-
-def crawling_img_list_selenium(json_data: Dict, json_path: Path) -> None:
-
-    # Check if there is file-wise url exists
-    need_crawling_img_list = False
-    for vol in json_data.values():
-        if vol.get("img_url") is None:
-            need_crawling_img_list = True
-            break
-
-    if not need_crawling_img_list:
-        return
-
-    print("Image list crawling has started...")
-
-    driver_path = "c:/work/chromedriver-win64/chromedriver.exe"
-    service = Service(executable_path=driver_path)
-    options = webdriver.ChromeOptions()
-    options.add_argument("--ignore-certificate-error")
-    options.add_argument("--ignore-ssl-errors")
-    driver = webdriver.Chrome(service=service, options=options)
-
-    for k, v in json_data.items():
-        if not v.get("img_url") is None:
-            continue
-
-        # Open page
-        driver.get(url=v.get("vol_url"))
-
-        # Find image url list
-        p_id = driver.find_elements(By.TAG_NAME, "script")
-        for script in p_id:
-            innerHTML = script.get_property("innerHTML")
-            matched = re.search("var img_list = (.+?);", innerHTML, re.S)
-            if matched is not None:
-                json_string = matched.group(1)
-                img_list = json.loads(json_string)
-                json_data[k]["img_url"] = img_list
-
-                with open(json_path, "w", encoding="utf-8") as f:
-                    json.dump(json_data, f, ensure_ascii=False, indent=4)
-                break
-
-    driver.quit()
 
 
 def download_images(json_data: Dict, save_base_dir: Path, tags: List) -> None:
