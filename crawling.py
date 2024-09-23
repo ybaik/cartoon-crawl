@@ -35,8 +35,7 @@ def main():
         crawling_vols(site_url, list_url, json_data, json_path)
         crawling_img_list(json_data, json_path)
     else:
-
-        crawler = SeleniumCrawlerToon()
+        crawler = SeleniumCrawlerToon(headless=True)
         crawler.crawling_vols(site_url, list_url, json_data, json_path)
         crawler.crawling_img_list(json_data, json_path)
         crawler.deinit()

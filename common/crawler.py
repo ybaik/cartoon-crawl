@@ -31,18 +31,25 @@ def filter_title(title: str, tags: List) -> str:
 class SeleniumCrawler:
     def __init__(
         self,
+        headless: bool = False,
         driver_path: str = "c:/work/chromedriver-win64/chromedriver.exe",
         profile_path: str = "C:/Users/hyunx/AppData/Local/Google/Chrome/User Data",
     ) -> None:
         service = Service(executable_path=driver_path)
         options = Options()
-        options.add_argument(f"user-data-dir={profile_path}")
+
+        # Set basic options
+        options.add_argument("--disable-extensions")
         options.add_argument("--disable-blink-features=AutomationControlled")
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--remote-debugging-port=9222")
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        options.add_experimental_option("useAutomationExtension", False)
+
+        # Set options selectively
+        if headless:
+            options.add_argument("--headless")
+        else:
+            options.add_argument(f"user-data-dir={profile_path}")
+            options.add_argument("--remote-debugging-port=9222")
+            options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            options.add_experimental_option("useAutomationExtension", False)
 
         self.driver = webdriver.Chrome(service=service, options=options)
 
@@ -190,33 +197,55 @@ class SeleniumCrawlerToki(SeleniumCrawler):
                         json.dump(json_data, f, ensure_ascii=False, indent=4)
                     break
 
-    # def download_images(self, json_data: Dict, save_base_dir: Path, tags: List) -> None:
+    def download_images(self, json_data: Dict, save_base_dir: Path, tags: List) -> None:
 
-    #     for k, v in json_data.items():
-    #         print(k)
-    #         name = filter_title(k, tags)
+        for k, v in json_data.items():
+            print(k)
+            name = filter_title(k, tags)
 
-    #         # print(name)
-    #         # continue
+            self.driver.get(url=v["vol_url"])
 
-    #         save_dir = save_base_dir / name
-    #         if not save_dir.exists():
-    #             save_dir.mkdir()
-    #         else:
-    #             # check number of files
-    #             files = [p for p in save_dir.glob("*.*")]
-    #             if len(files) >= 15:
-    #                 continue
+            p_id = self.driver.find_elements(By.TAG_NAME, "img")
+            for script in p_id:
+                print(1)
 
-    #         # Download images
-    #         idx = 1
-    #         for img_url in tqdm(v["img_url"]):
-    #             ext = img_url.split(".")[-1]
-    #             if ext not in ["jpg", "JPG", "jpeg", "JPEG"]:
-    #                 ext = "jpg"
-    #             dst_path = save_dir / f"{idx:03d}.{ext}"
-    #             if not dst_path.exists():
-    #                 wget.download(img_url, str(dst_path))
-    #             idx += 1
-    #         break
-    #         time.sleep(1)
+            cnt = 0
+            for img_url in tqdm(v["img_url"]):
+
+                if cnt < 10:
+                    cnt += 1
+                    continue
+
+                self.driver.get(url=img_url)
+                print(1)
+
+            # continue
+
+            # save_dir = save_base_dir / name
+            # if not save_dir.exists():
+            #     save_dir.mkdir()
+            # else:
+            #     # check number of files
+            #     files = [p for p in save_dir.glob("*.*")]
+            #     if len(files) >= 15:
+            #         continue
+
+            # # Download images
+            # idx = 1
+            # for img_url in tqdm(v["img_url"]):
+            #     ext = img_url.split(".")[-1]
+            #     if ext not in ["jpg", "JPG", "jpeg", "JPEG"]:
+            #         ext = "jpg"
+            #     dst_path = save_dir / f"{idx:03d}.{ext}"
+            #     if not dst_path.exists():
+            #         headers = {"User-Agent": user_agent.random}
+            #         with http.request(
+            #             "GET", img_url, preload_content=False, headers=headers
+            #         ) as r, open(dst_path, "wb") as out_file:
+            #             shutil.copyfileobj(r, out_file)
+            #         print(1)
+
+            #     break
+            #     idx += 1
+            # break
+            # time.sleep(1)

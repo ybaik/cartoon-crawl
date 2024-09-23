@@ -4,10 +4,9 @@ import os
 from common.info import MAIN_DIRS
 
 
-def check_dir_names(dirs_src, dirs_dst):
-    for src in dirs_src:
-        if src not in dirs_dst:
-            print(f"Diff: {src}")
+def check_dir_names(names):
+    for name in names:
+        print(f"Diff: {name}")
 
 
 def filter_verified(dirs):
@@ -37,47 +36,47 @@ def main():
             dirs_src = filter_verified(dirs_src)
             dirs_dst = filter_verified(dirs_dst)
 
-        # Check dir count
-        if len(dirs_src) != len(dirs_dst):
+        # Check dir
+        diff_src = set(dirs_src) - set(dirs_dst)
+        if len(diff_src):
             print(f"Num dir difference: {main_dir_src}, {main_dir_dst}")
-
             # check names
-            if len(dirs_src) > len(dirs_dst):
-                check_dir_names(dirs_src, dirs_dst)
-            else:
-                check_dir_names(dirs_dst, dirs_src)
+            check_dir_names(diff_src)
             diff = True
-            continue
+
+        diff_dst = set(dirs_dst) - set(dirs_src)
+        if len(diff_dst):
+            print(f"Num dir difference: {main_dir_src}, {main_dir_dst}")
+            # check names
+            check_dir_names(diff_dst)
+            diff = True
+
+        names = set(dirs_src) & set(dirs_dst)
 
         # Check names
-        for src, dst in zip(dirs_src, dirs_dst):
-            if src != dst:
-                diff = True
-                print(f"Dir name different: {main_dir_src}/{src}")
-                continue
-
+        for name in names:
             # check ext [zip and csv]
-            files_src = os.listdir(f"{main_dir_src}/{src}")
-            files_dst = os.listdir(f"{main_dir_dst}/{dst}")
+            files_src = os.listdir(f"{main_dir_src}/{name}")
+            files_dst = os.listdir(f"{main_dir_dst}/{name}")
 
             if ignore_verified:
                 diff_set1 = set(files_src).difference(set(files_dst))
                 diff_set2 = set(files_dst).difference(set(files_src))
                 if len(diff_set1) + len(diff_set2):
                     diff = True
-                    print(src, sorted(diff_set1), sorted(diff_set2))
+                    print(name, sorted(diff_set1), sorted(diff_set2))
             else:
                 for file in files_src:
                     name, ext = os.path.splitext(file)
                     if ext not in [".zip", ".csv", ".txt"]:
                         diff = True
-                        print(src)
+                        print(name)
 
                 for file in files_dst:
                     name, ext = os.path.splitext(file)
                     if ext not in [".zip", ".csv", ".txt"]:
                         diff = True
-                        print(dst)
+                        print(name)
         num_series += len(dirs_src)
 
     if not diff:

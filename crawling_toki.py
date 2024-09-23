@@ -12,7 +12,7 @@ def main():
 
     # Set url
     site_url = "https://manatoki461.net/comic"
-    list_url = f"{site_url}/278794?stx=%EC%B9%B4%EB%93%9C%EC%BA%A1%ED%84%B0"
+    list_url = f"{site_url}/278794?stx=%EC%B9%B4%EB%93%9C%EC%BA%A1%ED%84%B0&sst=wr_datetime&sod=desc"
 
     tags = []
     tags.append("카드캡터 사쿠라")
@@ -34,7 +34,8 @@ def main():
     crawler.crawling_img_list(json_data, json_path)
 
     # return
-    # crawler.download_images(json_data, base_dir, tags)
+    crawler.download_images(json_data, base_dir, tags)
+    crawler.deinit()
 
 
 if __name__ == "__main__":
