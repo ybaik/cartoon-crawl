@@ -18,11 +18,18 @@ def filter_verified(dirs):
 
 
 def main():
-    ignore_verified = True
-    base_path_src = "c:/comix"
+
+    compare_btw_hdd = True
+
+    if compare_btw_hdd:
+        ignore_verified = False
+        base_path_src = "e:/comix"
+    else:
+        ignore_verified = True
+        base_path_src = "c:/comix"
     base_path_dst = "d:/comix"
 
-    diff = False
+    diff = True
     num_series = 0
     for main_dir in MAIN_DIRS:
         main_dir_src = f"{base_path_src}/{main_dir}"
@@ -81,8 +88,8 @@ def main():
 
     if not diff:
         print("No differences.")
-        print(f"Series: {num_series}")
 
+    print(f"Series: {num_series}")
     print("done")
 
 
