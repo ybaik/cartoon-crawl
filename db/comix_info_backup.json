@@ -1,0 +1,1937 @@
+{
+    "20세기 소년": {
+        "title": {
+            "kor": "20세기 소년",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-22,외전(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "3x3 EYES": {
+        "title": {
+            "kor": "3x3 EYES",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-40(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "Beck": {
+        "title": {
+            "kor": "Beck",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-34(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "H2": {
+        "title": {
+            "kor": "H2",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-34(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "Someday": {
+        "title": {
+            "kor": "Someday",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-8(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 1파운드의 복음": {
+        "title": {
+            "kor": "1파운드의 복음",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-4(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] All you need is kill": {
+        "title": {
+            "kor": "All you need is kill",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-2(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 가시나무왕": {
+        "title": {
+            "kor": "가시나무왕",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-6(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 간츠": {
+        "title": {
+            "kor": "간츠",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-37(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 간츠G": {
+        "title": {
+            "kor": "간츠G",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-3(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 감시관 츠네모리 아카네": {
+        "title": {
+            "kor": "감시관 츠네모리 아카네",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-6(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 감옥실험": {
+        "title": {
+            "kor": "감옥실험",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-10(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 강식장갑 가이버": {
+        "title": {
+            "kor": "강식장갑 가이버",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-29",
+        "verified": "O",
+        "status": "미완_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 강철의 연금술사": {
+        "title": {
+            "kor": "강철의 연금술사",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-27(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 건슬링거 걸": {
+        "title": {
+            "kor": "건슬링거 걸",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-15(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 골든 카무이": {
+        "title": {
+            "kor": "골든 카무이",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-31(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 공각기동대": {
+        "title": {
+            "kor": "공각기동대",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 괴수 8호": {
+        "title": {
+            "kor": "괴수 8호",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-13",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 구름 일족과 진흙 소녀": {
+        "title": {
+            "kor": "구름 일족과 진흙 소녀",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-3(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 귀멸의 칼날": {
+        "title": {
+            "kor": "귀멸의 칼날",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-23(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 기생수 애장판": {
+        "title": {
+            "kor": "기생수 애장판",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-8(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 꼭두각시 서커스": {
+        "title": {
+            "kor": "꼭두각시 서커스",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-43(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 꿈의 화석": {
+        "title": {
+            "kor": "꿈의 화석",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 던전밥": {
+        "title": {
+            "kor": "던전밥",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-14(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 데스노트": {
+        "title": {
+            "kor": "데스노트",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-12(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 도로헤도로": {
+        "title": {
+            "kor": "도로헤도로",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-23(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 드래곤 헤드": {
+        "title": {
+            "kor": "드래곤 헤드",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-10(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 디트로이트 메탈시티": {
+        "title": {
+            "kor": "디트로이트 메탈시티",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-10(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 라이어 게임": {
+        "title": {
+            "kor": "라이어 게임",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-19(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 러프": {
+        "title": {
+            "kor": "러프",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-12(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 마브러브 언리미티드": {
+        "title": {
+            "kor": "마브러브 언리미티드",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-4(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 미래일기": {
+        "title": {
+            "kor": "미래일기",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-12(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 바람 계곡의 나우시카": {
+        "title": {
+            "kor": "바람 계곡의 나우시카",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-7(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 바질리스크 오우카인법첩": {
+        "title": {
+            "kor": "바질리스크 오우카인법첩",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-7(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 바질리스크 코우가인법첩": {
+        "title": {
+            "kor": "바질리스크 코우가인법첩",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-5(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 반항하지마": {
+        "title": {
+            "kor": "반항하지마",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-25(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 베르사이유의 장미 완전판": {
+        "title": {
+            "kor": "베르사이유의 장미 완전판",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-13(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 북두의 권": {
+        "title": {
+            "kor": "북두의 권",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-44(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 불새": {
+        "title": {
+            "kor": "불새",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-17(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 블레임!": {
+        "title": {
+            "kor": "블레임!",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-10(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 비바 블루스": {
+        "title": {
+            "kor": "비바 블루스",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-42(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 비서과 드롭": {
+        "title": {
+            "kor": "비서과 드롭",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-3(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 스프리건": {
+        "title": {
+            "kor": "스프리건",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-11(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 슬램덩크": {
+        "title": {
+            "kor": "슬램덩크",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-24(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 시도니아의 기사": {
+        "title": {
+            "kor": "시도니아의 기사",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-15(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 시리우스의 상처": {
+        "title": {
+            "kor": "시리우스의 상처",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-4(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 시마계장": {
+        "title": {
+            "kor": "시마계장",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-4(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 시마과장": {
+        "title": {
+            "kor": "시마과장",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-17(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 식령": {
+        "title": {
+            "kor": "식령",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-12(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 신세기 에반게리온": {
+        "title": {
+            "kor": "신세기 에반게리온",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-14(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 아이 앰 어 히어로": {
+        "title": {
+            "kor": "아이 앰 어 히어로",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-22(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 아카메가 벤다!": {
+        "title": {
+            "kor": "아카메가 벤다!",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-15(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 아키라": {
+        "title": {
+            "kor": "아키라",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-12(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 암스": {
+        "title": {
+            "kor": "암스",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-22(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 애플시드": {
+        "title": {
+            "kor": "애플시드",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-4(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 여자공병": {
+        "title": {
+            "kor": "여자공병",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-7(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 엿보기 구멍": {
+        "title": {
+            "kor": "엿보기 구멍",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-13(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 오버로드": {
+        "title": {
+            "kor": "오버로드",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-19(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 원 아웃": {
+        "title": {
+            "kor": "원 아웃",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-20(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 원피스": {
+        "title": {
+            "kor": "원피스",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-109",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 월광": {
+        "title": {
+            "kor": "월광",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-4(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 유체 노바": {
+        "title": {
+            "kor": "유체 노바",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-2(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 전영소녀 애장판": {
+        "title": {
+            "kor": "전영소녀 애장판",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-8(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 주술회전": {
+        "title": {
+            "kor": "주술회전",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-27",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 지옥락": {
+        "title": {
+            "kor": "지옥락",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-13(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 진격의 거인": {
+        "title": {
+            "kor": "진격의 거인",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-34(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 창천항로": {
+        "title": {
+            "kor": "창천항로",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-36(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 총몽": {
+        "title": {
+            "kor": "총몽",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-19(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 최애의 아이": {
+        "title": {
+            "kor": "최애의 아이",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-15",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 칠석의 나라": {
+        "title": {
+            "kor": "칠석의 나라",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-4(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 카미야도리": {
+        "title": {
+            "kor": "카미야도리",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-5(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 크라잉 프리맨": {
+        "title": {
+            "kor": "크라잉 프리맨",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-9(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 클레이모어": {
+        "title": {
+            "kor": "클레이모어",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-27(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 트라이건": {
+        "title": {
+            "kor": "트라이건",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-2(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 파이어 펀치": {
+        "title": {
+            "kor": "파이어 펀치",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-8(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 펫숍 오브 호러스 애장판": {
+        "title": {
+            "kor": "펫숍 오브 호러스 애장판",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-7(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 표류교실": {
+        "title": {
+            "kor": "표류교실",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-11(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 플라네테스": {
+        "title": {
+            "kor": "플라네테스",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-4(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 플루토": {
+        "title": {
+            "kor": "플루토",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-8(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 피안도": {
+        "title": {
+            "kor": "피안도",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-49(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 피안도 48일 후": {
+        "title": {
+            "kor": "피안도 48일 후",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-45",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 해귀선": {
+        "title": {
+            "kor": "해귀선",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 헬싱": {
+        "title": {
+            "kor": "헬싱",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-10(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] 흑집사": {
+        "title": {
+            "kor": "흑집사",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-32",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "가가탐정사무소": {
+        "title": {
+            "kor": "가가탐정사무소",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-15(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "가디언 하트": {
+        "title": {
+            "kor": "가디언 하트",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-8(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "가면전사 아쿠메츠": {
+        "title": {
+            "kor": "가면전사 아쿠메츠",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-18(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "감옥학원": {
+        "title": {
+            "kor": "감옥학원",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-28(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "고스트 바둑왕": {
+        "title": {
+            "kor": "고스트 바둑왕",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-23(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "공작왕": {
+        "title": {
+            "kor": "공작왕",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-17(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "권아": {
+        "title": {
+            "kor": "권아",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-22(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "더 파이팅": {
+        "title": {
+            "kor": "더 파이팅",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-111",
+        "verified": "X",
+        "status": "미완_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "도전 AV 여배우": {
+        "title": {
+            "kor": "도전 AV 여배우",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-5",
+        "verified": "X",
+        "status": "미완",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "마스터 키튼": {
+        "title": {
+            "kor": "마스터 키튼",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-18(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "매드 불34": {
+        "title": {
+            "kor": "매드 불34",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-22",
+        "verified": "X",
+        "status": "미완",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "몬스터": {
+        "title": {
+            "kor": "몬스터",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-18(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "무한의 주인": {
+        "title": {
+            "kor": "무한의 주인",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-30(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "바스타드": {
+        "title": {
+            "kor": "바스타드",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-26",
+        "verified": "X",
+        "status": "미완_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "뱀파이어 번드": {
+        "title": {
+            "kor": "뱀파이어 번드",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-14(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "베르세르크": {
+        "title": {
+            "kor": "베르세르크",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-41",
+        "verified": "X",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "선켄락": {
+        "title": {
+            "kor": "선켄락",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-17",
+        "verified": "X",
+        "status": "미완",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "시마부장": {
+        "title": {
+            "kor": "시마부장",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-13(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "시마이사": {
+        "title": {
+            "kor": "시마이사",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-8(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "신 쿵후보이 친미": {
+        "title": {
+            "kor": "신 쿵후보이 친미",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-20(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "신 펫숍 오브 호러스": {
+        "title": {
+            "kor": "신 펫숍 오브 호러스",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-12(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "신의 물방울": {
+        "title": {
+            "kor": "신의 물방울",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-44(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "아이실드21": {
+        "title": {
+            "kor": "아이실드21",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-37(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "에덴": {
+        "title": {
+            "kor": "에덴",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-18(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "오르페우스의 창": {
+        "title": {
+            "kor": "오르페우스의 창",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-18(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "원한 해결 사무소 1부": {
+        "title": {
+            "kor": "원한 해결 사무소 1부",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-20(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "원한 해결 사무소 2부 요코하마 지점": {
+        "title": {
+            "kor": "원한 해결 사무소 2부 요코하마 지점",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-6(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "의룡": {
+        "title": {
+            "kor": "의룡",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-25(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "의천도룡기": {
+        "title": {
+            "kor": "의천도룡기",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-20(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "이트맨": {
+        "title": {
+            "kor": "이트맨",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-15",
+        "verified": "X",
+        "status": "미완_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "인고시마": {
+        "title": {
+            "kor": "인고시마",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-13",
+        "verified": "X",
+        "status": "미완",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "종말의 하렘": {
+        "title": {
+            "kor": "종말의 하렘",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-16",
+        "verified": "X",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "지뢰진": {
+        "title": {
+            "kor": "지뢰진",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-19(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "체인소맨": {
+        "title": {
+            "kor": "체인소맨",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-13",
+        "verified": "X",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "카드캡터 사쿠라": {
+        "title": {
+            "kor": "카드캡터 사쿠라",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-12(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "카드캡터 사쿠라 클리어 카드 편": {
+        "title": {
+            "kor": "카드캡터 사쿠라 클리어 카드 편",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-12",
+        "verified": "X",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "카페 알파": {
+        "title": {
+            "kor": "카페 알파",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-14(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "쿵후보이 친미 Legends": {
+        "title": {
+            "kor": "쿵후보이 친미 Legends",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-15",
+        "verified": "X",
+        "status": "미완_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "터치": {
+        "title": {
+            "kor": "터치",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-26(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "파이브 스타 스토리즈": {
+        "title": {
+            "kor": "파이브 스타 스토리즈",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-12",
+        "verified": "X",
+        "status": "미완_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "판도라 하츠": {
+        "title": {
+            "kor": "판도라 하츠",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-24(완)",
+        "verified": "X",
+        "status": "완결",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "피스메이커": {
+        "title": {
+            "kor": "피스메이커",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-9",
+        "verified": "X",
+        "status": "미완_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "허리케인 죠": {
+        "title": {
+            "kor": "허리케인 죠",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-20(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "호문쿨루스": {
+        "title": {
+            "kor": "호문쿨루스",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-15(완)",
+        "verified": "X",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "히스토리에": {
+        "title": {
+            "kor": "히스토리에",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-11",
+        "verified": "X",
+        "status": "연재중",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    }
+}

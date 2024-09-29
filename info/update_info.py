@@ -50,7 +50,7 @@ def gather_info(check_dir, json_data):
 
 def main():
     check_dir = Path("d:/comix")
-    json_path = Path("./comix_info.json")
+    json_path = Path("./db/comix_info.json")
 
     # Read comix list
     if json_path.exists():
