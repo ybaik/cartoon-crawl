@@ -1,7 +1,6 @@
 __pycache__
 .idea
 .vscode
-*.json
 
 # Distribution / packaging
 *egg-info/
