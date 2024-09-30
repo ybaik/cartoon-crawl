@@ -17,7 +17,7 @@
     "3x3 EYES": {
         "title": {
             "kor": "3x3 EYES",
-            "eng": "3×3 EYES",
+            "eng": "3x3 EYES",
             "jpn": "サザンアイズ"
         },
         "vols": "1-40(완)",
@@ -1004,6 +1004,21 @@
             "jpn": "李學仁,王 欣太"
         }
     },
+    "[o] 체인소맨": {
+        "title": {
+            "kor": "체인소맨",
+            "eng": "Chainsaw Man",
+            "jpn": "チェンソーマン"
+        },
+        "vols": "1-13",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "후지모토 타츠키",
+            "eng": "Tatuski Fujimoto",
+            "jpn": "藤本 タツキ"
+        }
+    },    
     "[o] 총몽": {
         "title": {
             "kor": "총몽",
@@ -1752,21 +1767,6 @@
             "kor": "다카하시 츠토무",
             "eng": "Tsutomu Takahashi",
             "jpn": "髙橋 ツトム"
-        }
-    },
-    "체인소맨": {
-        "title": {
-            "kor": "체인소맨",
-            "eng": "Chainsaw Man",
-            "jpn": "チェンソーマン"
-        },
-        "vols": "1-13",
-        "verified": "X",
-        "status": "연재중",
-        "author": {
-            "kor": "후지모토 타츠키",
-            "eng": "Tatuski Fujimoto",
-            "jpn": "藤本 タツキ"
         }
     },
     "카드캡터 사쿠라": {

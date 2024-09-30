@@ -45,6 +45,7 @@ class SeleniumCrawler:
         # Set options selectively
         if headless:
             options.add_argument("--headless")
+            options.add_argument("--ignore-ssl-errors")
         else:
             options.add_argument(f"user-data-dir={profile_path}")
             options.add_argument("--remote-debugging-port=9222")

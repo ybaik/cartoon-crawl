@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 def main():
-    json_path = Path("./comix_info.json")
+    json_path = Path("./db/comix_info.json")
 
     # Read comix list
     if json_path.exists():
@@ -16,8 +16,14 @@ def main():
     author_keys = dict()
     for key in json_data.keys():
         data = json_data[key]
-        authors = data["author"]["kor"].split(";")
+        authors = data["author"]["kor"].split(",")
 
+        if "[o]" in key:
+            if data["verified"] == "X":
+                print(key)
+        else:
+            if data["verified"] == "O":
+                print(key)
         for author in authors:
             if author_keys.get(author) is not None:
                 author_keys[author] += 1
