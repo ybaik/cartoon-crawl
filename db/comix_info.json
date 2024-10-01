@@ -644,6 +644,21 @@
             "jpn": "春輝"
         }
     },
+    "[o] 성전 애장판": {
+        "title": {
+            "kor": "성전",
+            "eng": "RG Veda",
+            "jpn": "聖伝-RG VEDA-"
+        },
+        "vols": "1-5(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "클램프",
+            "eng": "Clamp",
+            "jpn": "Clamp"
+        }
+    },
     "[o] 스프리건": {
         "title": {
             "kor": "스프리건",

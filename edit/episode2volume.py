@@ -4,7 +4,7 @@ import os
 import shutil
 
 episode2vol = {
-    9: [57, 62]
+    5: [57, 73]
     # 45: [395, 402]
     # 107: [1077, 1088],
     # 21: [192, 201],  # 66
@@ -12,7 +12,8 @@ episode2vol = {
 
 
 def main():
-    skip_1page = False
+    skip_1page = True
+    skip_last_page = True
     base_dir = "c:/comix/etc/a"
     base_dir1 = "c:/comix/etc/c"
     bgfile = "c:/comix/etc/c/white.png"
@@ -35,6 +36,9 @@ def main():
             for j, f in enumerate(files):
                 if skip_1page and j < 1:
                     continue
+                if skip_last_page and j == (len(files) - 1):
+                    continue
+
                 [id, ext] = f.split(".")
                 shutil.copyfile(
                     f"{src_dir}/{f}", f"{target}/{k:02d}-{i:03d}-{idx:03d}.{ext}"
