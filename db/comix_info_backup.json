@@ -449,6 +449,21 @@
             "jpn": "安達 充"
         }
     },
+    "[o] 마법기사 레이어스": {
+        "title": {
+            "kor": "마법기사 레이어스",
+            "eng": "Magic Knight Rayearth",
+            "jpn": "魔法騎士レイアース"
+        },
+        "vols": "1-6(완)",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "클램프",
+            "eng": "Clamp",
+            "jpn": "Clamp"
+        }
+    },
     "[o] 마브러브 언리미티드": {
         "title": {
             "kor": "마브러브 언리미티드",
@@ -1018,7 +1033,7 @@
             "eng": "Tatuski Fujimoto",
             "jpn": "藤本 タツキ"
         }
-    },    
+    },
     "[o] 총몽": {
         "title": {
             "kor": "총몽",
@@ -1062,6 +1077,21 @@
             "kor": "이와아키 히토시",
             "eng": "Hitoshi Iwaaki",
             "jpn": "岩明 均"
+        }
+    },
+    "[o] 카드캡터 사쿠라 클리어 카드 편": {
+        "title": {
+            "kor": "카드캡터 사쿠라 클리어 카드 편",
+            "eng": "Cardcaptor Sakura: Clear Card Arc",
+            "jpn": "カードキャプターさくら クリアカード編"
+        },
+        "vols": "1-16(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "클램프",
+            "eng": "Clamp",
+            "jpn": "Clamp"
         }
     },
     "[o] 카미야도리": {
@@ -1778,21 +1808,6 @@
         "vols": "1-12(완)",
         "verified": "X",
         "status": "완결_스캔",
-        "author": {
-            "kor": "클램프",
-            "eng": "Clamp",
-            "jpn": "Clamp"
-        }
-    },
-    "카드캡터 사쿠라 클리어 카드 편": {
-        "title": {
-            "kor": "카드캡터 사쿠라 클리어 카드 편",
-            "eng": "Cardcaptor Sakura: Clear Card Arc",
-            "jpn": "カードキャプターさくら クリアカード編"
-        },
-        "vols": "1-12",
-        "verified": "X",
-        "status": "연재중",
         "author": {
             "kor": "클램프",
             "eng": "Clamp",

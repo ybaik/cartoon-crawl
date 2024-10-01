@@ -30,6 +30,7 @@ def main():
             else:
                 author_keys[author] = 1
 
+    author_keys = sorted(author_keys.items(), key=lambda x: x[1], reverse=True)
     print(1)
 
 
