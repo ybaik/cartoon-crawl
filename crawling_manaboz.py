@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 import json
 from pathlib import Path
-from common.crawling_toon import (
+from common.crawling_manaboza import (
     crawling_vols,
     crawling_img_list,
-    download_images,
 )
-from common.crawler import SeleniumCrawlerToon
+from common.crawling_toon import download_images
+
+from common.crawler import SeleniumCrawlerManaboza
 
 USE_SELENIUM = True
 
@@ -18,10 +19,11 @@ def main():
     json_path = base_dir / "info.json"
 
     # Set url
-    site_url = "https://www.11toon136.com/bbs"
-    list_url = f"{site_url}/board.php?bo_table=toons&stx=GS%EB%AF%B8%EC%B9%B4%EB%AF%B8+%EA%B7%B9%EB%9D%BD%EB%8C%80%EC%9E%91%EC%A0%84%21%21&is=32937&sord=&type=&page=1"
+    site_url = "https://manaboza74.com/comic/ep_list/20771"
+    list_url = site_url
+
     tags = []
-    tags.append("GS미카미 극락대작전!!")
+    tags.append("-")
 
     # Read url list
     if json_path.exists():
@@ -34,12 +36,12 @@ def main():
         crawling_vols(site_url, list_url, json_data, json_path)
         crawling_img_list(json_data, json_path)
     else:
-        crawler = SeleniumCrawlerToon(headless=False)
+        crawler = SeleniumCrawlerManaboza(headless=False)
         crawler.crawling_vols(site_url, list_url, json_data, json_path)
         crawler.crawling_img_list(json_data, json_path)
         crawler.deinit()
 
-    # return
+    return
     download_images(json_data, base_dir, tags)
 
 

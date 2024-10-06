@@ -120,6 +120,66 @@ class SeleniumCrawlerToon(SeleniumCrawler):
                     break
 
 
+class SeleniumCrawlerManaboza(SeleniumCrawler):
+    def crawling_vols(
+        self, site_url: str, list_url: str, json_data: Dict, json_path: Path
+    ) -> None:
+        if len(json_data.keys()) != 0:
+            return
+
+        print("Volumn crawling has started...")
+        print(list_url)
+
+        # Open page
+        self.driver.get(url=list_url)
+        poses = self.driver.find_elements(By.CLASS_NAME, "flex-container")
+        for p in poses:
+            title = p.find_element(By.CLASS_NAME, "episode_stitle").text
+            target = p.get_attribute("data-episode-id")
+            target_address = list_url.replace("ep_list", "ep_view")
+            vol_url = f"{target_address}/{target}"
+            if json_data.get(title) is None:
+                json_data[title] = dict()
+            json_data[title]["vol_url"] = vol_url
+
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(json_data, f, ensure_ascii=False, indent=4)
+
+    def crawling_img_list(self, json_data: Dict, json_path: Path) -> None:
+
+        # Check if there is file-wise url exists
+        need_crawling_img_list = False
+        for vol in json_data.values():
+            if vol.get("img_url") is None:
+                need_crawling_img_list = True
+                break
+
+        if not need_crawling_img_list:
+            return
+
+        print("Image list crawling has started...")
+        for k, v in json_data.items():
+            if not v.get("img_url") is None:
+                continue
+
+            # Open page
+            self.driver.get(url=v.get("vol_url"))
+
+            # Find image url list
+            img_list = []
+            ps = self.driver.find_elements(By.CLASS_NAME, "document_img")
+            for p in ps:
+                url = p.get_attribute("data-src")
+                img_list.append(url)
+
+            if len(img_list):
+                json_data[k]["img_url"] = img_list
+
+            with open(json_path, "w", encoding="utf-8") as f:
+                json.dump(json_data, f, ensure_ascii=False, indent=4)
+            break
+
+
 class SeleniumCrawlerToki(SeleniumCrawler):
     def crawling_vols(self, list_url: str, json_data: Dict, json_path: Path) -> None:
         if len(json_data.keys()) != 0:

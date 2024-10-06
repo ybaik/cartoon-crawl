@@ -3,20 +3,19 @@
 import os
 import shutil
 
+
 episode2vol = {
-    5: [57, 73]
-    # 45: [395, 402]
-    # 107: [1077, 1088],
-    # 21: [192, 201],  # 66
+    23: [378, 378],
 }
 
 
 def main():
     skip_1page = True
-    skip_last_page = True
+    keep_1page_for_1st_episode = True
+    skip_last_page = False
     base_dir = "c:/comix/etc/a"
     base_dir1 = "c:/comix/etc/c"
-    bgfile = "c:/comix/etc/c/white.png"
+    bgfile = "c:/comix/etc/c/bg.jpg"
     add_bg_file = False
 
     for k in episode2vol.keys():
@@ -24,30 +23,40 @@ def main():
         target = f"{base_dir1}/{k:02d}"
         os.makedirs(target, exist_ok=True)
 
-        for vol_idx, i in enumerate(range(s, e + 1)):
-            # src_dir = f"{base_dir}/{i:02d}화"
-            src_dir = f"{base_dir}/{i}화"
+        for episode in range(s, e + 1):
+            src_dir = f"{base_dir}/{episode:03d}"
+            # src_dir = f"{base_dir}/{episode}화"
             if not os.path.exists(src_dir):
                 print(src_dir)
                 continue
 
-            idx = 3  # will be ordered later
+            page = 3  # will be ordered later
             files = os.listdir(src_dir)
             for j, f in enumerate(files):
-                if skip_1page and j < 1:
-                    continue
+
+                if skip_1page:
+                    if not keep_1page_for_1st_episode or episode != s:
+                        if j < 1:
+                            continue
                 if skip_last_page and j == (len(files) - 1):
                     continue
 
-                [id, ext] = f.split(".")
-                shutil.copyfile(
-                    f"{src_dir}/{f}", f"{target}/{k:02d}-{i:03d}-{idx:03d}.{ext}"
-                )
-                idx += 1
+                _, ext = os.path.splitext(f)
 
-            # if add_bg_file:
-            #     if i < e:
-            #         shutil.copyfile(bgfile, f"{target}/{k:03d}-{i:04d}-{idx:03d}.{ext}")
+                if keep_1page_for_1st_episode and episode == s and j == 0:
+                    shutil.copyfile(f"{src_dir}/{f}", f"{target}/{k:02d}-000-000{ext}")
+                else:
+                    shutil.copyfile(
+                        f"{src_dir}/{f}",
+                        f"{target}/{k:02d}-{episode:03d}-{page:03d}{ext}",
+                    )
+                page += 1
+
+            if add_bg_file:
+                if episode < e:
+                    shutil.copyfile(
+                        bgfile, f"{target}/{k:02d}-{episode:03d}-{page:03d}{ext}"
+                    )
 
     # Ext
     return

@@ -16,7 +16,7 @@ def main():
     base_path = "D:/comix/etc/바질리스크 오우카인법첩"
     # tag = "베르세르크_"
     # extract episodes
-    site_address = "http://manaboza.komana.wiki/comic/ep_list/12777"
+    site_address = "http://manaboza74.com/comic/ep_list/12777"
     list_address = f"{site_address}"
 
     user_agent = UserAgent()

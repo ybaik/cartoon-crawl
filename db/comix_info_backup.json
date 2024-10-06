@@ -104,6 +104,36 @@
             "jpn": "竹内 良輔,小畑 健"
         }
     },
+    "[o] GS 미카미 극락 대작전!!": {
+        "title": {
+            "kor": "GS 미카미 극락 대작전!!",
+            "eng": "Ghost Sweeper Mikami",
+            "jpn": "GS 美神 極楽大作戦!!"
+        },
+        "vols": "1-39(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "시이나 타카시",
+            "eng": "Takashi Shiina",
+            "jpn": "椎名 高志"
+        }
+    },
+    "[o] GS 미카미 극락 대작전!! 문고판": {
+        "title": {
+            "kor": "GS 미카미 극락 대작전!! 문고판",
+            "eng": "Ghost Sweeper Mikami",
+            "jpn": "GS 美神 極楽大作戦!!"
+        },
+        "vols": "1-22",
+        "verified": "O",
+        "status": "미완",
+        "author": {
+            "kor": "시이나 타카시",
+            "eng": "Takashi Shiina",
+            "jpn": "椎名 高志"
+        }
+    },
     "[o] 가시나무왕": {
         "title": {
             "kor": "가시나무왕",
@@ -387,6 +417,21 @@
             "kor": "하야시다 큐",
             "eng": "Q Hayashida ",
             "jpn": "林田 球"
+        }
+    },
+    "[o] 도쿄 바빌론 애장판": {
+        "title": {
+            "kor": "도쿄 바빌론",
+            "eng": "Tokyo Babylon",
+            "jpn": "東京BABYLON"
+        },
+        "vols": "1-3(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "클램프",
+            "eng": "Clamp",
+            "jpn": "Clamp"
         }
     },
     "[o] 드래곤 헤드": {
@@ -764,6 +809,21 @@
             "jpn": "瀬川 はじめ"
         }
     },
+    "[o] 신 펫숍 오브 호러스": {
+        "title": {
+            "kor": "신 펫숍 오브 호러스",
+            "eng": "Shin Petshop of Horrors",
+            "jpn": "新 Petshop of Horrors"
+        },
+        "vols": "1-12(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "아키노 마츠리",
+            "eng": "Matsuri Akino",
+            "jpn": "秋乃 茉莉"
+        }
+    },
     "[o] 신세기 에반게리온": {
         "title": {
             "kor": "신세기 에반게리온",
@@ -852,6 +912,21 @@
             "kor": "시로 마사무네",
             "eng": "Masamune Shirow",
             "jpn": "士郎 正宗"
+        }
+    },
+    "[o] 엔젤릭 레이어": {
+        "title": {
+            "kor": "엔젤릭 레이어",
+            "eng": "エンジェリックレイヤー",
+            "jpn": "Angelic Laayer"
+        },
+        "vols": "1-5(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "클램프",
+            "eng": "Clamp",
+            "jpn": "Clamp"
         }
     },
     "[o] 여자공병": {
@@ -974,6 +1049,21 @@
             "jpn": "桂 正和"
         }
     },
+    "[o] 종말의 하렘": {
+        "title": {
+            "kor": "종말의 하렘",
+            "eng": "World's end harem",
+            "jpn": "終末のハーレム"
+        },
+        "vols": "1-17",
+        "verified": "O",
+        "status": "미완",
+        "author": {
+            "kor": "Link,쇼노 코타로",
+            "eng": "Link,Kotaro Shono",
+            "jpn": "Link,宵野 コタロー"
+        }
+    },
     "[o] 주술회전": {
         "title": {
             "kor": "주술회전",
@@ -1077,6 +1167,21 @@
             "kor": "아카사카 아카,요코야리 멩고",
             "eng": "Aka Akasaka,Mengo Yokoyari",
             "jpn": "赤坂 アカ,横槍 メンゴ "
+        }
+    },
+    "[o] 쵸비츠": {
+        "title": {
+            "kor": "쵸비츠",
+            "eng": "ちょびっツ",
+            "jpn": "Chobits"
+        },
+        "vols": "1-8(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "클램프",
+            "eng": "Clamp",
+            "jpn": "Clamp"
         }
     },
     "[o] 칠석의 나라": {
@@ -1619,21 +1724,6 @@
             "jpn": "前川 たけし"
         }
     },
-    "신 펫숍 오브 호러스": {
-        "title": {
-            "kor": "신 펫숍 오브 호러스",
-            "eng": "Shin Petshop of Horrors",
-            "jpn": "新 Petshop of Horrors"
-        },
-        "vols": "1-12(완)",
-        "verified": "X",
-        "status": "완결",
-        "author": {
-            "kor": "아키노 마츠리",
-            "eng": "Matsuri Akino",
-            "jpn": "秋乃 茉莉"
-        }
-    },
     "신의 물방울": {
         "title": {
             "kor": "신의 물방울",
@@ -1782,21 +1872,6 @@
             "kor": "아마시타 메스코,타나카 요시키",
             "eng": "Mesuko Amashita,Yoshiki Tanaka",
             "jpn": "天下 雌子,田中 克樹"
-        }
-    },
-    "종말의 하렘": {
-        "title": {
-            "kor": "종말의 하렘",
-            "eng": "World's end harem",
-            "jpn": "終末のハーレム"
-        },
-        "vols": "1-16",
-        "verified": "X",
-        "status": "연재중",
-        "author": {
-            "kor": "Link,쇼노 코타로",
-            "eng": "Link,Kotaro Shono",
-            "jpn": "Link,宵野 コタロー"
         }
     },
     "지뢰진": {

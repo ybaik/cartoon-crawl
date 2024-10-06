@@ -6,13 +6,11 @@ import shutil
 
 def main():
     base_path = "c:/comix/etc/a"
-    # base_path = "D:/comix/etc/b/3권"
+    target_path = "c:/comix/etc/e/"
 
     els = os.listdir(base_path)
-    for i, el in enumerate(els):
-        new = el
-        new = new.replace(" ", "")
-        new = new.replace("마법기사레이어스", "")
+    for el in els:
+        new = el.replace(" ", "")
         if new != el:
             os.rename(f"{base_path}/{el}", f"{base_path}/{new}")
 

@@ -32,13 +32,13 @@ def rename(base_path, target_episode, target_page, files):
 
 
 def main():
-    base_path = r"C:/comix/완결_스캔/아이 앰 어 히어로 1-22(완)/22"
+    base_path = r"C:/comix/etc/c/07"
 
     files = os.listdir(base_path)
     files.sort()
 
-    target_episode = 254
-    target_page = 1
+    target_episode = 47
+    target_page = 11
 
     rename(base_path, target_episode, target_page, files)
 

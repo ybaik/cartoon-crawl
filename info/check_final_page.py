@@ -5,7 +5,7 @@ import shutil
 
 
 def main():
-    vol = "14"
+    vol = "17"
     base_path = f"C:/comix/etc/c/{vol}"
     bg_path = f"C:/comix/etc/c/00-000-000.png"
     episodes = dict()
@@ -30,7 +30,7 @@ def main():
         page = episodes[e] + 10
         if e == "000":
             continue
-        shutil.copyfile(bg_path, f"{base_path}/{vol}-{e}-{page}.png")
+        shutil.copyfile(bg_path, f"{base_path}/{vol}-{e}-{page:03d}.png")
 
 
 if __name__ == "__main__":

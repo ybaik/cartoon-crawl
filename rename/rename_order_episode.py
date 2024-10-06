@@ -3,11 +3,11 @@
 import os
 
 
-def rename(base_path, vol, files):
+def rename(base_path, episode, files):
     target_files = []
     for file in files:
-        vol_src = file.split("-")[1]
-        if vol_src != vol:
+        episode_src = file.split("-")[1]
+        if episode_src != episode:
             continue
         target_files.append(file)
     target_files.sort()
@@ -21,22 +21,25 @@ def rename(base_path, vol, files):
 
 
 def main():
-    # base_dir = "C:/comix/완결_스캔/아이 앰 어 히어로 1-22(완)/22"
-    base_dir = "C:/comix/etc/c/19"
 
-    files = os.listdir(base_dir)
-    files.sort()
+    base_dir = "C:/comix/etc/c"
+    vol_range = [22, 22]
 
-    vols = set()
-    for file in files:
-        vols.add(file.split("-")[1])
+    for vol in range(vol_range[0], vol_range[-1] + 1):
+        target_dir = f"{base_dir}/{vol:02d}"
+        files = os.listdir(target_dir)
+        files.sort()
 
-    print(vols)
+        episodes = set()
+        for file in files:
+            episodes.add(file.split("-")[1])
 
-    for vol in vols:
-        if vol == "000":
-            continue
-        rename(base_dir, vol, files)
+        print(episodes)
+
+        for episode in episodes:
+            if episode == "000":
+                continue
+            rename(target_dir, episode, files)
 
 
 if __name__ == "__main__":
