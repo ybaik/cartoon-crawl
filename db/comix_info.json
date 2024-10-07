@@ -554,6 +554,21 @@
             "jpn": "宮﨑 駿"
         }
     },
+    "[o] 바람의 검심 완전판": {
+        "title": {
+            "kor": "바람의 검심 -메이지 검객 낭만기-",
+            "eng": "Rurouni Kenshin: Meiji Kenkaku Romantan",
+            "jpn": "るろうに剣心 -明治剣客浪漫譚-"
+        },
+        "vols": "1-22(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "와츠키 노부히로",
+            "eng": "Nobuhiro Watsuki",
+            "jpn": "和月 伸宏"
+        }
+    },
     "[o] 바질리스크 오우카인법첩": {
         "title": {
             "kor": "바질리스크 오우카인법첩",
@@ -1032,6 +1047,21 @@
             "kor": "오시미 슈조",
             "eng": "Shuzo Oshimi",
             "jpn": "押見 修造"
+        }
+    },
+    "[o] 인고시마": {
+        "title": {
+            "kor": "인고시마",
+            "eng": "Ingoshima",
+            "jpn": "インゴシマ"
+        },
+        "vols": "1-16",
+        "verified": "O",
+        "status": "미완",
+        "author": {
+            "kor": "아마시타 메스코,타나카 요시키",
+            "eng": "Mesuko Amashita,Yoshiki Tanaka",
+            "jpn": "天下 雌子,田中 克樹"
         }
     },
     "[o] 전영소녀 애장판": {
@@ -1857,21 +1887,6 @@
             "kor": "요시토미 아키히토",
             "eng": "Akihito Yoshitomi",
             "jpn": "吉富 昭仁"
-        }
-    },
-    "인고시마": {
-        "title": {
-            "kor": "인고시마",
-            "eng": "Ingoshima",
-            "jpn": "インゴシマ"
-        },
-        "vols": "1-13",
-        "verified": "X",
-        "status": "미완",
-        "author": {
-            "kor": "아마시타 메스코,타나카 요시키",
-            "eng": "Mesuko Amashita,Yoshiki Tanaka",
-            "jpn": "天下 雌子,田中 克樹"
         }
     },
     "지뢰진": {

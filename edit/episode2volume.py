@@ -1,22 +1,32 @@
 # -*- coding: utf-8 -*-
 
 import os
+import cv2
 import shutil
+import numpy as np
 
 
 episode2vol = {
-    23: [378, 378],
+    16: [108, 111],
 }
 
 
+def gen_bg_img(h, w):
+    white_image = np.full((h, w, 1), 255, dtype=np.uint8)
+    return white_image
+
 def main():
-    skip_1page = True
-    keep_1page_for_1st_episode = True
+    skip_1page = False
+    keep_1page_for_1st_episode = False
     skip_last_page = False
-    base_dir = "c:/comix/etc/a"
+    base_dir = "c:/comix/etc/b"
     base_dir1 = "c:/comix/etc/c"
-    bgfile = "c:/comix/etc/c/bg.jpg"
-    add_bg_file = False
+    # bgfile = "c:/comix/etc/c/white.png"
+    bgfile = "c:/comix/etc/c/in_white.png"
+    add_bg_file = True
+
+    # img = gen_bg_img(1080, 720)
+    # cv2.imwrite(bgfile, img)
 
     for k in episode2vol.keys():
         [s, e] = episode2vol.get(k)
@@ -24,8 +34,8 @@ def main():
         os.makedirs(target, exist_ok=True)
 
         for episode in range(s, e + 1):
-            src_dir = f"{base_dir}/{episode:03d}"
-            # src_dir = f"{base_dir}/{episode}화"
+            # src_dir = f"{base_dir}/{episode:03d}"
+            src_dir = f"{base_dir}/{episode}"
             if not os.path.exists(src_dir):
                 print(src_dir)
                 continue
@@ -59,30 +69,27 @@ def main():
                     )
 
     # Ext
-    return
-    episode2vol["ext"] = ["2권 번외편"]
-    if episode2vol.get("ext") is not None:
-        dsts = episode2vol.get("ext")
-        cnt = 1
-        v = list(episode2vol.keys())[0]
-        target = f"{base_dir1}/{v:02d}"
-        for dst in dsts:
-            src_dir = f"{base_dir}/{dst}"
+    # # return
+    # episode2vol["ext"] = ["80.5화"]
+    # if episode2vol.get("ext") is not None:
+    #     dsts = episode2vol.get("ext")
+    #     cnt = 1
+    #     v = list(episode2vol.keys())[0]
+    #     target = f"{base_dir1}/{v:02d}"
+    #     for dst in dsts:
+    #         src_dir = f"{base_dir}/{dst}"
 
-            if not os.path.exists(src_dir):
-                print(src_dir)
-                continue
+    #         if not os.path.exists(src_dir):
+    #             print(src_dir)
+    #             continue
 
-            files = os.listdir(src_dir)
-
-            for j, f in enumerate(files):
-                if j == 0:
-                    continue
-                [id, ext] = f.split(".")
-                shutil.copyfile(
-                    f"{src_dir}/{f}", f"{target}/{v:02d}-ext-{cnt:03d}.{ext}"
-                )
-                cnt += 1
+    #         files = os.listdir(src_dir)
+    #         for f in files:
+    #             _, ext = os.path.splitext(f)
+    #             shutil.copyfile(
+    #                 f"{src_dir}/{f}", f"{target}/{v:02d}-ext-{cnt:03d}{ext}"
+    #             )
+    #             cnt += 1
 
 
 if __name__ == "__main__":
