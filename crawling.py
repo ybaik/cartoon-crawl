@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 import json
 from pathlib import Path
-from common.crawling_toon import (
-    crawling_vols,
-    crawling_img_list,
-    download_images,
-)
-from common.crawler import create_crawler
+from common.crawler import create_crawler, download_images
+
 
 USE_SELENIUM = False
 

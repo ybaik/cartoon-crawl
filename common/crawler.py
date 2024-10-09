@@ -3,6 +3,8 @@ import re
 import json
 import time
 import random
+import shutil
+import urllib3
 import binascii
 
 from tqdm import tqdm
@@ -32,6 +34,43 @@ def filter_title(title: str, tags: List) -> str:
         title = title.replace(tag, "").strip()
 
     return title
+
+
+def download_images(json_data: Dict, save_base_dir: Path, tags: List) -> None:
+    http = urllib3.PoolManager()
+    user_agent = UserAgent()
+
+    for k, v in json_data.items():
+        print(k)
+        name = filter_title(k, tags)
+
+        # print(name)
+        # continue
+
+        save_dir = save_base_dir / name
+        if not save_dir.exists():
+            save_dir.mkdir()
+        else:
+            # Check number of files
+            files = [p for p in save_dir.glob("*.*")]
+            if len(files) >= 15:
+                continue
+        # Download images
+        idx = 1
+        for img_url in tqdm(v["img_url"]):
+            ext = img_url.split(".")[-1]
+            if ext not in ["jpg", "JPG", "jpeg", "JPEG"]:
+                ext = "jpg"
+            dst_path = save_dir / f"{idx:03d}.{ext}"
+
+            if not dst_path.exists():
+                headers = {"User-Agent": user_agent.random}
+                with http.request(
+                    "GET", img_url, preload_content=False, headers=headers
+                ) as r, open(dst_path, "wb") as out_file:
+                    shutil.copyfileobj(r, out_file)
+            idx += 1
+        time.sleep(random.uniform(1, 2))
 
 
 def create_crawler(site_url: str, use_selenium: bool):
