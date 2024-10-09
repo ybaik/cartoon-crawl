@@ -8,7 +8,7 @@ from common.crawling_toon import (
 )
 from common.crawler import create_crawler
 
-USE_SELENIUM = True
+USE_SELENIUM = False
 
 
 def main():
@@ -19,15 +19,13 @@ def main():
 
     # Set url - 11toon
     site_url = "https://www.11toon136.com/bbs"
-    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EC%A2%85%EB%A7%90%EC%9D%98%20%EC%84%B8%EB%9D%BC%ED%94%84&is=4178"
-
-    # Set url - manaboza
-    site_url = "https://manaboza76.com/comic/ep_list"
-    list_url = f"{site_url}/35499"
-
-    # Set url - manatoki
-    site_url = "https://manatoki463.net/comic"
-    list_url = f"{site_url}/20721164?stx=%EA%B7%B8%EB%9E%9C+%ED%8C%A8%EB%B0%80%EB%A6%AC%EC%95%84"
+    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EA%B7%B8%EB%9E%9C%20%ED%8C%A8%EB%B0%80%EB%A6%AC%EC%95%84&is=35499"
+    # # Set url - manaboza
+    # site_url = "https://manaboza76.com/comic/ep_list"
+    # list_url = f"{site_url}/35499"
+    # # Set url - manatoki
+    # site_url = "https://manatoki463.net/comic"
+    # list_url = f"{site_url}/20721164?stx=%EA%B7%B8%EB%9E%9C+%ED%8C%A8%EB%B0%80%EB%A6%AC%EC%95%84"
 
     tags = []
     # tags.append("")
@@ -39,17 +37,13 @@ def main():
     else:
         json_data = dict()
 
-    if not USE_SELENIUM:
-        crawling_vols(site_url, list_url, json_data, json_path)
-        crawling_img_list(json_data, json_path)
-    else:
-        crawler = create_crawler(site_url)
-        if crawler is None:
-            print("Unknown site!")
-            return
-        crawler.crawling_vols(list_url, json_data, json_path)
-        crawler.crawling_img_list(json_data, json_path)
-        crawler.deinit()
+    crawler = create_crawler(site_url, USE_SELENIUM)
+    if crawler is None:
+        print("Unknown site!")
+        return
+    crawler.crawling_vols(list_url, json_data, json_path)
+    crawler.crawling_img_list(json_data, json_path)
+    crawler.deinit()
 
     return
     download_images(json_data, base_dir, tags)

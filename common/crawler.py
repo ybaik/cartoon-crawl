@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import List, Dict
 from abc import abstractmethod
 
+import requests
+from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -30,18 +34,142 @@ def filter_title(title: str, tags: List) -> str:
     return title
 
 
-def create_crawler(site_url: str):
+def create_crawler(site_url: str, use_selenium: bool):
 
-    if "11toon" in site_url:
-        return SeleniumCrawler11toon(site_url=site_url, headless=True)
-    elif "manaboza" in site_url:
-        return SeleniumCrawlerManaboza(site_url=site_url, headless=True)
-    elif "manatoki" in site_url:
-        return SeleniumCrawlerManatoki(site_url=site_url, headless=False)
+    if not use_selenium:
+        if "11toon" in site_url:
+            return Crawler11toon(site_url=site_url)
+        elif "manaboza" in site_url:
+            return CrawlerManaboza(site_url=site_url)
+    else:
+        if "11toon" in site_url:
+            return SeleniumCrawler11toon(site_url=site_url, headless=True)
+        elif "manaboza" in site_url:
+            return SeleniumCrawlerManaboza(site_url=site_url, headless=True)
+        elif "manatoki" in site_url:
+            return SeleniumCrawlerManatoki(site_url=site_url, headless=False)
     return None
 
 
-class SeleniumCrawler:
+class Crawler:
+    def __init__(self, site_url: str):
+        self.site_url = site_url
+        self.response = None
+
+    def open_page(self, url: str) -> None:
+        user_agent = UserAgent()
+        headers = {"User-Agent": user_agent.random}
+        self.response = requests.get(url, headers=headers)
+        time.sleep(random.uniform(1, 2))
+
+    def deinit(self):
+        pass
+
+    @staticmethod
+    def save_json(json_path: Path, json_data: Dict) -> None:
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(json_data, f, ensure_ascii=False, indent=4)
+
+    def crawling_vols(self, list_url: str, json_data: Dict, json_path: Path) -> None:
+        if len(json_data.keys()) != 0:
+            return
+
+        # Open page
+        self.open_page(url=list_url)
+
+        # Extract information using site-specific methods
+        print("Volumn crawling has started...")
+        self.site_wise_crawling_vols(list_url=list_url, json_data=json_data)
+        print("Volumn crawling is complete...")
+
+        # Save the extracted information
+        self.save_json(json_path, json_data)
+
+    def crawling_img_list(self, json_data: Dict, json_path: Path) -> None:
+
+        # Check if there is file-wise url exists
+        need_crawling_img_list = False
+        for vol in json_data.values():
+            if vol.get("img_url") is None:
+                need_crawling_img_list = True
+                break
+        if not need_crawling_img_list:
+            return
+
+        print("Image list crawling has started...")
+        for k, v in tqdm(json_data.items()):
+            if not v.get("img_url") is None:
+                continue
+
+            # Open page
+            self.open_page(url=v.get("vol_url"))
+
+            # Find image url list
+            img_list = self.site_wise_crawling_img_list()
+            if len(img_list):
+                json_data[k]["img_url"] = img_list
+                self.save_json(json_path, json_data)
+        print("Image list crawling is complete...")
+
+    @abstractmethod
+    def site_wise_crawling_vols(self, list_url: str, json_data: Dict) -> None:
+        pass
+
+    @abstractmethod
+    def site_wise_crawling_img_list(self) -> List:
+        pass
+
+
+class Crawler11toon(Crawler):
+    def site_wise_crawling_vols(self, list_url: str, json_data: Dict) -> None:
+        soup = BeautifulSoup(self.response.text, "html.parser")
+        items = soup.select(".episode.is-series")
+        for item in items:
+            title = item.select_one(".episode-title.ellipsis").get_text()
+            # title = item.select_one(".episode-title").text
+
+            vol_url = item.attrs["onclick"].replace("location.href='.", self.site_url)[
+                :-1
+            ]
+            # vol_url = item.attrs["onclick"].replace("location.href='.", self.site_url)[:-1]
+
+            if json_data.get(title) is None:
+                json_data[title] = dict()
+            json_data[title]["vol_url"] = vol_url
+
+    def site_wise_crawling_img_list(self) -> List:
+        matched = re.search("var img_list = (.+?);", self.response.text, re.S)
+        if matched is not None:
+            json_string = matched.group(1)
+            img_list = json.loads(json_string)
+            return img_list
+        return []
+
+
+class CrawlerManaboza(Crawler):
+    def site_wise_crawling_vols(self, list_url: str, json_data: Dict) -> None:
+        soup = BeautifulSoup(self.response.text, "html.parser")
+        items = soup.select(".flex-container.episode-items")
+        for item in items:
+            title = item.select_one(".episode_stitle").text.strip()
+            target = item.attrs["data-episode-id"]
+            target_address = list_url.replace("ep_list", "ep_view")
+            vol_url = f"{target_address}/{target}"
+
+            if json_data.get(title) is None:
+                json_data[title] = dict()
+            json_data[title]["vol_url"] = vol_url
+
+    def site_wise_crawling_img_list(self) -> List:
+        img_list = []
+        soup = BeautifulSoup(self.response.text, "html.parser")
+        items = soup.select(".document_img")
+        for item in items:
+            img_list.append(item.attrs["data-src"])
+        return img_list
+
+
+class SeleniumCrawler(Crawler):
     def __init__(
         self,
         site_url: str,
@@ -71,68 +199,15 @@ class SeleniumCrawler:
             # )
             # self.options.add_experimental_option("useAutomationExtension", False)
 
-    def check_driver(self):
-        if self.driver is None:
-            self.driver = webdriver.Chrome(options=self.options)
-
     def deinit(self):
         if self.driver is not None:
             self.driver.quit()
 
-    def crawling_vols(self, list_url: str, json_data: Dict, json_path: Path) -> None:
-        if len(json_data.keys()) != 0:
-            return
-
-        # Open page
-        print(list_url)
-        self.check_driver()
-        self.driver.get(url=list_url)
+    def open_page(self, url: str) -> None:
+        if self.driver is None:
+            self.driver = webdriver.Chrome(options=self.options)
+        self.driver.get(url=url)
         time.sleep(random.uniform(1, 2))
-
-        # Extract information using site-specific methods
-        print("Volumn crawling has started...")
-        self.site_wise_crawling_vols(list_url=list_url, json_data=json_data)
-        print("Volumn crawling is complete...")
-
-        # Save the extracted information
-        with open(json_path, "w", encoding="utf-8") as f:
-            json.dump(json_data, f, ensure_ascii=False, indent=4)
-
-    @abstractmethod
-    def site_wise_crawling_vols(self, list_url: str, json_data: Dict) -> None:
-        pass
-
-    def crawling_img_list(self, json_data: Dict, json_path: Path) -> None:
-
-        # Check if there is file-wise url exists
-        need_crawling_img_list = False
-        for vol in json_data.values():
-            if vol.get("img_url") is None:
-                need_crawling_img_list = True
-                break
-
-        if not need_crawling_img_list:
-            return
-
-        print("Image list crawling has started...")
-        self.check_driver()
-        for k, v in tqdm(json_data.items()):
-            if not v.get("img_url") is None:
-                continue
-
-            # Open page
-            self.driver.get(url=v.get("vol_url"))
-            time.sleep(random.uniform(1, 2))
-
-            # Find image url list
-            self.site_wise_crawling_img_list(k, json_data, json_path)
-        print("Image list crawling is complete...")
-
-    @abstractmethod
-    def site_wise_crawling_img_list(
-        self, key: str, json_data: Dict, json_path: Path
-    ) -> None:
-        pass
 
 
 class SeleniumCrawler11toon(SeleniumCrawler):
@@ -149,10 +224,7 @@ class SeleniumCrawler11toon(SeleniumCrawler):
                 json_data[title] = dict()
             json_data[title]["vol_url"] = vol_url
 
-    def site_wise_crawling_img_list(
-        self, key: str, json_data: Dict, json_path: Path
-    ) -> None:
-
+    def site_wise_crawling_img_list(self) -> List:
         p_id = self.driver.find_elements(By.TAG_NAME, "script")
         for script in p_id:
             innerHTML = script.get_property("innerHTML")
@@ -160,15 +232,11 @@ class SeleniumCrawler11toon(SeleniumCrawler):
             if matched is not None:
                 json_string = matched.group(1)
                 img_list = json.loads(json_string)
-                json_data[key]["img_url"] = img_list
-
-                with open(json_path, "w", encoding="utf-8") as f:
-                    json.dump(json_data, f, ensure_ascii=False, indent=4)
-                break
+                return img_list
+        return []
 
 
 class SeleniumCrawlerManaboza(SeleniumCrawler):
-
     def site_wise_crawling_vols(self, list_url: str, json_data: Dict):
         poses = self.driver.find_elements(By.CLASS_NAME, "flex-container")
         for p in poses:
@@ -180,20 +248,13 @@ class SeleniumCrawlerManaboza(SeleniumCrawler):
                 json_data[title] = dict()
             json_data[title]["vol_url"] = vol_url
 
-    def site_wise_crawling_img_list(
-        self, key: str, json_data: Dict, json_path: Path
-    ) -> None:
+    def site_wise_crawling_img_list(self) -> List:
         img_list = []
         ps = self.driver.find_elements(By.CLASS_NAME, "document_img")
         for p in ps:
             url = p.get_attribute("data-src")
             img_list.append(url)
-
-        if len(img_list):
-            json_data[key]["img_url"] = img_list
-
-        with open(json_path, "w", encoding="utf-8") as f:
-            json.dump(json_data, f, ensure_ascii=False, indent=4)
+        return img_list
 
 
 class SeleniumCrawlerManatoki(SeleniumCrawler):
@@ -213,9 +274,7 @@ class SeleniumCrawlerManatoki(SeleniumCrawler):
                 json_data[title] = dict()
             json_data[title]["vol_url"] = vol_url
 
-    def site_wise_crawling_img_list(
-        self, key: str, json_data: Dict, json_path: Path
-    ) -> None:
+    def site_wise_crawling_img_list(self) -> List:
         p_id = self.driver.find_elements(By.TAG_NAME, "script")
         for script in p_id:
             type = script.get_attribute("type")
@@ -234,12 +293,9 @@ class SeleniumCrawlerManatoki(SeleniumCrawler):
 
                 bytes_data = binascii.unhexlify(clean_hex_string)
                 text = bytes_data.decode("utf-8")
-
                 pattern = r"https://.*?\.jpg"
                 jpg_urls = re.findall(pattern, text)
 
-                json_data[key]["img_url"] = jpg_urls
+                return jpg_urls
 
-                with open(json_path, "w", encoding="utf-8") as f:
-                    json.dump(json_data, f, ensure_ascii=False, indent=4)
-                break
+        return []
