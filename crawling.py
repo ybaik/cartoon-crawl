@@ -6,7 +6,7 @@ from common.crawling_toon import (
     crawling_img_list,
     download_images,
 )
-from common.crawler import SeleniumCrawlerToon
+from common.crawler import create_crawler
 
 USE_SELENIUM = True
 
@@ -17,11 +17,20 @@ def main():
     base_dir = Path(f"c:/comix/etc/{title}")
     json_path = base_dir / "info.json"
 
-    # Set url
+    # Set url - 11toon
     site_url = "https://www.11toon136.com/bbs"
-    list_url = f"{site_url}/board.php?bo_table=toons&stx=GS%EB%AF%B8%EC%B9%B4%EB%AF%B8+%EA%B7%B9%EB%9D%BD%EB%8C%80%EC%9E%91%EC%A0%84%21%21&is=32937&sord=&type=&page=1"
+    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EC%A2%85%EB%A7%90%EC%9D%98%20%EC%84%B8%EB%9D%BC%ED%94%84&is=4178"
+
+    # Set url - manaboza
+    site_url = "https://manaboza76.com/comic/ep_list"
+    list_url = f"{site_url}/35499"
+
+    # Set url - manatoki
+    site_url = "https://manatoki463.net/comic"
+    list_url = f"{site_url}/20721164?stx=%EA%B7%B8%EB%9E%9C+%ED%8C%A8%EB%B0%80%EB%A6%AC%EC%95%84"
+
     tags = []
-    tags.append("GS미카미 극락대작전!!")
+    # tags.append("")
 
     # Read url list
     if json_path.exists():
@@ -34,12 +43,15 @@ def main():
         crawling_vols(site_url, list_url, json_data, json_path)
         crawling_img_list(json_data, json_path)
     else:
-        crawler = SeleniumCrawlerToon(headless=False)
-        crawler.crawling_vols(site_url, list_url, json_data, json_path)
+        crawler = create_crawler(site_url)
+        if crawler is None:
+            print("Unknown site!")
+            return
+        crawler.crawling_vols(list_url, json_data, json_path)
         crawler.crawling_img_list(json_data, json_path)
         crawler.deinit()
 
-    # return
+    return
     download_images(json_data, base_dir, tags)
 
 

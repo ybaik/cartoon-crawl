@@ -15,6 +15,7 @@ def gen_bg_img(h, w):
     white_image = np.full((h, w, 1), 255, dtype=np.uint8)
     return white_image
 
+
 def main():
     skip_1page = False
     keep_1page_for_1st_episode = False

@@ -1,6 +1,7 @@
 import re
 import json
 import time
+import random
 import shutil
 import urllib3
 import requests
@@ -37,7 +38,12 @@ def crawling_vols(
     print(list_url)
 
     user_agent = UserAgent()
-    headers = {"User-Agent": user_agent.random}
+
+    headers = {
+        "User-Agent": user_agent.random,
+        # "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
+        # "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8"
+    }
     source = requests.get(list_url, headers=headers)
 
     # For debugging
@@ -125,4 +131,4 @@ def download_images(json_data: Dict, save_base_dir: Path, tags: List) -> None:
                 ) as r, open(dst_path, "wb") as out_file:
                     shutil.copyfileobj(r, out_file)
             idx += 1
-        time.sleep(1)
+        time.sleep(random.uniform(1, 2))
