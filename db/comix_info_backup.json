@@ -809,6 +809,36 @@
             "jpn": "弘兼 憲史"
         }
     },
+    "[o] 식량인류": {
+        "title": {
+            "kor": "식량인류",
+            "eng": "Starving Anonymous",
+            "jpn": "食糧人類"
+        },
+        "vols": "1-7(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "쿠라이시 유우,이나베 카즈",
+            "eng": "Yuu Kuraishi,Kazu Inabe",
+            "jpn": "蔵石 ユウ,イナベ カズ"
+        }
+    },
+    "[o] 식량인류 Re": {
+        "title": {
+            "kor": "식량인류 Re",
+            "eng": "Starving Re:velation",
+            "jpn": "食糧人類 Re"
+        },
+        "vols": "1-7(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "쿠라이시 유우,이나베 카즈",
+            "eng": "Yuu Kuraishi,Kazu Inabe",
+            "jpn": "蔵石 ユウ,イナベ カズ"
+        }
+    },
     "[o] 식령": {
         "title": {
             "kor": "식령",

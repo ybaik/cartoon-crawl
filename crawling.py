@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 from pathlib import Path
-from common.crawler import create_crawler, download_images
+from common.crawler import create_crawler, download_images, filter_title
 
 
 USE_SELENIUM = False
@@ -14,8 +14,8 @@ def main():
     json_path = base_dir / "info.json"
 
     # Set url - 11toon
-    site_url = "https://www.11toon136.com/bbs"
-    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EA%B7%B8%EB%9E%9C%20%ED%8C%A8%EB%B0%80%EB%A6%AC%EC%95%84&is=35499"
+    site_url = "https://www.11toon137.com/bbs"
+    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EB%A9%94%EC%A2%85%EC%9D%BC%EA%B0%81&is=2799&sord=&type=&page=2"
     # # Set url - manaboza
     # site_url = "https://manaboza76.com/comic/ep_list"
     # list_url = f"{site_url}/35499"
@@ -23,15 +23,16 @@ def main():
     # site_url = "https://manatoki463.net/comic"
     # list_url = f"{site_url}/20721164?stx=%EA%B7%B8%EB%9E%9C+%ED%8C%A8%EB%B0%80%EB%A6%AC%EC%95%84"
 
-    tags = []
-    # tags.append("")
-
     # Read url list
     if json_path.exists():
         with open(json_path, encoding="utf-8") as f:
             json_data = json.load(f)
     else:
-        json_data = dict()
+        json_data = {
+            "site_name": "",
+            "tag_list": list(),
+            "vol_info": dict(),
+        }
 
     crawler = create_crawler(site_url, USE_SELENIUM)
     if crawler is None:
@@ -41,8 +42,17 @@ def main():
     crawler.crawling_img_list(json_data, json_path)
     crawler.deinit()
 
+    # Check filter
+    # json_data["tag_list"].append("마슐")
+    for key in json_data["vol_info"].keys():
+        tags = json_data["tag_list"]
+        name = filter_title(key, tags)
+        if name == key:
+            print(key)
+            pass
+
     return
-    download_images(json_data, base_dir, tags)
+    download_images(json_data, base_dir)
 
 
 if __name__ == "__main__":
