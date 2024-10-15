@@ -524,6 +524,36 @@
             "jpn": "緋呂河 とも"
         }
     },
+    "[o] 마슐": {
+        "title": {
+            "kor": "마슐",
+            "eng": "Mashle: Magic And Muscles",
+            "jpn": "マッシュル"
+        },
+        "vols": "1-18(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "코모토 하지메",
+            "eng": "Hajime Komoto",
+            "jpn": "甲本 一"
+        }
+    },
+    "[o] 메종일각 신장판": {
+        "title": {
+            "kor": "메종일각",
+            "eng": "Maison Ikkoku",
+            "jpn": "めぞん一刻"
+        },
+        "vols": "1-15(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "타카하시 루미코",
+            "eng": "Rumiko Takahashi",
+            "jpn": "高橋 留美子"
+        }
+    },
     "[o] 미래일기": {
         "title": {
             "kor": "미래일기",
