@@ -217,11 +217,12 @@ class CrawlerManaboza(Crawler):
 class SeleniumCrawler(Crawler):
     def __init__(
         self,
+        site_name: str,
         site_url: str,
         headless: bool = False,
         profile_path: str = "C:/Users/hyunx/AppData/Local/Google/Chrome/User Data",
     ) -> None:
-        self.site_url = site_url
+        super().__init__(site_name, site_url)
         self.driver = None
         self.options = Options()
 
@@ -254,9 +255,17 @@ class SeleniumCrawler(Crawler):
         self.driver.get(url=url)
         time.sleep(random.uniform(1, 2))
 
+    @abstractmethod
+    def site_wise_crawling_vols(self, list_url: str, vol_info: Dict) -> None:
+        pass
+
+    @abstractmethod
+    def site_wise_crawling_img_list(self) -> List:
+        pass
+
 
 class SeleniumCrawler11toon(SeleniumCrawler):
-    def site_wise_crawling_vols(self, list_url: str, voi_info: Dict) -> None:
+    def site_wise_crawling_vols(self, list_url: str, vol_info: Dict) -> None:
         poses = self.driver.find_elements(
             By.XPATH, '//*[@id="comic-episode-list"]/li/button'
         )
@@ -265,9 +274,9 @@ class SeleniumCrawler11toon(SeleniumCrawler):
             vol_url = p.get_attribute("onclick").replace(
                 "location.href='.", self.site_url
             )[:-1]
-            if voi_info.get(title) is None:
-                voi_info[title] = dict()
-            voi_info[title]["vol_url"] = vol_url
+            if vol_info.get(title) is None:
+                vol_info[title] = dict()
+            vol_info[title]["vol_url"] = vol_url
 
     def site_wise_crawling_img_list(self) -> List:
         p_id = self.driver.find_elements(By.TAG_NAME, "script")
@@ -282,16 +291,16 @@ class SeleniumCrawler11toon(SeleniumCrawler):
 
 
 class SeleniumCrawlerManaboza(SeleniumCrawler):
-    def site_wise_crawling_vols(self, list_url: str, voi_info: Dict):
+    def site_wise_crawling_vols(self, list_url: str, vol_info: Dict) -> None:
         poses = self.driver.find_elements(By.CLASS_NAME, "flex-container")
         for p in poses:
             title = p.find_element(By.CLASS_NAME, "episode_stitle").text
             target = p.get_attribute("data-episode-id")
             target_address = list_url.replace("ep_list", "ep_view")
             vol_url = f"{target_address}/{target}"
-            if voi_info.get(title) is None:
-                voi_info[title] = dict()
-            voi_info[title]["vol_url"] = vol_url
+            if vol_info.get(title) is None:
+                vol_info[title] = dict()
+            vol_info[title]["vol_url"] = vol_url
 
     def site_wise_crawling_img_list(self) -> List:
         img_list = []
@@ -303,7 +312,7 @@ class SeleniumCrawlerManaboza(SeleniumCrawler):
 
 
 class SeleniumCrawlerManatoki(SeleniumCrawler):
-    def site_wise_crawling_vols(self, list_url: str, voi_info: Dict) -> None:
+    def site_wise_crawling_vols(self, list_url: str, vol_info: Dict) -> None:
         poses = self.driver.find_elements(By.XPATH, '//*[@id="serial-move"]/div/ul/li')
         for p in poses:
             tag = p.find_element(By.TAG_NAME, "a")
@@ -315,9 +324,9 @@ class SeleniumCrawlerManatoki(SeleniumCrawler):
             if "화 " in title:
                 title = title[: title.find("화") + 1]
             vol_url = tag.get_attribute("href")
-            if voi_info.get(title) is None:
-                voi_info[title] = dict()
-            voi_info[title]["vol_url"] = vol_url
+            if vol_info.get(title) is None:
+                vol_info[title] = dict()
+            vol_info[title]["vol_url"] = vol_url
 
     def site_wise_crawling_img_list(self) -> List:
         p_id = self.driver.find_elements(By.TAG_NAME, "script")

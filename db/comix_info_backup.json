@@ -1049,6 +1049,21 @@
             "jpn": "丸山 くがね,深山 フギン"
         }
     },
+    "[o] 요괴소년 호야": {
+        "title": {
+            "kor": "요괴소년 호야",
+            "eng": "Ushio to Tora",
+            "jpn": "うしおととら"
+        },
+        "vols": "1-34(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "후지타 카즈히로",
+            "eng": "Kazuhiro Fujita",
+            "jpn": "藤田 和日郎"
+        }
+    },
     "[o] 원 아웃": {
         "title": {
             "kor": "원 아웃",
