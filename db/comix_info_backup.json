@@ -134,6 +134,21 @@
             "jpn": "椎名 高志"
         }
     },
+    "[o] Green Worldz": {
+        "title": {
+            "kor": "Green WorldZ",
+            "eng": "Green WorldZ",
+            "jpn": "グリーンワールズ"
+        },
+        "vols": "1-8(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "오오사와 유우스케",
+            "eng": "Yusuke Osawa",
+            "jpn": "大沢 祐輔"
+        }
+    },
     "[o] 가시나무왕": {
         "title": {
             "kor": "가시나무왕",
@@ -314,6 +329,21 @@
             "jpn": "三月 えみ"
         }
     },
+    "[o] 군계": {
+        "title": {
+            "kor": "군계",
+            "eng": "Shamo",
+            "jpn": "軍鶏"
+        },
+        "vols": "1-34(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "하시모토 이조우,타나카 아키오",
+            "eng": "Izo Hashimoto,Akio Tanaka",
+            "jpn": "橋本 以蔵,たなか 亜希夫"
+        }
+    },
     "[o] 귀멸의 칼날": {
         "title": {
             "kor": "귀멸의 칼날",
@@ -327,6 +357,21 @@
             "kor": "고토게 코요하루",
             "eng": "Koyoharu Gotoge",
             "jpn": "吾峠 呼世晴"
+        }
+    },
+    "[o] 기동경찰 패트레이버": {
+        "title": {
+            "kor": "기동경찰 패트레이버",
+            "eng": "Mobile Police PATLABOR",
+            "jpn": "機動警察パトレイバー"
+        },
+        "vols": "1-22(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "유우키 마사미",
+            "eng": "Masami Yuki",
+            "jpn": "ゆうき まさみ"
         }
     },
     "[o] 기생수 애장판": {
@@ -1422,6 +1467,21 @@
             "kor": "우메즈 카즈오",
             "eng": "Kazuo Umezu",
             "jpn": "楳図 かずお"
+        }
+    },
+    "[o] 프론트미션 도그라이프 앤 도그스타일": {
+        "title": {
+            "kor": "프론트미션 도그라이프 앤 도그스타일",
+            "eng": "Front Mission Dog Life & Dog Style",
+            "jpn": "前线任务 Dog Life And Dog Style"
+        },
+        "vols": "1-10(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "오타가키 야스오,윤찬희",
+            "eng": "Yasuo Ohtagaki,C.H.LINE",
+            "jpn": "太田垣 康男,C.H.LINE"
         }
     },
     "[o] 플라네테스": {
