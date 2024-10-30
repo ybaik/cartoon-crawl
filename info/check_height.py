@@ -75,8 +75,9 @@ def check_height(base_dir, clean_scan=False, check_ext_only=False):
 
 
 if __name__ == "__main__":
-    base_dir = "c:/comix/etc/c"
+    base_dir = "c:/comix/etc/d"
     clean_scan = True
+    check_ext_only = True
     check_ext_only = False
 
     check_height(base_dir, clean_scan, check_ext_only)

@@ -347,9 +347,8 @@ class SeleniumCrawlerManatoki(SeleniumCrawler):
 
                 bytes_data = binascii.unhexlify(clean_hex_string)
                 text = bytes_data.decode("utf-8")
-                with open("test.txt", "w", encoding="UTF-8") as file:
-                    file.write(text)
-
+                # with open("test.txt", "w", encoding="UTF-8") as file:
+                #     file.write(text)
                 pattern = r"https://.*?\.jpg"
                 jpg_urls = re.findall(pattern, text)
 

@@ -494,6 +494,66 @@
             "jpn": "望月 峯太郎"
         }
     },
+    "[o] 드래곤볼 풀컬러 1부 소년편": {
+        "title": {
+            "kor": "드래곤볼 1부 소년편",
+            "eng": "Dragon Ball Boyhood Arc",
+            "jpn": "ドラゴンボール カラー版 少年編"
+        },
+        "vols": "1-8(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "토리야마 아키라",
+            "eng": "Akira Toriyama",
+            "jpn": "鳥山 明"
+        }
+    },
+    "[o] 드래곤볼 풀컬러 2부 피콜로 대마왕편": {
+        "title": {
+            "kor": "드래곤볼 2부 피콜로 대마왕편",
+            "eng": "Dragon Ball Demon King Piccolo Arc",
+            "jpn": "ドラゴンボール カラー版 ピッコロ大魔王編"
+        },
+        "vols": "1-4(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "토리야마 아키라",
+            "eng": "Akira Toriyama",
+            "jpn": "鳥山 明"
+        }
+    },
+    "[o] 드래곤볼 풀컬러 3부 사이언인편": {
+        "title": {
+            "kor": "드래곤볼Z 3부 사이언인편",
+            "eng": "Dragon Ball Saiyan Arc",
+            "jpn": "ドラゴンボール カラー版 サイヤ人編"
+        },
+        "vols": "1-3(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "토리야마 아키라",
+            "eng": "Akira Toriyama",
+            "jpn": "鳥山 明"
+        }
+    },
+    "[o] 드래곤볼 풀컬러 4부 프리저편": {
+        "title": {
+            "kor": "드래곤볼Z 4부 프리저편",
+            "eng": "Dragon Ball Z Freeza Arc",
+            "jpn": "ドラゴンボール カラー版 フリーザ編 "
+        },
+        "vols": "1-5(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "토리야마 아키라",
+            "eng": "Akira Toriyama",
+            "jpn": "鳥山 明"
+        }
+    },
     "[o] 디트로이트 메탈시티": {
         "title": {
             "kor": "디트로이트 메탈시티",
@@ -777,6 +837,21 @@
             "kor": "하루키",
             "eng": "Haruki",
             "jpn": "春輝"
+        }
+    },
+    "[o] 사무라이 디퍼 쿄우": {
+        "title": {
+            "kor": "사무라이 디퍼 쿄우",
+            "eng": "Samurai Deeper Kyo",
+            "jpn": "Samurai Deeper Kyo"
+        },
+        "vols": "1-38(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "카미죠 아키미네",
+            "eng": "Akimine Kamijyo",
+            "jpn": "上条 明峰"
         }
     },
     "[o] 성전 애장판": {
@@ -1227,6 +1302,21 @@
             "kor": "아쿠타미 게게",
             "eng": "Gege Akutami",
             "jpn": "芥見 下々"
+        }
+    },
+    "[o] 지어스": {
+        "title": {
+            "kor": "지어스",
+            "eng": "Zearth",
+            "jpn": "ぼくらの"
+        },
+        "vols": "1-11(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "키토 모히로",
+            "eng": "Mohiro Kitoh",
+            "jpn": "鬼頭 莫宏"
         }
     },
     "[o] 지옥락": {

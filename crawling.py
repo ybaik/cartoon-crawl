@@ -4,7 +4,7 @@ from pathlib import Path
 from common.crawler import create_crawler, download_images, filter_title
 
 
-USE_SELENIUM = False
+USE_SELENIUM = True
 
 
 def main():
@@ -14,8 +14,8 @@ def main():
     json_path = base_dir / "info.json"
 
     # Set url - 11toon
-    site_url = "https://www.11toon137.com/bbs"
-    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EB%A9%94%EC%A2%85%EC%9D%BC%EA%B0%81&is=2799&sord=&type=&page=2"
+    site_url = "https://www.11toon139.com/bbs"
+    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EB%93%9C%EB%9E%98%EA%B3%A4%EB%B3%BC%20%ED%92%80%EC%BB%AC%EB%9F%AC%204%EB%B6%80%20%ED%94%84%EB%A6%AC%EC%A0%80%ED%8E%B8&is=21860"
     # # Set url - manaboza
     # site_url = "https://manaboza76.com/comic/ep_list"
     # list_url = f"{site_url}/35499"
@@ -43,10 +43,12 @@ def main():
     crawler.deinit()
 
     # Check filter
-    # json_data["tag_list"].append("마슐")
+    json_data["tag_list"].append("드래곤볼 풀컬러 4…부 프리저편")
+    json_data["tag_list"].append("드래곤볼 풀컬러 4부 프리저편")
     for key in json_data["vol_info"].keys():
         tags = json_data["tag_list"]
         name = filter_title(key, tags)
+        print(name)
         if name == key:
             print(key)
             pass

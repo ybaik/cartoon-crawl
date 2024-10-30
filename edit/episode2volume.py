@@ -7,7 +7,11 @@ import numpy as np
 
 
 episode2vol = {
-    16: [108, 111],
+    1: [1, 17],
+    2: [18, 34],
+    3: [35, 51],
+    4: [52, 68],
+    5: [69, 84],
 }
 
 
@@ -17,14 +21,14 @@ def gen_bg_img(h, w):
 
 
 def main():
-    skip_1page = False
-    keep_1page_for_1st_episode = False
+    skip_1page = True
+    keep_1page_for_1st_episode = True
     skip_last_page = False
-    base_dir = "c:/comix/etc/b"
+    base_dir = "c:/comix/etc/a"
     base_dir1 = "c:/comix/etc/c"
     # bgfile = "c:/comix/etc/c/white.png"
-    bgfile = "c:/comix/etc/c/in_white.png"
-    add_bg_file = True
+    bgfile = "c:/comix/etc/c/white.png"
+    add_bg_file = False
 
     # img = gen_bg_img(1080, 720)
     # cv2.imwrite(bgfile, img)
@@ -36,7 +40,7 @@ def main():
 
         for episode in range(s, e + 1):
             # src_dir = f"{base_dir}/{episode:03d}"
-            src_dir = f"{base_dir}/{episode}"
+            src_dir = f"{base_dir}/{episode}화"
             if not os.path.exists(src_dir):
                 print(src_dir)
                 continue
