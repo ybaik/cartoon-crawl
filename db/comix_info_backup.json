@@ -305,7 +305,7 @@
             "eng": "Kaiju No.8",
             "jpn": "怪獣8号"
         },
-        "vols": "1-13",
+        "vols": "1-14",
         "verified": "O",
         "status": "연재중",
         "author": {
@@ -357,6 +357,21 @@
             "kor": "고토게 코요하루",
             "eng": "Koyoharu Gotoge",
             "jpn": "吾峠 呼世晴"
+        }
+    },
+    "[o] 글레이프니르": {
+        "title": {
+            "kor": "글레이프니르",
+            "eng": "Gleipnir",
+            "jpn": "グレイプニル"
+        },
+        "vols": "1-14(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "타케다 순",
+            "eng": "Sun Takeda",
+            "jpn": "武田 すん"
         }
     },
     "[o] 기동경찰 패트레이버": {
@@ -546,6 +561,36 @@
             "jpn": "ドラゴンボール カラー版 フリーザ編 "
         },
         "vols": "1-5(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "토리야마 아키라",
+            "eng": "Akira Toriyama",
+            "jpn": "鳥山 明"
+        }
+    },
+    "[o] 드래곤볼 풀컬러 5부 인조인간 셀편": {
+        "title": {
+            "kor": "드래곤볼 풀컬러 5부 인조인간 셀편",
+            "eng": "Dragon Ball Z Android/Cell Arc",
+            "jpn": "DRAGON BALL カラー版 人造人間・セル編"
+        },
+        "vols": "1-6(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "토리야마 아키라",
+            "eng": "Akira Toriyama",
+            "jpn": "鳥山 明"
+        }
+    },
+    "[o] 드래곤볼 풀컬러 6부 마인 부우편": {
+        "title": {
+            "kor": "드래곤볼 풀컬러 6부 마인 부우편",
+            "eng": "Dragon Ball Z Majin Buu Arc",
+            "jpn": "DRAGON BALL カラー版 魔人ブウ編"
+        },
+        "vols": "1-6(완)",
         "verified": "O",
         "status": "완결",
         "author": {
@@ -959,6 +1004,21 @@
             "jpn": "弘兼 憲史"
         }
     },
+    "[o] 시티헌터": {
+        "title": {
+            "kor": "시티헌터",
+            "eng": "City Hunter",
+            "jpn": "シティーハンター"
+        },
+        "vols": "1-35(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "호조 츠카사",
+            "eng": "Tsukasa Hojo",
+            "jpn": "北条 司"
+        }
+    },
     "[o] 식량인류": {
         "title": {
             "kor": "식량인류",
@@ -1259,6 +1319,21 @@
             "jpn": "天下 雌子,田中 克樹"
         }
     },
+    "[o] 일기당천": {
+        "title": {
+            "kor": "일기당천",
+            "eng": "Ikkitousen",
+            "jpn": "一騎当千"
+        },
+        "vols": "1-8(완)",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "시오자키 유지",
+            "eng": "Yuji Shiozaki",
+            "jpn": "塩崎 雄二"
+        }
+    },
     "[o] 전영소녀 애장판": {
         "title": {
             "kor": "전영소녀",
@@ -1295,7 +1370,7 @@
             "eng": "Jujutsu Kaisen",
             "jpn": "呪術廻戦"
         },
-        "vols": "1-27",
+        "vols": "1-28",
         "verified": "O",
         "status": "연재중",
         "author": {
