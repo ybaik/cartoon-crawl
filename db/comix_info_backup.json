@@ -434,6 +434,21 @@
             "jpn": "今 敏"
         }
     },
+    "[o] 더 페이블": {
+        "title": {
+            "kor": "더 페이블",
+            "eng": "The Fable",
+            "jpn": "ザ・ファブル"
+        },
+        "vols": "1부1-22,2부1-9",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "미나미 카츠히사",
+            "eng": "Katsuhisa Minami",
+            "jpn": "南 勝久"
+        }
+    },
     "[o] 던전밥": {
         "title": {
             "kor": "던전밥",

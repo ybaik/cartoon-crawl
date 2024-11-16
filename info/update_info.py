@@ -9,45 +9,28 @@ MAIN_DIRS = ["미완", "미완_스캔", "연재중", "연재중_스캔", "완결
 
 
 def gather_info(check_dir: Path, json_data: dict) -> None:
-
     for main in MAIN_DIRS:
         main_dir = check_dir / main
-        titles = os.listdir(main_dir)
-        for title in titles:
-            verified = False
-            if "[o]" in title:
-                verified = True
-            title = title.replace("(완)", "")
-            vols = title.split()[-1]
-            if re.match(r"\d+-\d+", vols):
-                title = title.removesuffix(vols).strip()
-            else:
-                vols = ""
 
-            if json_data.get(title) is not None:
+        for title in os.listdir(main_dir):
+            verified = "[o]" in title
+            title_info = title.replace("(완)", "").split()
+            vols = title_info.pop() if re.match(r"\d+-\d+", title_info[-1]) else ""
+            title = " ".join(title_info)
+            if title in json_data:
                 continue
-            else:
-                title_dict = {
+
+            json_data[title] = {
+                "title": {
                     "kor": title.replace("[o]", "").strip(),
                     "eng": "",
                     "jpn": "",
-                }
-
-                author_dict = {
-                    "kor": "",
-                    "eng": "",
-                    "jpn": "",
-                }
-
-                doc_info = {
-                    "title": title_dict,
-                    "vols": vols,
-                    "verified": "O" if verified else "X",
-                    "status": main,
-                    "author": author_dict,
-                }
-
-                json_data[title] = doc_info
+                },
+                "vols": vols,
+                "verified": "O" if verified else "X",
+                "status": main,
+                "author": {"kor": "", "eng": "", "jpn": ""},
+            }
 
 
 def main():
