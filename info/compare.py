@@ -4,86 +4,63 @@ import os
 from common.info import MAIN_DIRS
 
 
-def check_dir_names(names):
-    for name in names:
-        print(f"Diff: {name}")
+def get_unverified_dirs(dirs):
+    """Returns a list of directories without the '[o] ' prefix"""
+    return [d for d in dirs if not d.startswith("[o] ")]
 
 
-def filter_verified(dirs):
-    dirs_return = []
-    for d in dirs:
-        if not "[o] " in d:
-            dirs_return.append(d)
-    return dirs_return
+def get_diff_dirs(dirs1, dirs2):
+    """Returns the difference between two lists of directories"""
+    return set(dirs1) - set(dirs2)
 
 
 def main():
-
     compare_btw_hdd = True
-
-    if compare_btw_hdd:
-        ignore_verified = False
-        base_path_src = "e:/comix"
-    else:
-        ignore_verified = True
-        base_path_src = "c:/comix"
+    base_path_src = "e:/comix" if compare_btw_hdd else "c:/comix"
     base_path_dst = "d:/comix"
+    ignore_verified = not compare_btw_hdd
 
-    diff = True
+    diff = False
     num_series = 0
     for main_dir in MAIN_DIRS:
-        main_dir_src = f"{base_path_src}/{main_dir}"
-        main_dir_dst = f"{base_path_dst}/{main_dir}"
-        dirs_src = os.listdir(main_dir_src)
-        dirs_dst = os.listdir(main_dir_dst)
-        dirs_src.sort()
-        dirs_dst.sort()
+        main_dir_src = os.path.join(base_path_src, main_dir)
+        main_dir_dst = os.path.join(base_path_dst, main_dir)
+        dirs_src = sorted(
+            get_unverified_dirs(os.listdir(main_dir_src))
+            if ignore_verified
+            else os.listdir(main_dir_src)
+        )
+        dirs_dst = sorted(
+            get_unverified_dirs(os.listdir(main_dir_dst))
+            if ignore_verified
+            else os.listdir(main_dir_dst)
+        )
+        diff_src = get_diff_dirs(dirs_src, dirs_dst)
+        diff_dst = get_diff_dirs(dirs_dst, dirs_src)
 
-        if ignore_verified:
-            dirs_src = filter_verified(dirs_src)
-            dirs_dst = filter_verified(dirs_dst)
-
-        # Check dir
-        diff_src = set(dirs_src) - set(dirs_dst)
-        if len(diff_src):
-            print(f"Num dir difference: {main_dir_src}, {main_dir_dst}")
-            # check names
-            check_dir_names(diff_src)
+        if diff_src or diff_dst:
+            print(f"Dir difference: {main_dir_src}, {main_dir_dst}")
+            print("Missing in dst:", sorted(diff_src))
+            print("Missing in src:", sorted(diff_dst))
             diff = True
 
-        diff_dst = set(dirs_dst) - set(dirs_src)
-        if len(diff_dst):
-            print(f"Num dir difference: {main_dir_src}, {main_dir_dst}")
-            # check names
-            check_dir_names(diff_dst)
-            diff = True
+        common_dirs = set(dirs_src) & set(dirs_dst)
 
-        titles = set(dirs_src) & set(dirs_dst)
-
-        # Check names
-        for title in titles:
-            # check ext [zip and csv]
-            files_src = os.listdir(f"{main_dir_src}/{title}")
-            files_dst = os.listdir(f"{main_dir_dst}/{title}")
-
+        for title in common_dirs:
+            files_src = os.listdir(os.path.join(main_dir_src, title))
+            files_dst = os.listdir(os.path.join(main_dir_dst, title))
             if ignore_verified:
-                diff_set1 = set(files_src).difference(set(files_dst))
-                diff_set2 = set(files_dst).difference(set(files_src))
-                if len(diff_set1) + len(diff_set2):
+                diff_files = set(files_src) ^ set(files_dst)
+                if diff_files:
+                    print(title, sorted(diff_files))
                     diff = True
-                    print(title, sorted(diff_set1), sorted(diff_set2))
             else:
-                for file in files_src:
-                    fn, ext = os.path.splitext(file)
-                    if ext not in [".zip", ".csv", ".txt"]:
-                        diff = True
-                        print(title, fn)
+                for files in [files_src, files_dst]:
+                    for file in files:
+                        if not file.endswith((".zip", ".csv", ".txt")):
+                            print(title, file)
+                            diff = True
 
-                for file in files_dst:
-                    fn, ext = os.path.splitext(file)
-                    if ext not in [".zip", ".csv", ".txt"]:
-                        diff = True
-                        print(title, fn)
         num_series += len(dirs_src)
 
     if not diff:

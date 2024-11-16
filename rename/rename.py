@@ -5,14 +5,13 @@ import shutil
 
 
 def main():
-    base_path = "c:/comix/etc/a"
-    target_path = "c:/comix/etc/e/"
-
-    els = os.listdir(base_path)
-    for el in els:
-        new = el.replace(" ", "")
-        if new != el:
-            os.rename(f"{base_path}/{el}", f"{base_path}/{new}")
+    base_dir = "d:/comix/완결"
+    vols = os.listdir(base_dir)
+    for vol in vols:
+        tag = vol.split(" ")[-1]
+        new = vol.removesuffix(tag)
+        if new != vol:
+            os.rename(f"{base_dir}/{vol}", f"{base_dir}/{new}")
 
 
 if __name__ == "__main__":

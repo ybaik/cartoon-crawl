@@ -4,12 +4,7 @@ import os
 
 
 def rename(base_path, episode, files):
-    target_files = []
-    for file in files:
-        episode_src = file.split("-")[1]
-        if episode_src != episode:
-            continue
-        target_files.append(file)
+    target_files = [f for f in files if f.split("-")[1] == episode]
     target_files.sort()
 
     for i, file in enumerate(target_files, start=1):
@@ -23,8 +18,7 @@ def rename(base_path, episode, files):
 def main():
 
     base_dir = "C:/comix/etc/c"
-    vol_range = [22, 22]
-
+    vol_range = [9, 9]
     for vol in range(vol_range[0], vol_range[-1] + 1):
         target_dir = f"{base_dir}/{vol:02d}"
         files = os.listdir(target_dir)
@@ -32,8 +26,8 @@ def main():
 
         episodes = set()
         for file in files:
-            episodes.add(file.split("-")[1])
-
+            episode = file.split("-")[1]
+            episodes.add(episode)
         print(episodes)
 
         for episode in episodes:

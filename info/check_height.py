@@ -5,73 +5,58 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-exts = [".jpg", ".png", ".gif"]
 
+def check_height(base_dir: str, clean_scan: bool = False, check_ext_only: bool = False):
+    """
+    Checks the height of images in the given directory.
 
-def check_height(base_dir, clean_scan=False, check_ext_only=False):
-    exts_ = set()
-    targets = os.listdir(base_dir)
-    dirs = []
-    for target in targets:
-        target_path = f"{base_dir}/{target}"
-        if not os.path.isdir(target_path):
-            continue
-        dirs.append(target)
+    Args:
+        base_dir (str): The base directory to check.
+        clean_scan (bool): Whether to mark as clean scan. Defaults to False.
+        check_ext_only (bool): Whether to only check the extension. Defaults to False.
 
+    Returns:
+        None
+    """
+    supported_exts = [".jpg", ".png", ".gif"]
+    dirs = [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d))]
     if not check_ext_only:
-        cnt = len(dirs)
         csv_head = ["Vol.", "Clean.Scan", "Height.Med", "Height.Min", "Height.Max"]
-        df = pd.DataFrame(index=range(0, cnt), columns=csv_head)
+        df = pd.DataFrame(columns=csv_head)
 
-    cnt = 0
     for folder in tqdm(dirs):
-        target_dir = f"{base_dir}/{folder}"
-        if not os.path.isdir(target_dir):
-            continue
-        # print(folder)
-        files = os.listdir(target_dir)
+        target_dir = os.path.join(base_dir, folder)
+        files = [
+            f
+            for f in os.listdir(target_dir)
+            if os.path.splitext(f)[1].lower() in supported_exts
+        ]
         heights = []
         for file in files:
-            name, ext = os.path.splitext(file)
-            exts_.add(ext)
-
-            fsize = os.path.getsize(f"{target_dir}/{file}")
-            if fsize < 10000:
-                print(f"{target_dir}/{file}: {fsize} byte")
-            if ext not in exts:
-                if ext in [".JPG", ".jpeg"]:
-                    os.rename(f"{target_dir}/{file}", f"{target_dir}/{name}.jpg")
-                print(target_dir, file)
-                continue
-
+            file_path = os.path.join(target_dir, file)
             if not check_ext_only:
-                file_path = f"{target_dir}/{file}"
-                img_array = np.fromfile(file_path, np.uint8)
-                # img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                img = cv2.imdecode(img_array, cv2.IMREAD_GRAYSCALE)
-
-                if img is None:
-                    print(f"None: {target_dir}/{file}")
-                    continue
-                h, wc = img.shape
-                heights.append(h)
-
+                img = cv2.imdecode(
+                    np.fromfile(file_path, np.uint8), cv2.IMREAD_GRAYSCALE
+                )
+                if img is not None:
+                    heights.append(img.shape[0])
         if not check_ext_only:
-            median = int(np.median(heights))
-            min = int(np.min(heights))
-            max = int(np.max(heights))
-            df.iloc[cnt] = {
-                "Vol.": folder,
-                "Clean.Scan": "O" if clean_scan else "X",
-                "Height.Med": f"{median:4d}",
-                "Height.Min": f"{min:4d}",
-                "Height.Max": f"{max:4d}",
-            }
-        cnt += 1
-
+            if heights:
+                median = int(np.median(heights))
+                min_height = int(np.min(heights))
+                max_height = int(np.max(heights))
+                df = df._append(
+                    {
+                        "Vol.": folder,
+                        "Clean.Scan": "O" if clean_scan else "X",
+                        "Height.Med": f"{median:4d}",
+                        "Height.Min": f"{min_height:4d}",
+                        "Height.Max": f"{max_height:4d}",
+                    },
+                    ignore_index=True,
+                )
     if not check_ext_only:
-        df.to_csv(f"{base_dir}/info.csv", index=False)
-    print(exts_)
+        df.to_csv(os.path.join(base_dir, "info.csv"), index=False)
 
 
 if __name__ == "__main__":
