@@ -374,6 +374,21 @@
             "jpn": "武田 すん"
         }
     },
+    "[o] 기간트": {
+        "title": {
+            "kor": "기간트",
+            "eng": "Gigant",
+            "jpn": "Gigant"
+        },
+        "vols": "1-10",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "오쿠 히로야",
+            "eng": "Hiroya Oku",
+            "jpn": "奥 浩哉"
+        }
+    },
     "[o] 기동경찰 패트레이버": {
         "title": {
             "kor": "기동경찰 패트레이버",
@@ -1317,6 +1332,21 @@
             "kor": "오시미 슈조",
             "eng": "Shuzo Oshimi",
             "jpn": "押見 修造"
+        }
+    },
+    "[o] 이누야시키": {
+        "title": {
+            "kor": "이누야시키",
+            "eng": "Inuyashiki",
+            "jpn": "いぬやしき"
+        },
+        "vols": "1-10",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "오쿠 히로야",
+            "eng": "Hiroya Oku",
+            "jpn": "奥 浩哉"
         }
     },
     "[o] 인고시마": {
