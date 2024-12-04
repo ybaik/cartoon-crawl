@@ -21,7 +21,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 
-SITE_NAMES = ["11toon", "manaboza"]
+SITE_NAMES = ["11toon", "manaboza", "newtoki"]
 SITE_NAMES_SELENIUM = ["11toon", "manaboza", "manatoki"]
 
 
@@ -40,11 +40,14 @@ def filter_title(title: str, tags: List) -> str:
     return title
 
 
-def download_images(json_data: Dict, save_base_dir: Path) -> None:
+def download_images(json_data: Dict, save_base_dir: Path, site_url: str) -> None:
     http = urllib3.PoolManager()
     user_agent = UserAgent()
 
-    for k, v in json_data["vol_info"].items():
+    # for k, v in json_data["vol_info"].items():
+    # for k in reversed(list(json_data["vol_info"].keys())):
+    for k in json_data["vol_info"].keys():
+        v = json_data["vol_info"][k]
         print(k)
         name = filter_title(k, json_data["tag_list"])
         # print(name)
@@ -67,7 +70,7 @@ def download_images(json_data: Dict, save_base_dir: Path) -> None:
             dst_path = save_dir / f"{idx:03d}.{ext}"
 
             if not dst_path.exists():
-                headers = {"User-Agent": user_agent.random}
+                headers = {"User-Agent": user_agent.random, "Referer": site_url}
                 with http.request(
                     "GET", img_url, preload_content=False, headers=headers
                 ) as r, open(dst_path, "wb") as out_file:
@@ -79,13 +82,13 @@ def download_images(json_data: Dict, save_base_dir: Path) -> None:
 def create_crawler(site_url: str, use_selenium: bool):
 
     if not use_selenium:
-        for site_name in SITE_NAMES_SELENIUM:
+        for site_name in SITE_NAMES:
             if not site_name in site_url:
                 continue
             class_name = f"Crawler{site_name.capitalize()}"
             return globals()[class_name](site_name=site_name, site_url=site_url)
     else:
-        for site_name in SITE_NAMES:
+        for site_name in SITE_NAMES_SELENIUM:
             if not site_name in site_url:
                 continue
             class_name = f"SeleniumCrawler{site_name.capitalize()}"
@@ -107,6 +110,7 @@ class Crawler:
         user_agent = UserAgent()
         headers = {"User-Agent": user_agent.random}
         self.response = requests.get(url, headers=headers)
+
         time.sleep(random.uniform(1, 2))
 
     def deinit(self):
@@ -192,7 +196,7 @@ class Crawler11toon(Crawler):
 
 
 class CrawlerManaboza(Crawler):
-    def site_wise_crawling_vols(self, list_url: str, voi_info: Dict) -> None:
+    def site_wise_crawling_vols(self, list_url: str, vol_info: Dict) -> None:
         soup = BeautifulSoup(self.response.text, "html.parser")
         items = soup.select(".flex-container.episode-items")
         for item in items:
@@ -201,9 +205,9 @@ class CrawlerManaboza(Crawler):
             target_address = list_url.replace("ep_list", "ep_view")
             vol_url = f"{target_address}/{target}"
 
-            if voi_info.get(title) is None:
-                voi_info[title] = dict()
-            voi_info[title]["vol_url"] = vol_url
+            if vol_info.get(title) is None:
+                vol_info[title] = dict()
+            vol_info[title]["vol_url"] = vol_url
 
     def site_wise_crawling_img_list(self) -> List:
         img_list = []
@@ -211,6 +215,28 @@ class CrawlerManaboza(Crawler):
         items = soup.select(".document_img")
         for item in items:
             img_list.append(item.attrs["data-src"])
+        return img_list
+
+
+class CrawlerNewtoki(Crawler):
+    def site_wise_crawling_vols(self, list_url: str, vol_info: Dict) -> None:
+        soup = BeautifulSoup(self.response.text, "html.parser")
+        list = soup.select_one(".toon_index")
+        items = list.select("li")
+        for item in items:
+            title = item.a.contents[1].strip()
+            vol_url = item.find("a").attrs["href"]
+            if vol_info.get(title) is None:
+                vol_info[title] = dict()
+            vol_info[title]["vol_url"] = vol_url
+
+    def site_wise_crawling_img_list(self) -> List:
+        img_list = []
+        soup = BeautifulSoup(self.response.text, "html.parser")
+        div_tag = soup.find("div", id="bo_v_con")
+        items = div_tag.find_all("img", alt=True)
+        for item in items:
+            img_list.append(item.attrs["src"])
         return img_list
 
 

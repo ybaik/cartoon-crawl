@@ -524,6 +524,36 @@
             "jpn": "Clamp"
         }
     },
+    "[o] 도쿄구울": {
+        "title": {
+            "kor": "도쿄구울",
+            "eng": "Tokyo Ghoul",
+            "jpn": "東京喰種"
+        },
+        "vols": "1-14",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "이시다 스이",
+            "eng": "Sui Ishida",
+            "jpn": "石田 スイ"
+        }
+    },
+    "[o] 도쿄구울re": {
+        "title": {
+            "kor": "도쿄구울:re",
+            "eng": "Tokyo Ghoul:re",
+            "jpn": "東京喰種:re"
+        },
+        "vols": "1-16",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "이시다 스이",
+            "eng": "Sui Ishida",
+            "jpn": "石田 スイ"
+        }
+    },
     "[o] 드래곤 헤드": {
         "title": {
             "kor": "드래곤 헤드",
@@ -974,6 +1004,21 @@
             "jpn": "井上 雄彦"
         }
     },
+    "[o] 시끌별 녀석들": {
+        "title": {
+            "kor": "시끌별 녀석들",
+            "eng": "Urusei Yatsura",
+            "jpn": "うる星やつら"
+        },
+        "vols": "1-34",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "타카하시 루미코",
+            "eng": "Rumiko Takahashi",
+            "jpn": "高橋 留美子"
+        }
+    },
     "[o] 시도니아의 기사": {
         "title": {
             "kor": "시도니아의 기사",
@@ -1122,6 +1167,21 @@
             "kor": "사다모토 요시유키",
             "eng": "Yoshiyuki Sadamoto",
             "jpn": "貞本 義行"
+        }
+    },
+    "[o] 쌍망정은 부숴야 한다": {
+        "title": {
+            "kor": "쌍망정은 부숴야 한다",
+            "eng": "双亡亭壊すべし",
+            "jpn": "Souboutei Must be Destroyed"
+        },
+        "vols": "1-25",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "후지타 카즈히로",
+            "eng": "Kazuhiro Fujita",
+            "jpn": "藤田 和日郎"
         }
     },
     "[o] 아이 앰 어 히어로": {
@@ -1319,6 +1379,21 @@
             "jpn": "土屋 ガロン,竹谷 州史"
         }
     },
+    "[o] 월광조례": {
+        "title": {
+            "kor": "월광조례",
+            "eng": "月光条例",
+            "jpn": "Moonlight Act"
+        },
+        "vols": "1-29",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "후지타 카즈히로",
+            "eng": "Kazuhiro Fujita",
+            "jpn": "藤田 和日郎"
+        }
+    },
     "[o] 유체 노바": {
         "title": {
             "kor": "유체 노바",
@@ -1364,6 +1439,21 @@
             "jpn": "天下 雌子,田中 克樹"
         }
     },
+    "[o] 인어 시리즈": {
+        "title": {
+            "kor": "인어 시리즈",
+            "eng": "Mermaid Saga",
+            "jpn": "人魚シリーズ"
+        },
+        "vols": "1-3",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "타카하시 루미코",
+            "eng": "Rumiko Takahashi",
+            "jpn": "高橋 留美子"
+        }
+    },
     "[o] 일기당천": {
         "title": {
             "kor": "일기당천",
@@ -1392,6 +1482,21 @@
             "kor": "카츠라 마사카즈",
             "eng": "Masakazu Katsura",
             "jpn": "桂 正和"
+        }
+    },
+    "[o] 제멋대로 아이돌": {
+        "title": {
+            "kor": "제멋대로 아이돌",
+            "eng": "Good Luck To You",
+            "jpn": "気ままにアイドル"
+        },
+        "vols": "1-5",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "코타니 켄이치",
+            "eng": "Kenichi Kotani",
+            "jpn": "小谷 憲一"
         }
     },
     "[o] 종말의 하렘": {
@@ -1557,6 +1662,21 @@
             "kor": "이와아키 히토시",
             "eng": "Hitoshi Iwaaki",
             "jpn": "岩明 均"
+        }
+    },
+    "[o] 카드캡터 사쿠라": {
+        "title": {
+            "kor": "카드캡터 사쿠라",
+            "eng": "Cardcaptor Sakura",
+            "jpn": "カードキャプターさくら"
+        },
+        "vols": "1-12",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "클램프",
+            "eng": "Clamp",
+            "jpn": "Clamp"
         }
     },
     "[o] 카드캡터 사쿠라 클리어 카드 편": {
@@ -2247,21 +2367,6 @@
             "kor": "다카하시 츠토무",
             "eng": "Tsutomu Takahashi",
             "jpn": "髙橋 ツトム"
-        }
-    },
-    "카드캡터 사쿠라": {
-        "title": {
-            "kor": "카드캡터 사쿠라",
-            "eng": "Cardcaptor Sakura",
-            "jpn": "カードキャプターさくら"
-        },
-        "vols": "1-12",
-        "verified": "X",
-        "status": "완결_스캔",
-        "author": {
-            "kor": "클램프",
-            "eng": "Clamp",
-            "jpn": "Clamp"
         }
     },
     "카페 알파": {

@@ -2,73 +2,74 @@
 
 import os
 import shutil
+import numpy as np
 
 
 episode2vol = {
-    "volumn": 23,
+    6: [46, 55],
+    7: [56, 65],
+    8: [66, 75],
+    9: [76, 85],
+    10: [86, 95],
+    11: [96, 105],
+    12: [106, 115],
+    13: [116, 125],
+    14: [126, 135],
+    15: [136, 145],
+    16: [146, 155],
+    17: [156, 165],
+    18: [166, 175],
+    19: [176, 185],
+    20: [186, 195],
+    21: [196, 205],
+    22: [206, 215],
+    23: [216, 225],
+    24: [226, 235],
+    25: [236, 245],
+    26: [246, 255],
+    27: [256, 265],
+    28: [266, 275],
+    29: [276, 286],
 }
-
-start = 331
-
-for i in range(155, 167):
-    episode2vol[i] = [start, start + 1]
-    start += 2
-
-episode2vol["ext"] = [f"{start+1}화"]
-
-print(episode2vol)
 
 
 def main():
-    base_path = "D:/comix/etc/도로헤도로"
-    base_path1 = "D:/comix/etc/a"
-    v = episode2vol["volumn"]
-    target = f"{base_path1}/{v:02d}"
-    os.makedirs(target, exist_ok=True)
+    skip_1page = True
+    keep_1page_for_1st_episode = True
+    skip_last_page = False
+    src_base_dir = "c:/comix/etc/a"
+    dst_base_dir = "c:/comix/etc/c"
+    bgfile = "c:/comix/etc/c/white.png"
+    add_bg_file = False
 
-    for k in episode2vol.keys():
-        if not isinstance(k, int):
-            continue
+    for vol, (s, e) in episode2vol.items():
+        dst_dir = f"{dst_base_dir}/{vol:02d}"
+        os.makedirs(dst_dir, exist_ok=True)
 
-        [s, e] = episode2vol.get(k)
-
-        cnt = 1
-        for i in range(s, e + 1):
-            src_dir = f"{base_path}/{i}화"
-
+        for new_episode, episode in enumerate(range(s, e + 1), 1):
+            src_dir = f"{src_base_dir}/{episode}화"
             if not os.path.exists(src_dir):
-                print(src_dir)
+                print(f"Skipping non-existent directory: {src_dir}")
                 continue
 
-            files = os.listdir(src_dir)
-            for j, f in enumerate(files):
-                if j == 0:
-                    continue
-                [id, ext] = f.split(".")
+            files = sorted(os.listdir(src_dir))
+            if skip_1page and not (keep_1page_for_1st_episode and episode == s):
+                files = files[1:]  # Skip the first file if required
+            if skip_last_page:
+                files = files[:-1]  # Skip the last file if required
+
+            for i, f in enumerate(files):
+                if keep_1page_for_1st_episode and episode == s and i == 0:
+                    dst_filename = f"{vol:02d}-000-000{os.path.splitext(f)[1]}"
+                else:
+                    dst_filename = f"{vol:02d}-{new_episode:03d}-{(i + 3):03d}{os.path.splitext(f)[1]}"
+                shutil.copyfile(f"{src_dir}/{f}", f"{dst_dir}/{dst_filename}")
+
+            if add_bg_file and episode < e:
                 shutil.copyfile(
-                    f"{src_dir}/{f}", f"{target}/{v:02d}-{k:03d}-{cnt:03d}.{ext}"
+                    bgfile,
+                    f"{dst_dir}/{vol:02d}-{new_episode:03d}-{(len(files) + 3):03d}{os.path.splitext(bgfile)[1]}",
                 )
-                cnt += 1
-    if episode2vol.get("ext") is not None:
-        dsts = episode2vol.get("ext")
-        cnt = 1
-        for dst in dsts:
-            src_dir = f"{base_path}/{dst}"
-
-            if not os.path.exists(src_dir):
-                print(src_dir)
-                continue
-
-            files = os.listdir(src_dir)
-
-            for j, f in enumerate(files):
-                if j == 0:
-                    continue
-                [id, ext] = f.split(".")
-                shutil.copyfile(
-                    f"{src_dir}/{f}", f"{target}/{v:02d}-ext-{cnt:03d}.{ext}"
-                )
-                cnt += 1
 
 
 if __name__ == "__main__":
