@@ -18,6 +18,7 @@ def check_height(base_dir: str, clean_scan: bool = False, check_ext_only: bool =
     Returns:
         None
     """
+    exts = set()
     supported_exts = [".jpg", ".png", ".gif"]
     dirs = [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d))]
     if not check_ext_only:
@@ -26,14 +27,18 @@ def check_height(base_dir: str, clean_scan: bool = False, check_ext_only: bool =
 
     for folder in tqdm(dirs):
         target_dir = os.path.join(base_dir, folder)
-        files = [
-            f
-            for f in os.listdir(target_dir)
-            if os.path.splitext(f)[1].lower() in supported_exts
-        ]
+        files = os.listdir(target_dir)
+
         heights = []
         for file in files:
+            name, ext = os.path.splitext(file)
+            exts.add(ext)
             file_path = os.path.join(target_dir, file)
+
+            if ext not in supported_exts:
+                if ext in [".JPG", ".jpeg", ".JPEG"]:
+                    os.rename(file_path, f"{target_dir}/{name}.jpg")
+                    file_path = f"{target_dir}/{name}.jpg"
             if not check_ext_only:
                 img = cv2.imdecode(
                     np.fromfile(file_path, np.uint8), cv2.IMREAD_GRAYSCALE
@@ -57,6 +62,7 @@ def check_height(base_dir: str, clean_scan: bool = False, check_ext_only: bool =
                 )
     if not check_ext_only:
         df.to_csv(os.path.join(base_dir, "info.csv"), index=False)
+    print(exts)
 
 
 if __name__ == "__main__":

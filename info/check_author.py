@@ -9,6 +9,8 @@ def main():
     )
 
     author_keys = {}
+    print(len(json_data.keys()))
+
     for _, data in json_data.items():
         for author in data["author"]["kor"].split(","):
             author_keys[author] = author_keys.get(author, 0) + 1

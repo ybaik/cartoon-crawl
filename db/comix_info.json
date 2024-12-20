@@ -449,6 +449,21 @@
             "jpn": "今 敏"
         }
     },
+    "[o] 단다단": {
+        "title": {
+            "kor": "단다단",
+            "eng": "Dandadan",
+            "jpn": "ダンダダン"
+        },
+        "vols": "1-17",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "타츠 유키노부",
+            "eng": "Yukinobu Tatsu",
+            "jpn": "龍 幸伸"
+        }
+    },
     "[o] 더 페이블": {
         "title": {
             "kor": "더 페이블",
@@ -942,6 +957,21 @@
             "kor": "하루키",
             "eng": "Haruki",
             "jpn": "春輝"
+        }
+    },
+    "[o] 비스타즈": {
+        "title": {
+            "kor": "비스타즈",
+            "eng": "Beastars",
+            "jpn": "ビースターズ"
+        },
+        "vols": "1-22",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "이타가키 파루",
+            "eng": "Paru Itagaki",
+            "jpn": "板垣 巴留"
         }
     },
     "[o] 사무라이 디퍼 쿄우": {
@@ -1595,7 +1625,7 @@
             "eng": "Chainsaw Man",
             "jpn": "チェンソーマン"
         },
-        "vols": "1-13",
+        "vols": "1-19",
         "verified": "O",
         "status": "연재중",
         "author": {
@@ -1865,7 +1895,7 @@
             "eng": "Higanjima 48 Nichigo…",
             "jpn": "彼岸島 48日後…"
         },
-        "vols": "1-45",
+        "vols": "1-47",
         "verified": "O",
         "status": "연재중",
         "author": {

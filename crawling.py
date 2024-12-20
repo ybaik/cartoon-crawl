@@ -4,19 +4,19 @@ from pathlib import Path
 from common.crawler import create_crawler, download_images, filter_title
 
 
-USE_SELENIUM = False
+USE_SELENIUM = True
 
 
 def main():
     # Set path
-    title = "b"
+    title = "a"
     base_dir = Path(f"c:/comix/etc/{title}")
     json_path = base_dir / "info.json"
 
     # Set url - 11toon
-    site_url = "https://www.11toon142.com/bbs"
-    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EB%9E%80%EB%A7%88%C2%BD&is=9764"
-    # # Set url - manaboza
+    site_url = "https://www.11toon143.com/bbs"
+    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EB%8B%A8%EB%8B%A4%EB%8B%A8&is=26068&sord=&type=&page=1"
+    # Set url - manaboza
     # site_url = "https://manaboza76.com/comic/ep_list"
     # list_url = f"{site_url}/35499"
     # # Set url - manatoki
@@ -48,7 +48,8 @@ def main():
     crawler.deinit()
 
     # Check filter
-    json_data["tag_list"].append("란마½")
+    # json_data["tag_list"].append("란마½")
+    json_data["tag_list"].append("단다단")
     for key in json_data["vol_info"].keys():
         tags = json_data["tag_list"]
         name = filter_title(key, tags)
