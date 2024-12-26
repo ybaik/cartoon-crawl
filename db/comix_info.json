@@ -104,6 +104,21 @@
             "jpn": "竹内 良輔,小畑 健"
         }
     },
+    "[o] Dr. 프리즈너": {
+        "title": {
+            "kor": "Dr. 프리즈너",
+            "eng": "Dr. Prisoner",
+            "jpn": "Dr.プリズナー"
+        },
+        "vols": "1-4",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "이시카와 코마츠,우에다 아츠오",
+            "eng": "Komatsu Ishikawa, Atsuo Ueda",
+            "jpn": "石川 小松, 上田 敦夫"
+        }
+    },
     "[o] GS 미카미 극락 대작전!!": {
         "title": {
             "kor": "GS 미카미 극락 대작전!!",
@@ -1289,6 +1304,21 @@
             "jpn": "士郎 正宗"
         }
     },
+    "[o] 약속의 네버랜드": {
+        "title": {
+            "kor": "약속의 네버랜드",
+            "eng": "The Promised Neverland",
+            "jpn": "約束のネバーランド"
+        },
+        "vols": "1-20",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "시라이 카이우,데미즈 포스카",
+            "eng": "Kaiu Shirai,Posuka Demizu",
+            "jpn": "白井 カイウ,出水 ぽすか"
+        }
+    },
     "[o] 엔젤릭 레이어": {
         "title": {
             "kor": "엔젤릭 레이어",
@@ -1619,6 +1649,21 @@
             "jpn": "李學仁,王 欣太"
         }
     },
+    "[o] 천공침범": {
+        "title": {
+            "kor": "천공침범",
+            "eng": "High-Rise Invasion",
+            "jpn": "天空侵犯"
+        },
+        "vols": "1-21",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "미우라 츠이나,오바 타카히로",
+            "eng": "Tsuina Miura,Takahiro Oba",
+            "jpn": "三浦 追儺,大羽 隆廣"
+        }
+    },
     "[o] 체인소맨": {
         "title": {
             "kor": "체인소맨",
@@ -1767,6 +1812,21 @@
             "kor": "야기 노리히로",
             "eng": "Norihiro Yagi",
             "jpn": "八木 教広"
+        }
+    },
+    "[o] 타부 타투": {
+        "title": {
+            "kor": "타부 타투",
+            "eng": "Taboo Tattoo",
+            "jpn": "タブー・タトゥー"
+        },
+        "vols": "1-13",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "신지로",
+            "eng": "真じろう",
+            "jpn": "Shinjiro"
         }
     },
     "[o] 트라이건": {
@@ -1932,6 +1992,21 @@
             "kor": "히라노 코우타",
             "eng": "Kouta Hirano",
             "jpn": "平野 耕太"
+        }
+    },
+    "[o] 혈계전선": {
+        "title": {
+            "kor": "혈계전선",
+            "eng": "Blood Blockade Battlefront",
+            "jpn": "血界戦線"
+        },
+        "vols": "1-10",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "나이토 야스히로",
+            "eng": "Yasuhiro Nightow",
+            "jpn": "内藤 泰弘"
         }
     },
     "[o] 흑집사": {

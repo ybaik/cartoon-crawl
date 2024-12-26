@@ -5,29 +5,32 @@ import shutil
 
 
 def main():
-    base_path = "c:/comix/etc/c/22"
-
-    src_epi = 183
+    base_path = "c:/comix/etc/c/04"
+    
     start = 4
-    dst_epi = 229
-
-    pages = os.listdir(base_path)
-    for page in pages:
-        name, ext = os.path.splitext(page)
+    dst_ep = 31
+    src_eps = [34]
+#34
+    files = os.listdir(base_path)
+    files.sort()
+    for file in files:
+        name, ext = os.path.splitext(file)
 
         eps = name.split("-")
+        vol = int(eps[0])
+        ep = int(eps[1])
+        page = int(eps[2])
 
-        if int(eps[1]) != src_epi:
+        if ep < src_eps[0] or ep > src_eps[-1]:
             continue
 
-        p = int(eps[2])
+        # if ep == 16 and page > 24:
+        #     continue
 
-        if p < start:
-            continue
-
-        new = f"{eps[0]}-{dst_epi:03d}-{eps[2]}{ext}"
-        print(new)
-        os.rename(f"{base_path}/{page}", f"{base_path}/{new}")
+        new = f"{vol:02d}-{dst_ep:03d}-{start:03d}{ext}"
+        # new = f"{vol:02d}-ext-{start:03d}{ext}"
+        os.rename(f"{base_path}/{file}", f"{base_path}/{new}")
+        start += 1
 
 
 if __name__ == "__main__":
