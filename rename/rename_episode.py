@@ -6,11 +6,11 @@ import shutil
 
 def main():
     base_path = "c:/comix/etc/c/04"
-    
+
     start = 4
     dst_ep = 31
     src_eps = [34]
-#34
+    # 34
     files = os.listdir(base_path)
     files.sort()
     for file in files:

@@ -132,7 +132,8 @@
             "kor": "시이나 타카시",
             "eng": "Takashi Shiina",
             "jpn": "椎名 高志"
-        }
+        },
+        "order": "Left to right"
     },
     "[o] GS 미카미 극락 대작전!! 문고판": {
         "title": {
@@ -374,6 +375,21 @@
             "jpn": "吾峠 呼世晴"
         }
     },
+    "[o] 그라메 - 총리의 요리사": {
+        "title": {
+            "kor": "그·라·메! - 총리의 요리사",
+            "eng": "Gu Ra Me!: Daisaishou no Ryourinin",
+            "jpn": "グ・ラ・メ! -大宰相の料理人-"
+        },
+        "vols": "1-13",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "니시무라 미츠루,오오사키 미츠루",
+            "eng": "Mitsuru Nishimura,Mitsuru Oosaki",
+            "jpn": "西村 ミツル,大崎 充"
+        }
+    },
     "[o] 글레이프니르": {
         "title": {
             "kor": "글레이프니르",
@@ -612,7 +628,8 @@
             "kor": "토리야마 아키라",
             "eng": "Akira Toriyama",
             "jpn": "鳥山 明"
-        }
+        },
+        "info": "두솔미디어-해적판"
     },
     "[o] 드래곤볼 풀컬러 2부 피콜로 대마왕편": {
         "title": {
@@ -732,6 +749,21 @@
             "kor": "아다치 미츠루",
             "eng": "Mitsuru Adachi",
             "jpn": "安達 充"
+        }
+    },
+    "[o] 로즈 힙 로즈 완전판": {
+        "title": {
+            "kor": "로즈 힙 로즈",
+            "eng": "Rose Hip Rose",
+            "jpn": "Rose Hip Rose"
+        },
+        "vols": "1-4",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "후지사와 토오루",
+            "eng": "Toru Fujisawa",
+            "jpn": "藤沢 とおる"
         }
     },
     "[o] 마법기사 레이어스": {
@@ -880,8 +912,23 @@
         "status": "완결",
         "author": {
             "kor": "후지사와 토오루",
-            "eng": "Tooru Fujisawa",
+            "eng": "Toru Fujisawa",
             "jpn": "藤沢 とおる"
+        }
+    },
+    "[o] 뱀파이어 기사": {
+        "title": {
+            "kor": "뱀파이어 기사",
+            "eng": "Vampire Knight",
+            "jpn": "ヴァンパイア騎士"
+        },
+        "vols": "1-19",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "히노 마츠리",
+            "eng": "Matsuri Hino",
+            "jpn": "樋野 まつり"
         }
     },
     "[o] 베르사이유의 장미 완전판": {
@@ -942,6 +989,21 @@
             "kor": "니헤이 츠토무",
             "eng": "Tsutomu Nihei",
             "jpn": "弐瓶 勉"
+        }
+    },
+    "[o] 블루 드래곤 라르그라드": {
+        "title": {
+            "kor": "블루 드래곤 라르그라드",
+            "eng": "Ral Grad",
+            "jpn": "BLUE DRAGON ラルΩグラド"
+        },
+        "vols": "1-4",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "타카노 츠네오,오바타 타케시",
+            "eng": "Tsuneo Takano,Takeshi Obata",
+            "jpn": "鷹野 常雄,小畑 健"
         }
     },
     "[o] 비바 블루스": {
@@ -1634,6 +1696,21 @@
             "jpn": "諫山 創"
         }
     },
+    "[o] 창천의 권": {
+        "title": {
+            "kor": "창천의 권",
+            "eng": "Fist of the Blue Sky",
+            "jpn": "蒼天の拳"
+        },
+        "vols": "1-22",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "하라 테츠오",
+            "eng": "Tetsuo Hara",
+            "jpn": "原 哲夫"
+        }
+    },
     "[o] 창천항로": {
         "title": {
             "kor": "창천항로",
@@ -1677,6 +1754,21 @@
             "kor": "후지모토 타츠키",
             "eng": "Tatuski Fujimoto",
             "jpn": "藤本 タツキ"
+        }
+    },
+    "[o] 체포하겠어": {
+        "title": {
+            "kor": "체포하겠어",
+            "eng": "You're Under Arrest!",
+            "jpn": "逮捕しちゃうぞ"
+        },
+        "vols": "1-7",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "후지시마 코스케",
+            "eng": "Kosuke Fujishima",
+            "jpn": "藤島 康介"
         }
     },
     "[o] 총몽": {
@@ -1784,6 +1876,21 @@
             "jpn": "三部 敬"
         }
     },
+    "[o] 코드 브레이커": {
+        "title": {
+            "kor": "코드:브레이커",
+            "eng": "Code:Breaker",
+            "jpn": "コード：ブレイカー"
+        },
+        "vols": "1-26",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "카미죠 아키미네",
+            "eng": "Akimine Kamijyo",
+            "jpn": "上条 明峰"
+        }
+    },
     "[o] 크라잉 프리맨": {
         "title": {
             "kor": "크라잉 프리맨",
@@ -1872,6 +1979,21 @@
             "kor": "아키노 마츠리",
             "eng": "Matsuri Akino",
             "jpn": "秋乃 茉莉"
+        }
+    },
+    "[o] 폐급 상태이상 스킬": {
+        "title": {
+            "kor": "폐급 【상태 이상 스킬】로 최강이 된 내가 모든 것을 유린하기까지",
+            "eng": "Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells",
+            "jpn": "ハズレ枠の【状態異常スキル】で 最強になった俺がすべてを蹂躙するまで"
+        },
+        "vols": "1-5",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "우요시 쇼우,우치우치 케야키",
+            "eng": "Sho Uyoshi,Keyaki Uchi-Uchi",
+            "jpn": "鵜吉 しょう,内々 けやき"
         }
     },
     "[o] 표류교실": {
@@ -2082,7 +2204,8 @@
             "kor": "히라모토 아키라",
             "eng": "Akira Hiramoto",
             "jpn": "平本 アキラ"
-        }
+        },
+        "info": "1권 1-2, 3-4, 5-6, 7-8화는 합본"
     },
     "고스트 바둑왕": {
         "title": {
@@ -2275,7 +2398,7 @@
         "status": "미완",
         "author": {
             "kor": "보이치",
-            "eng": "Boich",
+            "eng": "Boichi",
             "jpn": "ボウイチ"
         }
     },

@@ -1,17 +1,22 @@
 # -*- coding: utf-8 -*-
 
 import os
-import shutil
+from pathlib import Path
 
 
 def main():
-    base_dir = "d:/comix/완결"
+    base_dir = Path("c:/comix/etc/b")
     vols = os.listdir(base_dir)
     for vol in vols:
-        tag = vol.split(" ")[-1]
-        new = vol.removesuffix(tag)
+        src_path = base_dir / vol
+        if not src_path.is_dir():
+            continue
+
+        new = vol
+        new = new.replace("권", "")
+        new = f"{int(new):02d}"
         if new != vol:
-            os.rename(f"{base_dir}/{vol}", f"{base_dir}/{new}")
+            os.rename(src_path, base_dir / new)
 
 
 if __name__ == "__main__":

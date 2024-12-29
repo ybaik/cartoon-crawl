@@ -6,7 +6,20 @@ import numpy as np
 
 
 episode2vol = {
-    9: [78, 86],
+    1: [1, 14],
+    2: [15, 28],
+    3: [29, 42],
+    4: [43, 56],
+    5: [57, 70],
+    6: [71, 82],
+    7: [83, 94],
+    8: [95, 106],
+    9: [107, 118],
+    10: [119, 130],
+    11: [131, 142],
+    12: [143, 154],
+    13: [155, 166],
+    14: [167, 178],
 }
 
 
@@ -16,8 +29,8 @@ def gen_bg_img(h, w):
 
 
 def main():
-    skip_1page = False
-    keep_1page_for_1st_episode = False
+    skip_1page = True
+    keep_1page_for_1st_episode = True
     skip_last_page = False
     src_base_dir = "c:/comix/etc/a"
     dst_base_dir = "c:/comix/etc/c"
@@ -42,7 +55,7 @@ def main():
 
             for i, f in enumerate(files):
                 if keep_1page_for_1st_episode and episode == s and i == 0:
-                    dst_filename = f"{vol:02d}-000-000{os.path.splitext(f)[1]}"
+                    dst_filename = f"{vol:02d}-000-001{os.path.splitext(f)[1]}"
                 else:
                     dst_filename = (
                         f"{vol:02d}-{episode:03d}-{(i + 3):03d}{os.path.splitext(f)[1]}"
