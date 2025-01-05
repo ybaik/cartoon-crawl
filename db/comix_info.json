@@ -480,6 +480,21 @@
             "jpn": "今 敏"
         }
     },
+    "[o] 닥터 스톤": {
+        "title": {
+            "kor": "닥터 스톤",
+            "eng": "Dr.Stone",
+            "jpn": "ドクターストーン"
+        },
+        "vols": "1-27",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "이나가키 리이치로,보이치",
+            "eng": "Riichiro Inagaki,Boichi",
+            "jpn": "稲垣 理一郎,ボウイチ"
+        }
+    },
     "[o] 단다단": {
         "title": {
             "kor": "단다단",
@@ -916,6 +931,21 @@
             "jpn": "藤沢 とおる"
         }
     },
+    "[o] 방패 용사 성공담": {
+        "title": {
+            "kor": "방패 용사 성공담",
+            "eng": "The Rising of the Shield Hero",
+            "jpn": "盾の勇者の成り上がり"
+        },
+        "vols": "1-26",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "아네코 유사기,아이야 큐",
+            "eng": "Aneko Yusagi,Kyu Aiya",
+            "jpn": "アネコ ユサギ,藍屋 球"
+        }
+    },
     "[o] 뱀파이어 기사": {
         "title": {
             "kor": "뱀파이어 기사",
@@ -944,6 +974,21 @@
             "kor": "이케다 리요코",
             "eng": "Riyoko Ikeda",
             "jpn": "池田 理代子"
+        }
+    },
+    "[o] 벨제바브": {
+        "title": {
+            "kor": "벨제바브",
+            "eng": "Beelzebub",
+            "jpn": "べるぜバブ"
+        },
+        "vols": "1-28",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "타무라 류헤이",
+            "eng": "Ryuhei Tamura",
+            "jpn": "田村 隆平"
         }
     },
     "[o] 북두의 권": {
@@ -1079,6 +1124,21 @@
             "kor": "클램프",
             "eng": "Clamp",
             "jpn": "Clamp"
+        }
+    },
+    "[o] 슈토헬": {
+        "title": {
+            "kor": "슈토헬",
+            "eng": "Shut Hell",
+            "jpn": "シュトヘル(惡霊)"
+        },
+        "vols": "1-14",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "이토우 유",
+            "eng": "Yu Ito",
+            "jpn": "伊藤 悠"
         }
     },
     "[o] 스프리건": {
@@ -1396,6 +1456,21 @@
             "jpn": "Clamp"
         }
     },
+    "[o] 엔젤전설": {
+        "title": {
+            "kor": "엔젤전설",
+            "eng": "Angel Densetsu",
+            "jpn": "エンジェル伝説"
+        },
+        "vols": "1-15",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "야기 노리히로",
+            "eng": "Norihiro Yagi",
+            "jpn": "八木 教広"
+        }
+    },
     "[o] 여자공병": {
         "title": {
             "kor": "여자공병",
@@ -1696,6 +1771,21 @@
             "jpn": "諫山 創"
         }
     },
+    "[o] 창공의 아리아드네": {
+        "title": {
+            "kor": "창공의 아리아드네",
+            "eng": "Ariadne in the Blue Sky",
+            "jpn": "蒼穹のアリアドネ"
+        },
+        "vols": "1-16",
+        "verified": "O",
+        "status": "미완",
+        "author": {
+            "kor": "야기 노리히로",
+            "eng": "Norihiro Yagi",
+            "jpn": "八木 教広"
+        }
+    },
     "[o] 창천의 권": {
         "title": {
             "kor": "창천의 권",
@@ -1874,6 +1964,21 @@
             "kor": "산베 케이",
             "eng": "Kei Sanbe",
             "jpn": "三部 敬"
+        }
+    },
+    "[o] 켄시로에게 안부를": {
+        "title": {
+            "kor": "켄시로에게 안부를",
+            "eng": "Kenshirou ni Yoroshiku",
+            "jpn": "ケンシロウによろしく"
+        },
+        "vols": "1-8",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "재스민 규",
+            "eng": "Jasmine Gyuh",
+            "jpn": "ジャスミン ギュ"
         }
     },
     "[o] 코드 브레이커": {

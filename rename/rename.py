@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def main():
-    base_dir = Path("c:/comix/etc/b")
+    base_dir = Path("c:/comix/etc/a")
     vols = os.listdir(base_dir)
     for vol in vols:
         src_path = base_dir / vol
@@ -13,8 +13,8 @@ def main():
             continue
 
         new = vol
-        new = new.replace("권", "")
-        new = f"{int(new):02d}"
+        new = new.replace(" ", "")
+        # new = f"{int(new):02d}"
         if new != vol:
             os.rename(src_path, base_dir / new)
 
