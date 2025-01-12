@@ -501,7 +501,7 @@
             "eng": "Dandadan",
             "jpn": "ダンダダン"
         },
-        "vols": "1-17",
+        "vols": "1-18",
         "verified": "O",
         "status": "연재중",
         "author": {
@@ -751,6 +751,21 @@
             "jpn": "甲斐谷忍"
         }
     },
+    "[o] 란마½ 완전판": {
+        "title": {
+            "kor": "란마½",
+            "eng": "Ranma Nibunnoichi",
+            "jpn": "らんま½"
+        },
+        "vols": "1-38",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "타카하시 루미코",
+            "eng": "Rumiko Takahashi",
+            "jpn": "高橋 留美子"
+        }
+    },
     "[o] 러프": {
         "title": {
             "kor": "러프",
@@ -961,6 +976,21 @@
             "jpn": "樋野 まつり"
         }
     },
+    "[o] 뱀파이어 번드": {
+        "title": {
+            "kor": "뱀파이어 번드",
+            "eng": "Dance in the Vampire Bund",
+            "jpn": "ダンス イン ザ ヴァンパイアバンド"
+        },
+        "vols": "1-14",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "타마키 노조무",
+            "eng": "Nozomu Tamaki",
+            "jpn": "環望"
+        }
+    },
     "[o] 베르사이유의 장미 완전판": {
         "title": {
             "kor": "베르사이유의 장미",
@@ -1139,6 +1169,21 @@
             "kor": "이토우 유",
             "eng": "Yu Ito",
             "jpn": "伊藤 悠"
+        }
+    },
+    "[o] 스파이 패밀리": {
+        "title": {
+            "kor": "스파이 패밀리",
+            "eng": "SPY × FAMILY",
+            "jpn": "スパイファミリー"
+        },
+        "vols": "1-14",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "엔도 타츠야",
+            "eng": "Tatsuya Endo",
+            "jpn": "炎堂 たつや"
         }
     },
     "[o] 스프리건": {
@@ -1591,6 +1636,21 @@
             "jpn": "藤田 和日郎"
         }
     },
+    "[o] 월화미인": {
+        "title": {
+            "kor": "월화미인",
+            "eng": "Blade of the Moon Princess",
+            "jpn": "月華美刃"
+        },
+        "vols": "1-5",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "엔도 타츠야",
+            "eng": "Tatsuya Endo",
+            "jpn": "炎堂 たつや"
+        }
+    },
     "[o] 유체 노바": {
         "title": {
             "kor": "유체 노바",
@@ -1604,6 +1664,21 @@
             "kor": "오시미 슈조",
             "eng": "Shuzo Oshimi",
             "jpn": "押見 修造"
+        }
+    },
+    "[o] 이누야샤": {
+        "title": {
+            "kor": "이누야샤",
+            "eng": "Inuyasha",
+            "jpn": "犬夜叉"
+        },
+        "vols": "1-56",
+        "verified": "O",
+        "status": "완결_스캔",
+        "author": {
+            "kor": "타카하시 루미코",
+            "eng": "Rumiko Takahashi",
+            "jpn": "高橋 留美子"
         }
     },
     "[o] 이누야시키": {
@@ -1717,9 +1792,9 @@
             "eng": "Jujutsu Kaisen",
             "jpn": "呪術廻戦"
         },
-        "vols": "1-28",
+        "vols": "1-30",
         "verified": "O",
-        "status": "연재중",
+        "status": "완결",
         "author": {
             "kor": "아쿠타미 게게",
             "eng": "Gege Akutami",
@@ -1882,9 +1957,9 @@
             "eng": "Oshi No Ko",
             "jpn": "【推しの子】"
         },
-        "vols": "1-15",
+        "vols": "1-16",
         "verified": "O",
-        "status": "연재중",
+        "status": "완결",
         "author": {
             "kor": "아카사카 아카,요코야리 멩고",
             "eng": "Aka Akasaka,Mengo Yokoyari",
@@ -2460,21 +2535,6 @@
             "kor": "하기와라 카즈시",
             "eng": "Kazushi Hagiwara",
             "jpn": "萩原 一至"
-        }
-    },
-    "뱀파이어 번드": {
-        "title": {
-            "kor": "뱀파이어 번드",
-            "eng": "Dance in the Vampire Bund",
-            "jpn": "ダンス イン ザ ヴァンパイアバンド"
-        },
-        "vols": "1-14",
-        "verified": "X",
-        "status": "완결",
-        "author": {
-            "kor": "타마키 노조무",
-            "eng": "Nozomu Tamaki",
-            "jpn": "環望"
         }
     },
     "베르세르크": {
