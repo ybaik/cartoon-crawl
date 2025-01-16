@@ -555,6 +555,21 @@
             "jpn": "大場 つぐみ,小畑 健"
         }
     },
+    "[o] 도게자로 부탁해봤다": {
+        "title": {
+            "kor": "도게자로 부탁해봤다",
+            "eng": "Dogeza de Tanondemita",
+            "jpn": "土下座で頼んでみた"
+        },
+        "vols": "1-2",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "후나츠 카즈키",
+            "eng": "Kazuki Funatsu",
+            "jpn": "ふなつかずき"
+        }
+    },
     "[o] 도로헤도로": {
         "title": {
             "kor": "도로헤도로",
@@ -583,6 +598,21 @@
             "kor": "클램프",
             "eng": "Clamp",
             "jpn": "Clamp"
+        }
+    },
+    "[o] 도쿄 빨간모자": {
+        "title": {
+            "kor": "도쿄 빨간모자",
+            "eng": "Tokyo Red Hood",
+            "jpn": "東京赤ずきん"
+        },
+        "vols": "1-4",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "타마오키 벤쿄",
+            "eng": "Benkyo Tamaoki",
+            "jpn": "玉置 勉強"
         }
     },
     "[o] 도쿄구울": {
@@ -841,6 +871,21 @@
             "jpn": "甲本 一"
         }
     },
+    "[o] 마이탐정 네우로": {
+        "title": {
+            "kor": "마이탐정 네우로",
+            "eng": "Neuro: Supernatural Detective",
+            "jpn": "魔人探偵 脳噛ネウロ"
+        },
+        "vols": "1-23",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "마츠이 유세이",
+            "eng": "Yusei Matsui",
+            "jpn": "松井 優征"
+        }
+    },
     "[o] 메종일각 신장판": {
         "title": {
             "kor": "메종일각",
@@ -959,6 +1004,21 @@
             "kor": "아네코 유사기,아이야 큐",
             "eng": "Aneko Yusagi,Kyu Aiya",
             "jpn": "アネコ ユサギ,藍屋 球"
+        }
+    },
+    "[o] 백 스트리트 걸스": {
+        "title": {
+            "kor": "백 스트리트 걸스",
+            "eng": "Back Street Girls",
+            "jpn": "バックストリートガールズ"
+        },
+        "vols": "1-12",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "재스민 규",
+            "eng": "Jasmine Gyuh",
+            "jpn": "ジャスミン ギュ"
         }
     },
     "[o] 뱀파이어 기사": {
@@ -1381,6 +1441,36 @@
             "jpn": "貞本 義行"
         }
     },
+    "[o] 신이 말하는 대로 1부": {
+        "title": {
+            "kor": "신이 말하는 대로 1부",
+            "eng": "As the Gods Will",
+            "jpn": "神さまの言うとおり"
+        },
+        "vols": "1-5",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "카네시로 무네유키,후지무라 아케지",
+            "eng": "Muneyuki Kaneshiro,Akeji Fujimura",
+            "jpn": "金城 宗幸,藤村 緋二"
+        }
+    },
+    "[o] 신이 말하는 대로 2부": {
+        "title": {
+            "kor": "신이 말하는 대로 2부",
+            "eng": "As the Gods Will: The Second Series",
+            "jpn": "神さまの言うとおり弐"
+        },
+        "vols": "1-21",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "카네시로 무네유키,후지무라 아케지",
+            "eng": "Muneyuki Kaneshiro,Akeji Fujimura",
+            "jpn": "金城 宗幸,藤村 緋二"
+        }
+    },
     "[o] 쌍망정은 부숴야 한다": {
         "title": {
             "kor": "쌍망정은 부숴야 한다",
@@ -1439,6 +1529,21 @@
             "kor": "오토모 카츠히로",
             "eng": "Katsuhiro Otomo",
             "jpn": "大友 克洋"
+        }
+    },
+    "[o] 암살교실": {
+        "title": {
+            "kor": "암살교실",
+            "eng": "Assassination Classroom",
+            "jpn": "暗殺教室"
+        },
+        "vols": "1-21",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "마츠이 유세이",
+            "eng": "Yusei Matsui",
+            "jpn": "松井 優征"
         }
     },
     "[o] 암스": {
