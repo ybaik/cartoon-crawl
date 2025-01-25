@@ -21,7 +21,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 
-SITE_NAMES = ["11toon", "manaboza", "newtoki"]
+SITE_NAMES = ["11toon", "manaboza", "newtoki", "mangaread", "readfairytail"]
 SITE_NAMES_SELENIUM = ["11toon", "manaboza", "manatoki"]
 
 
@@ -44,9 +44,8 @@ def download_images(json_data: Dict, save_base_dir: Path, site_url: str) -> None
     http = urllib3.PoolManager()
     user_agent = UserAgent()
 
-    # for k, v in json_data["vol_info"].items():
-    # for k in reversed(list(json_data["vol_info"].keys())):
-    for k in json_data["vol_info"].keys():
+    for k in reversed(list(json_data["vol_info"].keys())):
+        # for k in json_data["vol_info"].keys():
         v = json_data["vol_info"][k]
         print(k)
         name = filter_title(k, json_data["tag_list"])
@@ -95,7 +94,8 @@ def create_crawler(site_url: str, use_selenium: bool):
             return globals()[class_name](
                 site_name=site_name,
                 site_url=site_url,
-                headless=False if site_name == "manatoki" else True,
+                # headless=False if site_name == "manatoki" else True,
+                headless=False,
             )
     return None
 
@@ -237,6 +237,44 @@ class CrawlerNewtoki(Crawler):
         items = div_tag.find_all("img", alt=True)
         for item in items:
             img_list.append(item.attrs["src"])
+        return img_list
+
+
+class CrawlerMangaread(Crawler):
+    def site_wise_crawling_img_list(self) -> List:
+        img_list = []
+        soup = BeautifulSoup(self.response.text, "html.parser")
+        div_tag = soup.find("div", class_="reading-content")
+        items = div_tag.find_all("img")
+        for item in items:
+            path = item.get("src") or item.get("data-cfsrc")
+            # Remove \t\n
+            path_cleaned = re.sub(r"[\t\n]+", "", path)
+            img_list.append(path_cleaned)
+        return img_list
+
+
+class CrawlerReadfairytail(Crawler):
+    def site_wise_crawling_vols(self, list_url: str, vol_info: Dict) -> None:
+        soup = BeautifulSoup(self.response.text, "html.parser")
+        content = soup.find_all(
+            class_="text-sm md:text-base font-bold mb-1 text-text-normal"
+        )
+        for item in content:
+            title = item.text
+            vol_url = item.attrs["href"]
+            if vol_info.get(title) is None:
+                vol_info[title] = dict()
+            vol_info[title]["vol_url"] = vol_url
+
+    def site_wise_crawling_img_list(self) -> List:
+        img_list = []
+        soup = BeautifulSoup(self.response.text, "html.parser")
+        div_tag = soup.find("div", class_="js-pages-container")
+        items = div_tag.find_all("img")
+        for item in items:
+            path = item.get("src") or item.get("data-cfsrc")
+            img_list.append(path)
         return img_list
 
 

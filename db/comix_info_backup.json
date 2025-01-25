@@ -811,6 +811,22 @@
             "jpn": "安達 充"
         }
     },
+    "[o] 레이브": {
+        "title": {
+            "kor": "레이브",
+            "eng": "Rave Master",
+            "jpn": "レイヴ"
+        },
+        "vols": "1-35",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "마시마 히로",
+            "eng": "Hiro Mashima",
+            "jpn": "真島 ヒロ"        
+        },
+        "order": "Left to right"        
+    },
     "[o] 로즈 힙 로즈 완전판": {
         "title": {
             "kor": "로즈 힙 로즈",
@@ -974,6 +990,21 @@
             "kor": "야마타 후타로,세가와 마사키",
             "eng": "Futaro Yamada,Masaki Segawa",
             "jpn": "山田 風太郎,せがわ まさき"
+        }
+    },
+    "[o] 바쿠만": {
+        "title": {
+            "kor": "바쿠만",
+            "eng": "BAKUMAN",
+            "jpn": "バクマン"
+        },
+        "vols": "1-20",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "오바 츠구미,오바타 타케시",
+            "eng": "Tsugumi Ohba,Takeshi Obata",
+            "jpn": "大場 つぐみ,小畑 健"
         }
     },
     "[o] 반항하지마": {
@@ -1666,6 +1697,21 @@
             "jpn": "丸山 くがね,深山 フギン"
         }
     },
+    "[o] 요괴소녀": {
+        "title": {
+            "kor": "요괴소녀: 몬스터 걸",
+            "eng": "Yokai Girls",
+            "jpn": "妖怪少女 -モンスガ-"
+        },
+        "vols": "1-14",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "후나츠 카즈키",
+            "eng": "Kazuki Funatsu",
+            "jpn": "ふなつ かずき"
+        }
+    },
     "[o] 요괴소년 호야": {
         "title": {
             "kor": "요괴소년 호야",
@@ -1809,7 +1855,7 @@
         },
         "vols": "1-16",
         "verified": "O",
-        "status": "미완",
+        "status": "연재중",
         "author": {
             "kor": "아마시타 메스코,타나카 요시키",
             "eng": "Mesuko Amashita,Yoshiki Tanaka",
@@ -2054,6 +2100,21 @@
             "kor": "키시로 유키토",
             "eng": "Yukito Kishiro",
             "jpn": "木城 ゆきと"
+        }
+    },
+    "[o] 총좌의 우르나": {
+        "title": {
+            "kor": "총좌의 우르나",
+            "eng": "Ulna at the Emplacement",
+            "jpn": "銃座のウルナ"
+        },
+        "vols": "1-6",
+        "verified": "O",
+        "status": "미완",
+        "author": {
+            "kor": "이즈 토오루",
+            "eng": "Toru Izu",
+            "jpn": "伊 図透"
         }
     },
     "[o] 최애의 아이": {
@@ -2414,6 +2475,36 @@
             "kor": "나이토 야스히로",
             "eng": "Yasuhiro Nightow",
             "jpn": "内藤 泰弘"
+        }
+    },
+    "[o] 홀리랜드": {
+        "title": {
+            "kor": "홀리랜드",
+            "eng": "Holyland",
+            "jpn": "ホーリーランド"
+        },
+        "vols": "1-18",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "모리 코우지",
+            "eng": "Kouji Mori",
+            "jpn": "森 恒二"
+        }
+    },
+    "[o] 화려한 식탁": {
+        "title": {
+            "kor": "화려한 식탁",
+            "eng": "華麗なる食卓",
+            "jpn": "Addicted to Curry"
+        },
+        "vols": "1-49",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "후나츠 카즈키",
+            "eng": "Kazuki Funatsu",
+            "jpn": "ふなつ かずき"
         }
     },
     "[o] 흑집사": {

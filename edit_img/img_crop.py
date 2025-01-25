@@ -5,7 +5,12 @@ import cv2
 import numpy as np
 
 
-def img_crop(img: np.ndarray, dst_img_path: str, crop_right: bool = True):
+def img_crop(
+    img: np.ndarray,
+    dst_img_path: str,
+    crop_right: bool = True,
+    dst_img_path2: str = None,
+):
     """
     Crops an image in half either on the right or left side and saves it to a specified path.
 
@@ -22,21 +27,25 @@ def img_crop(img: np.ndarray, dst_img_path: str, crop_right: bool = True):
     new_img = img[:, nw:, :] if crop_right else img[:, :nw, :]
     cv2.imwrite(dst_img_path, new_img)
 
+    if dst_img_path2 is not None:
+        cv2.imwrite(dst_img_path2, img[:, :nw, :])
+
 
 def main():
-    vol = 17
+    vol = 56
     base_dir = f"c:/comix/etc/c"
     # base_path = f"c:/comix/etc/c"
-    page = 5
+    page = 3
     crop_right = True  # True
     src_img_path = f"{base_dir}/{vol:02d}/{vol:02d}-000-{page:03d}.png"
     dst_img_path = f"{base_dir}/{vol:02d}/{vol:02d}-000-{page:03d}.png"
+    dst_img_path2 = f"{base_dir}/{vol:02d}/{vol:02d}-000-{page+1:03d}.png"
     # src_img_path = f"{base_dir}/{vol:02d}-000-{page:03d}.png"
     # dst_img_path = f"{base_dir}/{vol:02d}-000-{page:03d}.png"
 
     if os.path.exists(src_img_path):
         img = cv2.imread(src_img_path)
-        img_crop(img, dst_img_path, crop_right)
+        img_crop(img, dst_img_path, crop_right, dst_img_path2)
 
 
 def main2():
