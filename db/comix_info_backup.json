@@ -104,6 +104,21 @@
             "jpn": "竹内 良輔,小畑 健"
         }
     },
+    "[o] Demon Slayer-Kimetsu no Yaiba": {
+        "title": {
+            "kor": "귀멸의 칼날",
+            "eng": "Demon Slayer: Kimetsu no Yaiba",
+            "jpn": "鬼滅の刃"
+        },
+        "vols": "1-23",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "고토게 코요하루",
+            "eng": "Koyoharu Gotoge",
+            "jpn": "吾峠 呼世晴"
+        }
+    },
     "[o] Dr. 프리즈너": {
         "title": {
             "kor": "Dr. 프리즈너",
@@ -117,6 +132,36 @@
             "kor": "이시카와 코마츠,우에다 아츠오",
             "eng": "Komatsu Ishikawa, Atsuo Ueda",
             "jpn": "石川 小松, 上田 敦夫"
+        }
+    },
+    "[o] Edens Zero": {
+        "title": {
+            "kor": "에덴즈 제로",
+            "eng": "Edens Zero",
+            "jpn": "エデンズ ゼロ"
+        },
+        "vols": "1-33",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "마시마 히로",
+            "eng": "Hiro Mashima",
+            "jpn": "真島 ヒロ"
+        }
+    },
+    "[o] Fairy Tail": {
+        "title": {
+            "kor": "페어리 테일",
+            "eng": "Fairy Tail",
+            "jpn": "フェアリーテイル"
+        },
+        "vols": "1-63",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "마시마 히로",
+            "eng": "Hiro Mashima",
+            "jpn": "真島 ヒロ"
         }
     },
     "[o] GS 미카미 극락 대작전!!": {
@@ -163,6 +208,36 @@
             "kor": "오오사와 유우스케",
             "eng": "Yusuke Osawa",
             "jpn": "大沢 祐輔"
+        }
+    },
+    "[o] Rave Master": {
+        "title": {
+            "kor": "레이브",
+            "eng": "Rave Master",
+            "jpn": "レイヴ"
+        },
+        "vols": "1-35",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "마시마 히로",
+            "eng": "Hiro Mashima",
+            "jpn": "真島 ヒロ"
+        }
+    },
+    "[o] Tokyo Ghoul re": {
+        "title": {
+            "kor": "도쿄구울:re",
+            "eng": "Tokyo Ghoul:re",
+            "jpn": "東京喰種:re"
+        },
+        "vols": "1-16",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "이시다 스이",
+            "eng": "Sui Ishida",
+            "jpn": "石田 スイ"
         }
     },
     "[o] 가시나무왕": {
@@ -823,9 +898,9 @@
         "author": {
             "kor": "마시마 히로",
             "eng": "Hiro Mashima",
-            "jpn": "真島 ヒロ"        
+            "jpn": "真島 ヒロ"
         },
-        "order": "Left to right"        
+        "order": "Left to right"
     },
     "[o] 로즈 힙 로즈 완전판": {
         "title": {
@@ -1622,6 +1697,21 @@
             "jpn": "白井 カイウ,出水 ぽすか"
         }
     },
+    "[o] 에덴즈 제로": {
+        "title": {
+            "kor": "에덴즈 제로",
+            "eng": "Edens Zero",
+            "jpn": "エデンズ ゼロ"
+        },
+        "vols": "1-33",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "마시마 히로",
+            "eng": "Hiro Mashima",
+            "jpn": "真島 ヒロ"
+        }
+    },
     "[o] 엔젤릭 레이어": {
         "title": {
             "kor": "엔젤릭 레이어",
@@ -2310,6 +2400,21 @@
             "kor": "후지모토 타츠키",
             "eng": "Tatuski Fujimoto",
             "jpn": "藤本 タツキ"
+        }
+    },
+    "[o] 페어리 테일": {
+        "title": {
+            "kor": "페어리 테일",
+            "eng": "Fairy Tail",
+            "jpn": "フェアリーテイル"
+        },
+        "vols": "1-63",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "마시마 히로",
+            "eng": "Hiro Mashima",
+            "jpn": "真島 ヒロ"
         }
     },
     "[o] 펫숍 오브 호러스 애장판": {

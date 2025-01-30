@@ -15,7 +15,7 @@ def main():
 
     # Set url - 11toon
     site_url = "https://www.11toon144.com/bbs"
-    list_url = f"{site_url}/board.php?bo_table=toons&stx=%ED%8E%98%EC%96%B4%EB%A6%AC%ED%85%8C%EC%9D%BC&is=11&sord=&type=&page=2"
+    list_url = f"{site_url}/board.php?bo_table=toons&stx=%EC%97%90%EB%8D%B4%EC%A6%88+%EC%A0%9C%EB%A1%9C&is=9545&sord=&type=&page=1"
     # Set url - manaboza
     # site_url = "https://manaboza76.com/comic/ep_list"
     # list_url = f"{site_url}/35499"
@@ -23,16 +23,18 @@ def main():
     # site_url = "https://manatoki463.net/comic"
     # list_url = f"{site_url}/20721164?stx=%EA%B7%B8%EB%9E%9C+%ED%8C%A8%EB%B0%80%EB%A6%AC%EC%95%84"
     # Set url - newtoki
-    # site_url = "https://newtoki.biz/manhwa"
-    # list_url = f"{site_url}/7272"
+    site_url = "https://newtoki.biz/manhwa"
+    list_url = f"{site_url}/6068"
     # site_url = "https://newtoki.biz/webtoon"
-    # list_url = f"{site_url}/3593"
+    # list_url = f"{site_url}/6068"
 
     # site_url = "https://www.mangaread.org/manga"
     # list_url = f"{site_url}/fairy-tail/chapter-475-dimaria-chronos-yesta"
 
-    site_url = "https://ww7.readfairytail.com"
-    list_url = f"{site_url}/manga/edens-zero"
+    # site_url = "https://ww7.readfairytail.com"
+    # list_url = f"{site_url}/manga/edens-zero"
+    # site_url = "https://ww4.readjujutsukaisen.com"
+    # list_url = f"{site_url}/manga/jujutsu-kaisen"
 
     # Read url list
     if json_path.exists():
@@ -54,8 +56,10 @@ def main():
     crawler.deinit()
 
     # Check filter
-    json_data["tag_list"].append("Eden’s Zero")
-    json_data["tag_list"].append("Chapter")
+    # json_data["tag_list"].append("Demon Slayer: Kimetsu no Yaiba Chapter")
+    # json_data["tag_list"].append("Tokyo Ghoul:re Chapter")
+    json_data["tag_list"].append("도쿄구울：re")
+
     for key in json_data["vol_info"].keys():
         tags = json_data["tag_list"]
         name = filter_title(key, tags)

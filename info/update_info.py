@@ -5,7 +5,15 @@ import json
 from pathlib import Path
 
 
-MAIN_DIRS = ["미완", "미완_스캔", "연재중", "연재중_스캔", "완결", "완결_스캔"]
+MAIN_DIRS = [
+    "미완",
+    "미완_스캔",
+    "연재중",
+    "연재중_스캔",
+    "완결",
+    "완결_스캔",
+    "English",
+]
 
 
 def gather_info(check_dir: Path, json_data: dict) -> None:
@@ -14,6 +22,7 @@ def gather_info(check_dir: Path, json_data: dict) -> None:
 
         for title in os.listdir(main_dir):
             verified = "[o]" in title
+            title = title.replace("(E)", "(완)")
             title_info = title.replace("(완)", "").split()
             vols = title_info.pop() if re.match(r"\d+-\d+", title_info[-1]) else ""
             title = " ".join(title_info)

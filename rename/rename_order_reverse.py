@@ -7,7 +7,10 @@ import shutil
 def rename(base_path, target_episode, target_page, files):
     target_files = []
     for file in files:
-        episode_src = int(file.split("-")[1])
+        tags = file.split("-")
+        if tags[1] == "ext":
+            continue
+        episode_src = int(tags[1])
         if episode_src != target_episode:
             continue
         target_files.append(file)
@@ -32,13 +35,13 @@ def rename(base_path, target_episode, target_page, files):
 
 
 def main():
-    base_path = r"C:/comix/etc/c/07"
+    base_path = r"C:/comix/etc/c/13"
 
     files = os.listdir(base_path)
     files.sort()
 
-    target_episode = 47
-    target_page = 11
+    target_episode = 141
+    target_page = 1
 
     rename(base_path, target_episode, target_page, files)
 

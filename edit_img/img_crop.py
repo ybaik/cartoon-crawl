@@ -32,7 +32,7 @@ def img_crop(
 
 
 def main():
-    vol = 56
+    vol = 23
     base_dir = f"c:/comix/etc/c"
     # base_path = f"c:/comix/etc/c"
     page = 3
@@ -49,31 +49,32 @@ def main():
 
 
 def main2():
-    base_dir = "C:/comix/etc/b/68"
-    dst_dir = "C:/comix/etc/b/68-1"
+    base_dir = "C:/comix/etc/c"
+    target_page = 4
 
-    cnt = 1
-    for i in range(1, 4):
-        src_img_path = f"{base_dir}/{i:03d}.jpg"
-        img = cv2.imread(src_img_path)
-        h, w, _ = img.shape
-        nh = h // 2
-        new_img = img[:nh, :, :]
+    files = os.listdir(base_dir)
+    for file in files:
+        path = f"{base_dir}/{file}"
+        if not os.path.isfile(path):
+            continue
+        name, ext = os.path.splitext(file)
+        if ext != ".png":
+            continue
+        tags = name.split("-")
+        if len(tags) != 3:
+            continue
 
-        dst_img_path = f"{dst_dir}/{cnt:03d}.png"
-        cnt += 1
-        cv2.imwrite(dst_img_path, new_img)
+        if int(tags[1]) != 0:
+            continue
 
-        new_img = img[nh:, :, :]
-        dst_img_path = f"{dst_dir}/{cnt:03d}.png"
-        cnt += 1
-        cv2.imwrite(dst_img_path, new_img)
-
-    for i in range(4, 17):
-        os.rename(f"{base_dir}/{i:03d}.jpg", f"{dst_dir}/{cnt:03d}.jpg")
-        cnt += 1
+        if int(tags[2]) == target_page:
+            src_img_path = path
+            dst_img_path = path
+            dst_img_path2 = f"{base_dir}/{tags[0]}-000-{target_page+1:03d}.png"
+            img = cv2.imread(src_img_path)
+            img_crop(img, dst_img_path, True, dst_img_path2)
 
 
 if __name__ == "__main__":
-    main()
-    # main2()
+    # main()
+    main2()

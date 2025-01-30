@@ -22,6 +22,8 @@ from selenium.webdriver.chrome.options import Options
 
 
 SITE_NAMES = ["11toon", "manaboza", "newtoki", "mangaread", "readfairytail"]
+SUB_NAMES = ["demonslayermanga", "tokyoghoulre", "readjujutsukaisen"]
+
 SITE_NAMES_SELENIUM = ["11toon", "manaboza", "manatoki"]
 
 
@@ -81,10 +83,13 @@ def download_images(json_data: Dict, save_base_dir: Path, site_url: str) -> None
 def create_crawler(site_url: str, use_selenium: bool):
 
     if not use_selenium:
-        for site_name in SITE_NAMES:
+        for site_name in SITE_NAMES + SUB_NAMES:
             if not site_name in site_url:
                 continue
-            class_name = f"Crawler{site_name.capitalize()}"
+            if site_name in SUB_NAMES:
+                class_name = "CrawlerReadfairytail"
+            else:
+                class_name = f"Crawler{site_name.capitalize()}"
             return globals()[class_name](site_name=site_name, site_url=site_url)
     else:
         for site_name in SITE_NAMES_SELENIUM:
@@ -94,8 +99,8 @@ def create_crawler(site_url: str, use_selenium: bool):
             return globals()[class_name](
                 site_name=site_name,
                 site_url=site_url,
-                # headless=False if site_name == "manatoki" else True,
-                headless=False,
+                headless=False if site_name == "manatoki" else True,
+                # headless=False,
             )
     return None
 
@@ -274,7 +279,7 @@ class CrawlerReadfairytail(Crawler):
         items = div_tag.find_all("img")
         for item in items:
             path = item.get("src") or item.get("data-cfsrc")
-            img_list.append(path)
+            img_list.append(path.strip())
         return img_list
 
 
