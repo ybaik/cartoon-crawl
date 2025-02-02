@@ -134,6 +134,21 @@
             "jpn": "三浦 建太郎"
         }
     },
+    "[o] Chainsaw Man": {
+        "title": {
+            "kor": "체인소맨",
+            "eng": "Chainsaw Man",
+            "jpn": "チェンソーマン"
+        },
+        "vols": "1-19",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "후지모토 타츠키",
+            "eng": "Tatuski Fujimoto",
+            "jpn": "藤本 タツキ"
+        }
+    },
     "[o] Demon Slayer-Kimetsu no Yaiba": {
         "title": {
             "kor": "귀멸의 칼날",
@@ -268,6 +283,21 @@
             "kor": "아쿠타미 게게",
             "eng": "Gege Akutami",
             "jpn": "芥見 下々"
+        }
+    },
+    "[o] Naruto": {
+        "title": {
+            "kor": "나루토",
+            "eng": "Naruto",
+            "jpn": "ナルト"
+        },
+        "vols": "1-72",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "키시모토 마사시",
+            "eng": "Masashi Kishimoto",
+            "jpn": "岸本 斉史"
         }
     },
     "[o] Rave Master": {
@@ -613,6 +643,21 @@
             "kor": "콘 사토시",
             "eng": "Satoshi Kon",
             "jpn": "今 敏"
+        }
+    },
+    "[o] 나루토": {
+        "title": {
+            "kor": "나루토",
+            "eng": "Naruto",
+            "jpn": "ナルト"
+        },
+        "vols": "1-72",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "키시모토 마사시",
+            "eng": "Masashi Kishimoto",
+            "jpn": "岸本 斉史"
         }
     },
     "[o] 닥터 스톤": {
@@ -1230,6 +1275,21 @@
             "kor": "이케다 리요코",
             "eng": "Riyoko Ikeda",
             "jpn": "池田 理代子"
+        }
+    },
+    "[o] 베르세르크": {
+        "title": {
+            "kor": "베르세르크",
+            "eng": "Berserk",
+            "jpn": "ベルセルク"
+        },
+        "vols": "1-41",
+        "verified": "O",
+        "status": "연재중",
+        "author": {
+            "kor": "미우라 켄타로",
+            "eng": "Kentaro Miura",
+            "jpn": "三浦 建太郎"
         }
     },
     "[o] 벨제바브": {
@@ -2896,21 +2956,6 @@
             "kor": "하기와라 카즈시",
             "eng": "Kazushi Hagiwara",
             "jpn": "萩原 一至"
-        }
-    },
-    "베르세르크": {
-        "title": {
-            "kor": "베르세르크",
-            "eng": "Berserk",
-            "jpn": "ベルセルク"
-        },
-        "vols": "1-41",
-        "verified": "X",
-        "status": "연재중",
-        "author": {
-            "kor": "미우라 켄타로",
-            "eng": "Kentaro Miura",
-            "jpn": "三浦 建太郎"
         }
     },
     "선켄락": {
