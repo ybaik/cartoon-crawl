@@ -22,7 +22,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 SITE_NAMES = ["11toon", "manaboza", "newtoki", "mangaread", "readfairytail"]
-SUB_NAMES = ["demonslayermanga", "tokyoghoulre", "readjujutsukaisen"]
+SUB_NAMES = ["demonslayermanga", "tokyoghoulre", "readsnk", "readchainsawman"]
 
 SITE_NAMES_SELENIUM = ["11toon", "manaboza", "manatoki"]
 
@@ -279,7 +279,8 @@ class CrawlerReadfairytail(Crawler):
         items = div_tag.find_all("img")
         for item in items:
             path = item.get("src") or item.get("data-cfsrc")
-            img_list.append(path.strip())
+            if path is not None:
+                img_list.append(path.strip())
         return img_list
 
 

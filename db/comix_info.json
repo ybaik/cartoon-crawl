@@ -104,6 +104,36 @@
             "jpn": "竹内 良輔,小畑 健"
         }
     },
+    "[o] Attack on Titan": {
+        "title": {
+            "kor": "진격의 거인",
+            "eng": "Attack on Titan",
+            "jpn": "進撃の巨人"
+        },
+        "vols": "1-34",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "이사야마 하지메",
+            "eng": "Hajime Isayama",
+            "jpn": "諫山 創"
+        }
+    },
+    "[o] Berserk": {
+        "title": {
+            "kor": "베르세르크",
+            "eng": "Berserk",
+            "jpn": "ベルセルク"
+        },
+        "vols": "1-41",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "미우라 켄타로",
+            "eng": "Kentaro Miura",
+            "jpn": "三浦 建太郎"
+        }
+    },
     "[o] Demon Slayer-Kimetsu no Yaiba": {
         "title": {
             "kor": "귀멸의 칼날",
@@ -164,6 +194,21 @@
             "jpn": "真島 ヒロ"
         }
     },
+    "[o] Fire Punch": {
+        "title": {
+            "kor": "파이어 펀치",
+            "eng": "Fire Punch",
+            "jpn": "ファイアパンチ"
+        },
+        "vols": "1-8",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "후지모토 타츠키",
+            "eng": "Tatuski Fujimoto",
+            "jpn": "藤本 タツキ"
+        }
+    },
     "[o] GS 미카미 극락 대작전!!": {
         "title": {
             "kor": "GS 미카미 극락 대작전!!",
@@ -208,6 +253,21 @@
             "kor": "오오사와 유우스케",
             "eng": "Yusuke Osawa",
             "jpn": "大沢 祐輔"
+        }
+    },
+    "[o] Jujutsu Kaisen": {
+        "title": {
+            "kor": "주술회전",
+            "eng": "Jujutsu Kaisen",
+            "jpn": "呪術廻戦"
+        },
+        "vols": "1-30",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "아쿠타미 게게",
+            "eng": "Gege Akutami",
+            "jpn": "芥見 下々"
         }
     },
     "[o] Rave Master": {
@@ -2080,7 +2140,7 @@
         },
         "vols": "1-34",
         "verified": "O",
-        "status": "완결_스캔",
+        "status": "완결",
         "author": {
             "kor": "이사야마 하지메",
             "eng": "Hajime Isayama",

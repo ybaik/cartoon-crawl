@@ -5,14 +5,13 @@ import shutil
 
 
 def main():
-    vol = 52
-    # base_dir = f"C:/comix/etc/a/{vol:02d}"
-    base_dir = f"C:/comix/etc/a/446화"
+    vol = 13
+    src_dir = f"C:/comix/etc/b/{vol:02d}"
     dst_dir = f"C:/comix/etc/c/{vol:02d}"
-    episode = 446
-    page_range = [1, 29]
+    episode = 0
+    page_range = [1, 5]
 
-    files = os.listdir(base_dir)
+    files = os.listdir(src_dir)
     files.sort()
     if not os.path.exists(dst_dir):
         os.makedirs(dst_dir)
@@ -29,7 +28,7 @@ def main():
 
         file_new = f"{vol:02d}-{episode:03d}-{new_page:03d}{ext}"
 
-        shutil.copyfile(os.path.join(base_dir, file), f"{dst_dir}/{file_new}")
+        shutil.copyfile(os.path.join(src_dir, file), f"{dst_dir}/{file_new}")
         new_page += 1
 
 

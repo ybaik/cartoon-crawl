@@ -3,6 +3,25 @@
 import os
 
 
+def numbering_000(base_dir, vol, files):
+
+    list_000 = []
+    for file in files:
+        if not file.split("-")[1] == "000":
+            continue
+        list_000.append(file)
+
+    list_000.sort(reverse=True)
+
+    for file in list_000:
+        name, ext = os.path.splitext(file)
+        num = int(name.split("-")[-1])
+
+        src_path = f"{base_dir}/{vol:02d}/{file}"
+        dst_path = f"{base_dir}/{vol:02d}/{vol:02d}-000-{num+1:03d}{ext}"
+        os.rename(src_path, dst_path)
+
+
 def rename(base_path, episode, files):
     target_files = [f for f in files if f.split("-")[1] == episode]
     target_files.sort()
@@ -17,8 +36,8 @@ def rename(base_path, episode, files):
 
 def main():
 
-    base_dir = "C:/comix/etc/dd"
-    vol_range = [51, 63]
+    base_dir = "C:/comix/etc/d"
+    vol_range = [1, 34]
     for vol in range(vol_range[0], vol_range[-1] + 1):
         target_dir = f"{base_dir}/{vol:02d}"
         files = os.listdir(target_dir)
@@ -30,9 +49,10 @@ def main():
             episodes.add(episode)
 
         for episode in episodes:
-            # if episode == "000":
-            #     continue
-            rename(target_dir, episode, files)
+            if episode == "000" and f"{vol:02d}-000-000.png" in files:
+                numbering_000(base_dir, vol, files)
+            else:
+                rename(target_dir, episode, files)
 
         episodes = list(episodes)
         episodes.sort()
