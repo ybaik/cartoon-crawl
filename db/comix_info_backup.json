@@ -134,6 +134,21 @@
             "jpn": "三浦 建太郎"
         }
     },
+    "[o] Bleach": {
+        "title": {
+            "kor": "블리치",
+            "eng": "Bleach",
+            "jpn": "ブリーチ"
+        },
+        "vols": "1-74",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "쿠보 타이토",
+            "eng": "Tite Kubo",
+            "jpn": "久保 帯人"
+        }
+    },
     "[o] Chainsaw Man": {
         "title": {
             "kor": "체인소맨",
@@ -313,6 +328,21 @@
             "kor": "마시마 히로",
             "eng": "Hiro Mashima",
             "jpn": "真島 ヒロ"
+        }
+    },
+    "[o] Samurai 8 The Tale of Hachimaru": {
+        "title": {
+            "kor": "사무라이8 하치마루전",
+            "eng": "Samurai 8: The Tale of Hachimaru",
+            "jpn": "サムライ8 八丸伝"
+        },
+        "vols": "1-5",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "키시모토 마사시,오쿠보 아키라",
+            "eng": "Masashi Kishimoto,Akira Okubo",
+            "jpn": "岸本 斉史,大久保 彰"
         }
     },
     "[o] Tokyo Ghoul re": {
@@ -1367,6 +1397,21 @@
             "jpn": "鷹野 常雄,小畑 健"
         }
     },
+    "[o] 블리치": {
+        "title": {
+            "kor": "블리치",
+            "eng": "Bleach",
+            "jpn": "ブリーチ"
+        },
+        "vols": "1-74",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "쿠보 타이토",
+            "eng": "Tite Kubo",
+            "jpn": "久保 帯人"
+        }
+    },
     "[o] 비바 블루스": {
         "title": {
             "kor": "비바 블루스",
@@ -1425,6 +1470,21 @@
             "kor": "카미죠 아키미네",
             "eng": "Akimine Kamijyo",
             "jpn": "上条 明峰"
+        }
+    },
+    "[o] 사무라이8 하치마루전": {
+        "title": {
+            "kor": "사무라이8 하치마루전",
+            "eng": "Samurai 8: The Tale of Hachimaru",
+            "jpn": "サムライ8 八丸伝"
+        },
+        "vols": "1-5",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "키시모토 마사시,오쿠보 아키라",
+            "eng": "Masashi Kishimoto,Akira Okubo",
+            "jpn": "岸本 斉史,大久保 彰"
         }
     },
     "[o] 성전 애장판": {
