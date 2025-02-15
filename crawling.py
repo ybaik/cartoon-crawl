@@ -29,12 +29,10 @@ def main():
     # list_url = f"{site_url}/6068"
 
     # site_url = "https://www.mangaread.org/manga"
-    # list_url = f"{site_url}/fairy-tail/chapter-475-dimaria-chronos-yesta"
+    # list_url = f"{site_url}/tokyo-manji-revengers"
 
-    # site_url = "https://ww7.readfairytail.com"
-    # list_url = f"{site_url}/manga/edens-zero"
-    # site_url = "https://ww4.readjujutsukaisen.com"
-    # list_url = f"{site_url}/manga/jujutsu-kaisen"
+    site_url = "https://ww1.readtokyorevengers.net"
+    list_url = f"{site_url}/manga/tokyo-revengers"
 
     # Read url list
     if json_path.exists():
@@ -55,10 +53,25 @@ def main():
     crawler.crawling_img_list(json_data, json_path)
     crawler.deinit()
 
+    # Filter files
+    # for key in json_data["vol_info"].keys():
+    #     if json_data["vol_info"][key].get("img_url") is None:
+    #         continue
+
+    #     files = []
+    #     for img_url in json_data["vol_info"][key]["img_url"]:
+    #         if (".gif" in img_url) or ("pp.userapi.com" in img_url):
+    #             continue
+    #         else:
+    #             files.append(img_url)
+
+    #     json_data["vol_info"][key]["img_url"] = files
+
+    # with open(json_path, "w", encoding="utf-8") as f:
+    #     json.dump(json_data, f, ensure_ascii=False, indent=4)
+
     # Check filter
-    # json_data["tag_list"].append("Demon Slayer: Kimetsu no Yaiba Chapter")
-    # json_data["tag_list"].append("Tokyo Ghoul:re Chapter")
-    json_data["tag_list"].append("도쿄구울：re")
+    json_data["tag_list"].append("Tokyo Revengers Chapter")
 
     for key in json_data["vol_info"].keys():
         tags = json_data["tag_list"]
@@ -67,6 +80,15 @@ def main():
         if name == key:
             print(key)
             pass
+
+    # Check list
+    num_need_to_search = 0
+    for key in json_data["vol_info"].keys():
+        if json_data["vol_info"][key].get("img_url") is None:
+            num_need_to_search += 1
+            print(key)
+    num_vol = len(json_data["vol_info"].keys())
+    print(f"Number of volumes need to search: {num_need_to_search}/{num_vol}")
 
     # return
     download_images(json_data, base_dir, site_url)

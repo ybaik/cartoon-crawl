@@ -49,7 +49,9 @@ def main():
             episodes.add(episode)
 
         for episode in episodes:
-            if episode == "000" and (f"{vol:02d}-000-000.png" in files or f"{vol:02d}-000-000.jpg" in files):
+            if episode == "000" and (
+                f"{vol:02d}-000-000.png" in files or f"{vol:02d}-000-000.jpg" in files
+            ):
                 numbering_000(base_dir, vol, files)
             else:
                 rename(target_dir, episode, files)

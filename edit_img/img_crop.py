@@ -50,7 +50,7 @@ def main():
 
 def main2():
     base_dir = "C:/comix/etc/c"
-    target_page = 4
+    target_page = 3
 
     files = os.listdir(base_dir)
     for file in files:
@@ -58,8 +58,8 @@ def main2():
         if not os.path.isfile(path):
             continue
         name, ext = os.path.splitext(file)
-        if ext != ".png":
-            continue
+        # if ext != ".png":
+        #     continue
         tags = name.split("-")
         if len(tags) != 3:
             continue

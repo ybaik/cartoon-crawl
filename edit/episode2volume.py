@@ -6,20 +6,11 @@ import numpy as np
 
 
 episode2vol = {
-    1: [1, 14],
-    2: [15, 28],
-    3: [29, 42],
-    4: [43, 56],
-    5: [57, 70],
-    6: [71, 82],
-    7: [83, 94],
-    8: [95, 106],
-    9: [107, 118],
-    10: [119, 130],
-    11: [131, 142],
-    12: [143, 154],
-    13: [155, 166],
-    14: [167, 178],
+    27: [234, 242],
+    28: [243, 251],
+    29: [252, 260],
+    30: [261, 269],
+    31: [270, 278],
 }
 
 
@@ -29,20 +20,28 @@ def gen_bg_img(h, w):
 
 
 def main():
-    skip_1page = True
-    keep_1page_for_1st_episode = True
+    korean = False
+
+    skip_1page = False
+    keep_1page_for_1st_episode = False
     skip_last_page = False
-    src_base_dir = "c:/comix/etc/a"
-    dst_base_dir = "c:/comix/etc/c"
+    src_base_dir = "c:/comix/etc/aa"
+    dst_base_dir = "c:/comix/etc/cc"
     bgfile = "c:/comix/etc/c/white.png"
     add_bg_file = False
+
+    if korean:
+        skip_1page = False
+        keep_1page_for_1st_episode = False
+        src_base_dir = "c:/comix/etc/a"
+        dst_base_dir = "c:/comix/etc/c"
 
     for vol, (s, e) in episode2vol.items():
         dst_dir = f"{dst_base_dir}/{vol:02d}"
         os.makedirs(dst_dir, exist_ok=True)
 
         for episode in range(s, e + 1):
-            src_dir = f"{src_base_dir}/{episode}화"
+            src_dir = f"{src_base_dir}/{episode}"
             if not os.path.exists(src_dir):
                 print(f"Skipping non-existent directory: {src_dir}")
                 continue
