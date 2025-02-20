@@ -9,17 +9,17 @@ def main():
     base_path = "c:/comix/etc/a"
     save_path = "c:/comix/etc/a"
 
-    start_index = 52
+    start_index = 46
     end_index = start_index + 1
     end_range = 2
 
     for i in range(start_index, end_index):
-        target = f"{save_path}/{i}화"
+        target = f"{save_path}/{i}"
         os.makedirs(target, exist_ok=True)
 
         idx = 1
         for j in range(1, end_range + 1):
-            src_path = f"{base_path}/{i}-{j}화"
+            src_path = f"{base_path}/{i}-{j}"
             # for j in ["전", "후"]:
             #     src_path = f"{base_path}/{i}권 - {j}"
             dir_list = os.listdir(src_path)
@@ -30,7 +30,7 @@ def main():
         ful = len(os.listdir(target))
         sum = 0
         for j in range(1, end_range + 1):
-            src_path = f"{base_path}/{i}-{j}화"
+            src_path = f"{base_path}/{i}-{j}"
             # for j in ["전", "후"]:
             #     src_path = f"{base_path}/{i}권 - {j}"
             sum += len(os.listdir(src_path))

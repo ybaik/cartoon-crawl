@@ -345,6 +345,51 @@
             "jpn": "岸本 斉史,大久保 彰"
         }
     },
+    "[o] The Promised Neverland": {
+        "title": {
+            "kor": "약속의 네버랜드",
+            "eng": "The Promised Neverland",
+            "jpn": "約束のネバーランド"
+        },
+        "vols": "1-20",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "시라이 카이우,데미즈 포스카",
+            "eng": "Kaiu Shirai,Posuka Demizu",
+            "jpn": "白井 カイウ,出水 ぽすか"
+        }
+    },
+    "[o] The Seven Deadly Sins": {
+        "title": {
+            "kor": "일곱 개의 대죄",
+            "eng": "The Seven Deadly Sins",
+            "jpn": "七つの大罪"
+        },
+        "vols": "1-41",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "스즈키 나카바",
+            "eng": "Nakaba Suzuki",
+            "jpn": "鈴木 央"
+        }
+    },
+    "[o] Tokyo Ghoul": {
+        "title": {
+            "kor": "도쿄구울",
+            "eng": "Tokyo Ghoul",
+            "jpn": "東京喰種"
+        },
+        "vols": "1-14",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "이시다 스이",
+            "eng": "Sui Ishida",
+            "jpn": "石田 スイ"
+        }
+    },
     "[o] Tokyo Ghoul re": {
         "title": {
             "kor": "도쿄구울:re",
@@ -358,6 +403,21 @@
             "kor": "이시다 스이",
             "eng": "Sui Ishida",
             "jpn": "石田 スイ"
+        }
+    },
+    "[o] Tokyo Revengers": {
+        "title": {
+            "kor": "도쿄 리벤저스",
+            "eng": "Tokyo Revengers",
+            "jpn": "東京卍リベンジャーズ"
+        },
+        "vols": "1-31",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "와쿠이 켄",
+            "eng": "Ken Wakui",
+            "jpn": "和久井 健"
         }
     },
     "[o] 가시나무왕": {
@@ -793,6 +853,21 @@
             "kor": "하야시다 큐",
             "eng": "Q Hayashida ",
             "jpn": "林田 球"
+        }
+    },
+    "[o] 도쿄 리벤저스": {
+        "title": {
+            "kor": "도쿄 리벤저스",
+            "eng": "Tokyo Revengers",
+            "jpn": "東京卍リベンジャーズ"
+        },
+        "vols": "1-31",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "와쿠이 켄",
+            "eng": "Ken Wakui",
+            "jpn": "和久井 健"
         }
     },
     "[o] 도쿄 바빌론 애장판": {
@@ -2145,6 +2220,21 @@
             "kor": "타카하시 루미코",
             "eng": "Rumiko Takahashi",
             "jpn": "高橋 留美子"
+        }
+    },
+    "[o] 일곱 개의 대죄": {
+        "title": {
+            "kor": "일곱 개의 대죄",
+            "eng": "The Seven Deadly Sins",
+            "jpn": "七つの大罪"
+        },
+        "vols": "1-41",
+        "verified": "O",
+        "status": "완결",
+        "author": {
+            "kor": "스즈키 나카바",
+            "eng": "Nakaba Suzuki",
+            "jpn": "鈴木 央"
         }
     },
     "[o] 일기당천": {

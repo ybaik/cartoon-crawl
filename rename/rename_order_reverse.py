@@ -8,9 +8,7 @@ def rename(base_path, target_episode, target_page, files):
     target_files = []
     for file in files:
         tags = file.split("-")
-        if tags[1] == "ext":
-            continue
-        episode_src = int(tags[1])
+        episode_src = "ext" if tags[1] == "ext" else int(tags[1])
         if episode_src != target_episode:
             continue
         target_files.append(file)
@@ -19,7 +17,7 @@ def rename(base_path, target_episode, target_page, files):
     last_page = int(target_files[-1].split("-")[-1].split(".")[0]) + 1
     idx = len(target_files) - 1
 
-    while idx:
+    while idx + 1:
         name, ext = os.path.splitext(target_files[idx])
         info = name.split("-")
         page = int(info[2])
@@ -35,12 +33,12 @@ def rename(base_path, target_episode, target_page, files):
 
 
 def main():
-    base_path = r"C:/comix/etc/c/13"
+    base_path = r"C:/comix/etc/d/30"
 
     files = os.listdir(base_path)
     files.sort()
 
-    target_episode = 141
+    target_episode = 241
     target_page = 1
 
     rename(base_path, target_episode, target_page, files)

@@ -70,7 +70,7 @@ def main2():
         if int(tags[2]) == target_page:
             src_img_path = path
             dst_img_path = path
-            dst_img_path2 = f"{base_dir}/{tags[0]}-000-{target_page+1:03d}.png"
+            dst_img_path2 = f"{base_dir}/{tags[0]}-000-{target_page+1:03d}{ext}"
             img = cv2.imread(src_img_path)
             img_crop(img, dst_img_path, True, dst_img_path2)
 

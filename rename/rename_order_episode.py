@@ -36,10 +36,14 @@ def rename(base_path, episode, files):
 
 def main():
 
-    base_dir = "C:/comix/etc/cc"
-    vol_range = [1]
+    base_dir = "C:/comix/etc/dd"
+    vol_range = [1, 14]
     for vol in range(vol_range[0], vol_range[-1] + 1):
         target_dir = f"{base_dir}/{vol:02d}"
+
+        if not os.path.exists(target_dir):
+            continue
+
         files = os.listdir(target_dir)
         files.sort()
 
