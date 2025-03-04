@@ -1,0 +1,272 @@
+{
+    "[o] Attack on Titan": {
+        "title": {
+            "kor": "진격의 거인",
+            "eng": "Attack on Titan",
+            "jpn": "進撃の巨人"
+        },
+        "vols": "1-34",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "이사야마 하지메",
+            "eng": "Hajime Isayama",
+            "jpn": "諫山 創"
+        }
+    },
+    "[o] Berserk": {
+        "title": {
+            "kor": "베르세르크",
+            "eng": "Berserk",
+            "jpn": "ベルセルク"
+        },
+        "vols": "1-41",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "미우라 켄타로",
+            "eng": "Kentaro Miura",
+            "jpn": "三浦 建太郎"
+        }
+    },
+    "[o] Bleach": {
+        "title": {
+            "kor": "블리치",
+            "eng": "Bleach",
+            "jpn": "ブリーチ"
+        },
+        "vols": "1-74",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "쿠보 타이토",
+            "eng": "Tite Kubo",
+            "jpn": "久保 帯人"
+        }
+    },
+    "[o] Chainsaw Man": {
+        "title": {
+            "kor": "체인소맨",
+            "eng": "Chainsaw Man",
+            "jpn": "チェンソーマン"
+        },
+        "vols": "1-19",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "후지모토 타츠키",
+            "eng": "Tatuski Fujimoto",
+            "jpn": "藤本 タツキ"
+        }
+    },
+    "[o] Demon Slayer-Kimetsu no Yaiba": {
+        "title": {
+            "kor": "귀멸의 칼날",
+            "eng": "Demon Slayer: Kimetsu no Yaiba",
+            "jpn": "鬼滅の刃"
+        },
+        "vols": "1-23",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "고토게 코요하루",
+            "eng": "Koyoharu Gotoge",
+            "jpn": "吾峠 呼世晴"
+        }
+    },
+    "[o] Edens Zero": {
+        "title": {
+            "kor": "에덴즈 제로",
+            "eng": "Edens Zero",
+            "jpn": "エデンズ ゼロ"
+        },
+        "vols": "1-33",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "마시마 히로",
+            "eng": "Hiro Mashima",
+            "jpn": "真島 ヒロ"
+        }
+    },
+    "[o] Fairy Tail": {
+        "title": {
+            "kor": "페어리 테일",
+            "eng": "Fairy Tail",
+            "jpn": "フェアリーテイル"
+        },
+        "vols": "1-63",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "마시마 히로",
+            "eng": "Hiro Mashima",
+            "jpn": "真島 ヒロ"
+        }
+    },
+    "[o] Fire Punch": {
+        "title": {
+            "kor": "파이어 펀치",
+            "eng": "Fire Punch",
+            "jpn": "ファイアパンチ"
+        },
+        "vols": "1-8",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "후지모토 타츠키",
+            "eng": "Tatuski Fujimoto",
+            "jpn": "藤本 タツキ"
+        }
+    },
+    "[o] Haikyu": {
+        "title": {
+            "kor": "Haikyu",
+            "eng": "",
+            "jpn": ""
+        },
+        "vols": "1-45",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    },
+    "[o] Jujutsu Kaisen": {
+        "title": {
+            "kor": "주술회전",
+            "eng": "Jujutsu Kaisen",
+            "jpn": "呪術廻戦"
+        },
+        "vols": "1-30",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "아쿠타미 게게",
+            "eng": "Gege Akutami",
+            "jpn": "芥見 下々"
+        }
+    },
+    "[o] Naruto": {
+        "title": {
+            "kor": "나루토",
+            "eng": "Naruto",
+            "jpn": "ナルト"
+        },
+        "vols": "1-72",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "키시모토 마사시",
+            "eng": "Masashi Kishimoto",
+            "jpn": "岸本 斉史"
+        }
+    },
+    "[o] Rave Master": {
+        "title": {
+            "kor": "레이브",
+            "eng": "Rave Master",
+            "jpn": "レイヴ"
+        },
+        "vols": "1-35",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "마시마 히로",
+            "eng": "Hiro Mashima",
+            "jpn": "真島 ヒロ"
+        }
+    },
+    "[o] Samurai 8 The Tale of Hachimaru": {
+        "title": {
+            "kor": "사무라이8 하치마루전",
+            "eng": "Samurai 8: The Tale of Hachimaru",
+            "jpn": "サムライ8 八丸伝"
+        },
+        "vols": "1-5",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "키시모토 마사시,오쿠보 아키라",
+            "eng": "Masashi Kishimoto,Akira Okubo",
+            "jpn": "岸本 斉史,大久保 彰"
+        }
+    },
+    "[o] The Promised Neverland": {
+        "title": {
+            "kor": "약속의 네버랜드",
+            "eng": "The Promised Neverland",
+            "jpn": "約束のネバーランド"
+        },
+        "vols": "1-20",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "시라이 카이우,데미즈 포스카",
+            "eng": "Kaiu Shirai,Posuka Demizu",
+            "jpn": "白井 カイウ,出水 ぽすか"
+        }
+    },
+    "[o] The Seven Deadly Sins": {
+        "title": {
+            "kor": "일곱 개의 대죄",
+            "eng": "The Seven Deadly Sins",
+            "jpn": "七つの大罪"
+        },
+        "vols": "1-41",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "스즈키 나카바",
+            "eng": "Nakaba Suzuki",
+            "jpn": "鈴木 央"
+        }
+    },
+    "[o] Tokyo Ghoul": {
+        "title": {
+            "kor": "도쿄구울",
+            "eng": "Tokyo Ghoul",
+            "jpn": "東京喰種"
+        },
+        "vols": "1-14",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "이시다 스이",
+            "eng": "Sui Ishida",
+            "jpn": "石田 スイ"
+        }
+    },
+    "[o] Tokyo Ghoul re": {
+        "title": {
+            "kor": "도쿄구울:re",
+            "eng": "Tokyo Ghoul:re",
+            "jpn": "東京喰種:re"
+        },
+        "vols": "1-16",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "이시다 스이",
+            "eng": "Sui Ishida",
+            "jpn": "石田 スイ"
+        }
+    },
+    "[o] Tokyo Revengers": {
+        "title": {
+            "kor": "도쿄 리벤저스",
+            "eng": "Tokyo Revengers",
+            "jpn": "東京卍リベンジャーズ"
+        },
+        "vols": "1-31",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "",
+            "eng": "",
+            "jpn": ""
+        }
+    }
+}
