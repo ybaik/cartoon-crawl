@@ -119,6 +119,21 @@
             "jpn": "藤本 タツキ"
         }
     },
+    "[o] Haikyu": {
+        "title": {
+            "kor": "하이큐!!",
+            "eng": "Haikyu!!",
+            "jpn": "ハイキュー!!"
+        },
+        "vols": "1-45",
+        "verified": "O",
+        "status": "English",
+        "author": {
+            "kor": "후루다테 하루이치",
+            "eng": "Haruichi Furudate",
+            "jpn": "古舘 春一"
+        }
+    },
     "[o] Jujutsu Kaisen": {
         "title": {
             "kor": "주술회전",
